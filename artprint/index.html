@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>ARTPRINT</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+</head>
+<body>
+
+	
+	<header class="header" id="header">
+		<div class="header__body">
+			<a href="index.php" class="logo"><span class="logo__images"></span></a>
+			<div class="info">
+				<div class="info__item">
+					<span class="info__name info__name_mail">Электронная почта:</span>
+					<a href="mailto:archprint@yandex.ru" class="info__about">archprint@yandex.ru</a>
+				</div>
+				<div class="info__item">
+					<span class="info__name info__name_clock">Часы работы:</span>
+					<p class="info__about">пн.-птн. с 9:00 до 18:00</p>
+				</div>
+				<div class="info__item">
+					<span class="info__name info__name_phone">Номер телефона:</span>
+					<a href="tel:+74995040407" class="info__about">+7 499 504 04 07</a>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="nav__body">
+				<nav class="navigation">
+					<ul class="navigation__list">
+						<li class="navigation__item">
+							<a href="#about_us" class="navigation__link navigation__link_triangle navigation__link_down">О компании</a>
+							<!--<ul class="navigation__two">
+								<li class="navigation__it">
+									<a href="#about_us" class="navgation__li">О печати</a>
+								</li>
+								<li class="navigation__it">
+									<a href="#!" class="navgation__li">Наши клиенты</a>
+								</li>
+								<li class="navigation__it">
+									<a href="#!" class="navgation__li">Отзывы</a>
+								</li>
+							</ul>-->
+						</li>
+						<li class="navigation__item">
+							<a href="#section_one" class="navigation__link navigation__link_triangle navigation__link_down">Услуги</a>
+							<!--<ul class="navigation__two">
+								<li class="navigation__it">
+									<a href="#section_one" class="navgation__li">Наши услуги</a>
+								</li>
+							</ul>-->
+						</li>
+						<li class="navigation__item">
+							<a href="#section_two" class="navigation__link navigation__link_down">Портфолио</a>
+						</li>
+						<li class="navigation__item">
+							<a href="#section_one" class="navigation__link navigation__link_down">Цены</a>
+						</li>
+						<li class="navigation__item">
+							<a href="#footer" class="navigation__link navigation__link_down">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="#nav__form" class="button button_header button_right"><span class="white">Обратный звонок</span></a>
+				<div class="nav__form">
+					<form action="mail.php" id="nav__form" class="connection">
+						<div class="connection__block">
+							<span class="connection__name">Заказ обратного звонка</span>
+							<span class="connection__line"></span>
+							<div class="connection__box">
+								<img src="img/header/human.png" alt="human" class="connection__icon">
+								<span class="connection__data">Ваше имя:</span>
+								<input type="text" class="connection__input" placeholder="Введите имя" required name="name" minlength="3">
+							</div>
+							<div class="connection__box">
+								<img src="img/header/phone2.png" alt="phone" class="connection__icon">
+								<span class="connection__data">Ваш номер телефона:</span>
+								<input type="tel" class="connection__input" placeholder="Введите телефон" required id="connection__phone" name="phone">
+								<input type="checkbox" class="connection__checkbox" required>
+								<p class="connection__text connection__text_black">Я согласен на обработку персональных данных. Ваши данные не будут переданы третьим лицам</p>
+								<button class="button button_connection" type="submit" name="submit">Обратный звонок</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="hamburger hamburger--slider">
+					<div class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hero">
+			<div class="slider">
+				<div class="slider__item">
+					<div class="slider__body">
+						<h2 class="slider__title">Получите расчет стоимости проекта</h2>
+						<div class="quality">
+							<div class="quality__item">
+								<span class="quality__name quality__name_bold quality__name_medal">высокое качество</span>
+								<span class="quality__name quality__name_light">всех процессов</span>
+							</div>
+							<div class="quality__item">
+								<span class="quality__name quality__name_bold quality__name_clock">быстрые сроки</span>
+								<span class="quality__name quality__name_light">изготовления заказов</span>
+							</div>
+							<div class="quality__item">
+								<span class="quality__name quality__name_bold quality__name_money">лучшие цены</span>
+								<span class="quality__name quality__name_light">в городе</span>
+							</div>
+						</div>
+						<div class="slider__box">
+							<div class="slider__calc">
+								<p class="slider__text">Получите бесплатный расчет стоимости проекта</p>
+								<a href="#free" class="button button_slider">заказать расчет</a>
+
+							</div>
+						</div>
+					</div>
+					<iframe class="iframe" src="https://www.youtube.com/embed/NyAh9FAogtU?autoplay=1&loop=1&controls=0&rel=0&fs=0&mute=1&disablekb=1&showinfo=0&playlist=WBy4bNKm8V4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<!--<video class="slider__video" loop muted="muted" id="video">
+						<source src="video/video.mp4" type="video/mp4" class="slider__play">
+					</video>
+					<button class="volume" onclick="mute(this, 'video')"></button>-->
+					<img  class="slider__hide" src="img/header/slider/item1.jpg" alt="item1">
+				</div>
+				<div class="slider__item">
+					<div class="slider__body">
+						<h2 class="slider__title">Получите расчет стоимости проекта</h2>
+						<div class="quality">
+							<div class="quality__item">
+								<span class="quality__name quality__name_bold quality__name_medal">высокое качество</span>
+								<span class="quality__name quality__name_light">всех процессов</span>
+							</div>
+							<div class="quality__item">
+								<span class="quality__name quality__name_bold quality__name_clock">быстрые сроки</span>
+								<span class="quality__name quality__name_light">изготовления заказов</span>
+							</div>
+							<div class="quality__item">
+								<span class="quality__name quality__name_bold quality__name_money">лучшие цены</span>
+								<span class="quality__name quality__name_light">в городе</span>
+							</div>
+						</div>
+						<div class="slider__box">
+							<div class="slider__calc">
+								<p class="slider__text">Получите бесплатный расчет стоимости проекта</p>
+								<a href="#free" class="button button_slider">заказать расчет</a>
+							</div>
+						</div>
+					</div>
+					<!--<iframe class="iframe" src="https://www.youtube.com/embed/NyAh9FAogtU?autoplay=1&loop=1&controls=0&rel=0&fs=0&mute=1&disablekb=1&showinfo=0&playlist=NyAh9FAogtU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+					<img src="img/header/slider/item1.jpg" alt="item1" class="slider__images">
+					<img  class="slider__hide" src="img/header/slider/item1.jpg" alt="item1">
+				</div>
+			</div>
+			<div class="hero__connect">
+				<form action="mail.php" class="free" id="free">
+					<div class="free__block">
+						<span class="free__name">заказ бесплатного расчета стоимости проекта</span>
+						<span class="free__line"></span>
+					</div>
+					<div class="free__box">
+						<div class="free__item">
+							<img src="img/header/human.png" alt="human" class="free__icon">
+							<span class="free__data">Ваше имя:</span>
+							<input type="text" class="free__input" placeholder="Введите имя" name="name" required minlength="3">
+						</div>
+						<div class="free__item">
+							<img src="img/header/phone2.png" alt="phone" class="free__icon">
+							<span class="free__data">Ваш номер телефона:</span>
+							<input type="tel" class="free__input" placeholder="Введите телефон" name="phone" required id="free__phone">
+						</div>
+						<div class="free__item">
+							<img src="img/header/mail2.png" alt="mail" class="free__icon">
+							<span class="free__data">Адрес электронной почты:</span>
+							<input type="email" class="free__input" placeholder="E-mail" name="email" required>
+						</div>
+						<div class="free__item">
+							<input type="text" class="hide" name="hide">
+							<img src="img/header/material.png" alt="material" class="free__icon">
+							<span class="free__data">Выберите материал для печати:</span>
+							<div class="select select_wh" tabindex="1" id="select">
+								<span class="select__down"><img src="img/section_four/form/down.png" alt="down" class="select__arrow"></span>
+								<span class="material material_black">Материал не выбран</span>
+								<ul class="list">
+									<li class="list__item">
+										<a href="#" class="list__link">Стекло</a>
+									</li>
+									<li class="list__item">
+										<a href="#" class="list__link">Зеркало</a>
+									</li>
+									<li class="list__item">
+										<a href="#" class="list__link">Металл</a>
+									</li>
+									<li class="list__item">
+										<a href="#" class="list__link">Акрил и оргстекло</a>
+									</li>
+									<li class="list__item">
+										<a href="#" class="list__link">МДФ</a>
+									</li>
+									<li class="list__item">
+										<a href="#" class="list__link">Печать белилами</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="free__item">
+							<img src="img/header/meter.png" alt="meter" class="free__icon">
+							<span class="free__data">Количество квадратных метров (м2):</span>
+							<input type="text" class="free__input" placeholder="Введите значение" name="square" required>
+						</div>
+						<div class="free__item">
+							<input type="checkbox" class="free__checkbox" required>
+							<p class="free__text">Я согласен на обработку персональных данных. Ваши данные не будут переданы третьим лицам</p>
+						</div>
+					</div>
+					<button class="button button_free" type="submit" name="submit">Заказать расчет</button>
+				</form>
+			</div>
+			<div class="hero__bottom">
+				<a href="#section_one" class="btn btn_one">
+					<img src="img/btn_down/down_one.png" alt="down">
+				</a>
+			</div>
+			
+			
+		</div>
+	</header>
+
+	<section class="section section_one" id="section_one">
+		<div class="section__body">
+			<div class="services">
+				<a href="#services__form0" class="services__item services__item_blue services__item_zero">
+					<span class="services__about">
+						НАШИ УСЛУГИ
+					</span>
+					<span class="line line_white"></span>
+					<h3 class="services__title">
+						Печать белилами
+					</h3>
+					<span class="services__price services__price_pl">от 1300 руб/кв.м</span>
+				</a>
+				<a href="#services__form1" class="services__item services__item_hover services__item_one">
+					<img src="img/section_one/services/item1.jpg" alt="item1" class="services__images">
+					<span class="services__block">
+						<span class="services__name"><span class="light">печать</span> <span class="bold"><br>на стекле</span></span>
+						<span class="line line_blue"></span>
+						<span class="services__price">от 1300 руб/кв.м</span>
+					</span>
+					<span class="services__two"></span>
+					<span class="services__arrow"></span>
+				</a>
+				<a href="#services__form2" class="services__item services__item_hover services__item_two">
+					<img src="img/section_one/services/item2.jpg" alt="item2" class="services__images">
+					<span class="services__block">
+						<span class="services__name"><span class="light">печать</span> <span class="bold"><br>на зеркале</span></span>
+						<span class="line line_blue"></span>
+						<span class="services__price">от 1300 руб/кв.м</span>
+					</span>
+					<span class="services__two"></span>
+					<span class="services__arrow"></span>
+				</a>
+				<a href="#services__form3" class="services__item services__item_hover services__item_three">
+					<img src="img/section_one/services/item3.jpg" alt="item3" class="services__images">
+					<span class="services__block">
+						<span class="services__name"><span class="light">печать</span> <span class="bold"><br>на металле</span></span>
+						<span class="line line_blue"></span>
+						<span class="services__price">от 1300 руб/кв.м</span>
+					</span>
+					<span class="services__two"></span>
+					<span class="services__arrow"></span>
+				</a>
+				<a href="#services__form4" class="services__item services__item_hover services__item_four">
+					<img src="img/section_one/services/item4.jpg" alt="item4" class="services__images">
+					<span class="services__block">
+						<span class="services__name"><span class="light">печать</span> <span class="bold">на акриле и орстекле</span></span>
+						<span class="line line_blue"></span>
+						<span class="services__price">от 570 руб/кв.м</span>
+					</span>
+					<span class="services__two"></span>
+					<span class="services__arrow"></span>
+				</a>
+				<a href="#services__form5" class="services__item services__item_hover services__item_five">
+					<img src="img/section_one/services/item5.jpg" alt="item5" class="services__images">
+					<span class="services__block">
+						<span class="services__name"><span class="light">печать</span> <span class="bold"><br>на МДФ</span></span>
+						<span class="line line_blue"></span>
+						<span class="services__price">от 1000 руб/кв.м</span>
+					</span>
+					<span class="services__two"></span>
+					<span class="services__arrow"></span>
+				</a>
+				<a href="#section_two" class="btn btn_two">
+					<img src="img/btn_down/down_two.png" alt="down">
+				</a>
+				<div class="services__form">
+					<div class="services__info" id="services__form0">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">Печать белилами</span>
+									<span class="col__price">от 1300 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1800 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1300 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">УФ-печать белилами</span>
+									<p class="col__text col__text_pb">УФ печать с использованием белил используется, когда необходимо сделать изображение максимально ярким и чётким.
+										Это особенно актуально, если исходный материал прозрачный или цветной. Краска, нанесённая на такой материал в один слой, будет
+										полупрозрачной. Сквозь неё может проступать цвет подложки.
+									</p>
+									<p class="col__text col__text_pb">Чтобы сделать изображение ярче, а тона – чище, на материал наносятся сначала белила, а затем цветная краска.
+										В такой технике можно нанести рисунок полностью или частично, расставив акценты – например, название компании выделить с использованием белил, а
+										основное изображение выполнить в полупрозрачных оттенках.
+									</p>
+									<p class="col__text col__text_pb">Белила используют и как самостоятельный цвет. Они имеют белоснежно-чистый, искрящийся оттенок, который отлично
+										подходит для расстановки акцентов в полноцветном изображении. Белоснежный непрозрачный логотип на общем фоне выглядит броско и хорошо запоминается.
+										С течением времени цвет сохраняет белизну: краска не сереет и не желтеет.
+									</p>
+									<p class="col__text col__text_pb">При изготовлении рекламных материалов УФ-печать даёт возможность делать их яркими и запоминающимися.
+										Но технология не ограничивается сферой маркетинга. Она отлично подходит для оформления жилых и офисных помещений, торговых зданий и культурных организаций.
+									</p>
+									<span class="col__name">Технология УФ-печати белилами: как это происходит?</span>
+									<p class="col__text col__text_pb">Печать с использованием белил позволяет добиться максимум эффекта при минимальных затратах.
+										Белила могут использоваться как основа для цветной краски и как самостоятельный цвет. Добиться при этом можно разных визуальных эффектов:
+									</p>
+									<ul class="col__list">
+										<li class="col__li"><span class="col__sp">Белила в качестве грунта. Исходный материал прозрачный (например, стекло или оргстекло), сами краски,
+											нанесённые в один слой, тоже полупрозрачные. Как сделать изображение ярким, плотным и непрозрачным? Для этого под изображение наносят слой белил.</span>
+										</li>
+										<li class="col__li"><span class="col__sp">Как самостоятельный цвет, если белый предусмотрен в макете будущего рисунка. Оттенок получается чистым,
+											сияющим, белоснежным и долго сохраняет свою яркость. Белила отлично подходят для расстановки акцентов. Слоган или название компании будут выглядеть
+											заметно и эффектно на фоне общего цветного изображения, особенно если сделать его полупрозрачным.</span>
+										</li>
+									</ul>
+									<span class="col__name col__name_pt">Преимущества УФ-печати белилами.</span>
+									<p class="col__text col__text_pb">Наша техника позволяет печатать белилами на листовом материале толщиной до 5 см: от плёнки до дерева с его
+										шероховатой волокнистой поверхностью. Прозрачный материал даёт возможность печати с обеих сторон. На оборотной стороне рисунок печатается в его
+										зеркальном отображении, и тогда сам материал будет служить защитой для краски, не требуя никакой дополнительной отделки.
+									</p>
+									<p class="col__text col__text_pb">Чтобы цвета были максимально яркими, мы используем кроющие белила. Они выполняют функцию грунта и наносятся на
+										материал первым слоем. Изображение, нанесённое после, сохраняет сочные, контрастные оттенки.
+									</p>
+									<p class="col__text">Стоимость без учета материала и резки. Материал и резка рассчитываются согласно размеров и кол-ва изделий.
+									</p>
+									<div class="table">
+										<span class="table__caption">Печать на Оргстекле, акриле, поликарбонате + слой белым от 870 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 1040 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 930 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 870 руб.</span>
+										</div>
+
+										<span class="table__caption">Оргстекле, акриле, поликарбонате только белым</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 740 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 630 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 570 руб.</span>
+										</div>
+
+										<span class="table__caption">На самоклеящейся пленке + слой белым</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 850 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 830 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 800 руб.</span>
+										</div>
+
+										<span class="table__caption">На самоклеящейся пленке только белым от 450 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 600 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 450 руб.</span>
+										</div>
+										
+										<span class="table__caption">На стекле, зеркале + слой белым</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 2500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 2100 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1700 руб.</span>
+										</div>
+
+										<span class="table__caption">На стекле, зеркале только белым</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 1800 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 1500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1300 руб.</span>
+										</div>
+
+										<span class="table__caption">На дереве МДФ, ДВП, ДСП + слой белым</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 1800 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 1500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1300 руб.</span>
+										</div>
+
+										<span class="table__caption">На дереве МДФ, ДВП, ДСП только белым</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 1500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 1200 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1000 руб.</span>
+										</div>
+
+										<span class="col__name col__name_pt">Наши работы</span>
+										<div class="col__slider col__slider_zero">
+											<div class="col__slide">
+												<a href="img/section_one/services/whitewash/item1.jpg"  class="mfp-gallery"><img src="img/section_one/services/whitewash/item1.jpg" alt="item1" class="col__images"></a>
+												
+												<span class="col__nm">Печать белилами</span>
+											</div>
+											<div class="col__slide">
+												<a href="img/section_one/services/whitewash/item2.jpg" class="mfp-gallery"><img src="img/section_one/services/whitewash/item2.jpg" alt="item2" class="col__images"></a>
+					
+												<span class="col__nm">Печать белилами</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__form">
+					<div class="services__info" id="services__form1">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">УФ печать на стекле</span>
+									<span class="col__price">от 1300 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1800 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1300 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">УФ печать на стекле</span>
+									<p class="col__text col__text_pb">Ультрафиолетовая печать – современная технология прямой печати на стекле и других
+										гладких ровных поверхностях. Рисунок при этом наносят прямо на стекло, в отличие от альтернативного метода – нанесения тонкой плёнки накатом.
+										Изображение на пленке бледнеет под влиянием ультрафиолетовых лучей, края начинают отслаиваться. А если качество накатки было не лучшим, картину
+										дополняют пузыри воздуха, попавшего под плёнку.
+									</p>
+									<p class="col__text">При технологии широкоформатной УФ-печати пленка «запечатывается» под воздействием ультрафиолетовых лучей.
+										Она получается плотной и красочной, а само изображение – сочным, чётким (разрешением 1440 dpi), устойчивым к солнечным лучам и
+										механическим повреждениям.
+									</p>
+									<p class="col__text col__text_pb">Печать происходит на базе цветовой модели CMYKLcLm+W. С помощью такого оборудования мы можем не только точно
+										передавать цвета и оттенки, но и создавать различные визуальные эффекты при печати на стекле. Например, используя белила,
+										можно добиваться визуальной объёмности изображения: одни предметы остаются на заднем плане, а другие выдвигаются на передний.
+										А 100-процентная запечатка с использованием белил делает цвета яркими и непрозрачными. Экспериментируя с эффектом объема,
+										перспективы и другими художественными приёмами, наши дизайнеры создают эксклюзивные вещи.
+									</p>
+									<span class="col__name col__name_pt">Наши работы</span>
+								</div>
+								
+								<div class="col__slider col__slider_one">
+									<div class="col__slide">
+											<a href="img/section_one/services/glass/open1.jpg"  class="mfp-gallery"><img src="img/section_one/services/glass/item1.jpg" alt="item1" class="col__images"></a>
+											<span class="col__nm">Настенные декоративные панно с фотопечатью по эскизам заказчика</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open2.jpg"  class="mfp-gallery"><img src="img/section_one/services/glass/item2.jpg" alt="item2" class="col__images"></a>
+										<span class="col__nm">Настенные декоративные панно с фотопечатью по эскизам заказчика</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open3.jpg"  class="mfp-gallery"><img src="img/section_one/services/glass/item3.jpg" alt="item1" class="col__images"></a>
+										<span class="col__nm">Настенные декоративные панно с фотопечатью по эскизам заказчика</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open4.JPG"  class="mfp-gallery"><img src="img/section_one/services/glass/item4.JPG" alt="item2" class="col__images"></a>
+										<span class="col__nm">Фотопечать на стекле на лицевой поверхности дизайнерских полотенцесушителей Samvalini. Современная технология уф-печати позволяет передовать сложные фактуры камня(малахит, оникс), создавать эффект 3D изображения.</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open5.jpg"  class="mfp-gallery"><img src="img/section_one/services/glass/item5.jpg" alt="item2" class="col__images"></a>
+										<span class="col__nm">Уф-печать по эскизу заказчика на столешнице из закаленного стекла.</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open6.JPG"  class="mfp-gallery"><img src="img/section_one/services/glass/item6.JPG" alt="item2" class="col__images"></a>
+										<span class="col__nm">Уф-печать на деталях и изделиях сложной формы, изготовленных по индивидуальным заказам.</span>
+										
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open7.jpg"  class="mfp-gallery"><img src="img/section_one/services/glass/item7.jpg" alt="item2" class="col__images"></a>
+										<span class="col__nm">Настенные декоративные панно с фотопечатью по эскизам заказчиак</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open8.jpg"  class="mfp-gallery"><img src="img/section_one/services/glass/item8.jpg" alt="item2" class="col__images"></a>
+										<span class="col__nm">Перегородка из закаленного стекла с уф-печатью. Душевая в гостиничном номере.</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open9.jpg"  class="mfp-gallery"><img src="img/section_one/services/glass/item9.jpg" alt="item2" class="col__images"></a>
+										<span class="col__nm">Настенные декоративные панно с фотопечатью по эскизам заказчика</span>
+									</div>
+								</div>
+								<a href="https://youtu.be/WBy4bNKm8V4" class="watch">Смотреть видео</a>
+								<div class="col__box">
+									<span class="col__name col__name_pt">Где применяют печать на стекле</span>
+									<p class="col__text">В нашей жизни стекло используется повсеместно: в интерьере жилых, торговых и офисных помещений, при оформлении выставочных комплексов.
+										Достаточно оглядеться по сторонам, чтобы обнаружить изделия из стекла:
+									</p>
+									<ul class="col__list">
+										<li class="col__li"><span class="col__sp">витражи,</span></li>
+										<li class="col__li"><span class="col__sp">рамки для фотографий,</span></li>
+										<li class="col__li"><span class="col__sp">стеклянные детали шкафов, стеллажей и другой мебели,</span></li>
+										<li class="col__li"><span class="col__sp">стеклянные перегородки и двери,</span></li>
+										<li class="col__li"><span class="col__sp">скинали (декоративные панели-фартуки для кухни),</span></li>
+										<li class="col__li"><span class="col__sp">информационные стенды, таблички,</span></li>
+										<li class="col__li"><span class="col__sp">столешницы, отдельные элементы полок и стеллажей,</span></li>
+										<li class="col__li"><span class="col__sp">выставочные стенды.</span></li>
+									</ul>
+									<span class="col__name col__name_pdd">Технология прямой печати на стекле</span>
+									<p class="col__text col__text_pb">Используя метод прямой УФ-печати на стекле, мы получаем красочное, яркое и чёткое изображение с безупречной передачей цвета.
+										Технология позволяет воспроизводить на гладкой поверхности мельчайшие детали исходного изображения. Рисунок содержит мелкие надписи?
+										Они останутся читабельными после печати, а изображение будет иметь чёткие и ровные края.
+									</p>
+									<p class="col__text">С нашими консультантами можно связаться по телефону, указанному на сайте. Мы не только ответим на вопросы о расценках,
+										но и проконсультируем вас по интересующим вопросам, поможем в подготовке макета, выборе подходящего изображения и т.д.
+									</p>
+									<span class="col__name col__name_pdd">Изящество и лёгкость</span>
+									<p class="col__text">Так как стекло – один из самых распространённых дизайнерских материалов, качественная печать по стеклу
+										имеет самое широкое применение. Придавая пространству лёгкость и изысканность, оно предоставляет массу возможностей для дизайнерских идей.
+										Мы работаем с печатью на обычном и закалённом стекле, наносим изображение по желанию заказчика на одну или обе стороны.
+									</p>
+									<div class="table">
+										<span class="table__caption">Цены на печать на стекле от 1300 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 1800 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 1500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1300 руб.</span>
+										</div>
+
+										<span class="table__caption">Печать на стекле + слой белым от 1700 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 2500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 2100 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1700 руб.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__form">
+					<div class="services__info" id="services__form2">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">УФ печать на зеркале</span>
+									<span class="col__price">от 1300 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1800 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1300 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">УФ печать на зеркале</span>
+									<p class="col__text col__text_pb">Печать на зеркале – тренд современного дизайна. Зеркала сами по себе являются украшением интерьера, привнося в него
+										перспективу и игру света. Отражая солнечные лучи, зеркала способны сделать помещение более освещённым. Зеркала применяют и как самостоятельные предметы
+										интерьера, и как декоративный элемент в конструкции мебели, люстр, потолка. Зеркала универсальны: интерьеру, стилизованному под старину, они придадут
+										аристократически шик, а помещению в стиле хайтек – лоск современности.
+									</p>
+									<p class="col__text">Технология прямой печати на зеркале – находка для дизайна. Красочные, чёткие, контрастные рисунки способны превратить зеркало в
+										произведение искусства. Изображение не растекается и не пузырится, имеет чёткие контуры, а разрешение 1440 dpi делает его очень реалистичным.
+										Качество такой картинки не отличается от фотографии, распечатанной хорошим принтером. Причём изображение будет не просто эстетичным, но и долговечным,
+										устойчивым к свету и влаге. Зеркало можно протирать водой с мылом без вреда для краски.
+									</p>
+									<span class="col__name col__name_pt">Наши работы</span>
+								</div>
+								
+								<div class="col__slider col__slider_two">
+									<div class="col__slide">
+										<a href="img/section_one/services/mirror/open1.jpg"  class="mfp-gallery"><img src="img/section_one/services/mirror/item1.jpg" alt="item1" class="col__images"></a>
+										<span class="col__nm">Уф-печать с белилами + CMYK на зеркальных поверхностях</span>
+									</div>
+								</div>
+								<div class="col__box">
+									<span class="col__name col__name_pt">Отличия фотографической уф-печати от других методов</span>
+									<p class="col__text">Существует несколько способов печати на зеркале. Альтернатива УФ-печати – техника, при которой изображение сначала
+										распечатывается на плёнку, а после накатывается на материал. Но эта технология проигрывает прямой ультрафиолетовой печати: краска
+										выцветает, края плёнки начинают облезать.
+									</p>
+									<ul class="col__list">
+										<li class="col__li"><span class="col__sp">При прямой печати краска не соскабливается и не шелушится, а её цвета остаются яркими.</span></li>
+										<li class="col__li"><span class="col__sp">Зеркало можно протирать мыльной водой</span></li>
+										<li class="col__li"><span class="col__sp">Принтер УФ-печати, который мы используем в своей работе, не повреждает гладкую поверхность зеркала и сохраняет его отражающие свойства.</span></li>
+										<li class="col__li"><span class="col__sp">Краска не боится солнечных лучей и перепада температур, поэтому такое зеркало подходит для использования на улице или при оформлении витрины.</span></li>
+									</ul>
+									<p class="col__text col__text_pb">Ещё одно большое преимущество такого метода – возможность использовать при печати белила.
+										А это даёт простор для всевозможных дизайнерских эффектов. Добиться получения того или иного эффекта позволяют разные способы нанесения
+										ультрафиолетовой печати на поверхность зеркала:
+									</p>
+									<ul class="col__list">
+										<li class="col__lis col__lis_one"><span class="col__sp">Изображение печатается без использования белил, в один проход.
+											Результат напоминает витражные окна: краски яркие, глянцевые, полупрозрачные.</span>
+										</li>
+										<li class="col__lis col__lis_two"><span class="col__sp">Первым слоем наносят белила, после – цветные краски.
+											Изображение получается более плотным, насыщенным.</span>
+										</li>
+										<li class="col__lis col__lis_three"><span class="col__sp">Можно совместить два эти способа в одном изображении, чередуя
+											полупрозрачные и плотные участки, чтобы расставить акценты. Например, на фоне рисунка, нанесенного одним слоем краски,
+											выделяется непрозрачный логотип, начертанный с использованием белил.</span>
+										</li>
+									</ul>
+									<p class="col__text col__text_pdd">Эти методы нанесения краски и их компоновка способны превратить зеркало из
+										обычного бытового предмета в роскошное украшение интерьера или инструмент продвижения бренда.
+									</p>
+									<p class="col__text col__text_pb">В своей работе мы используем принтеры с шириной печатного поля 2,5 метра,
+										а это значит, что в отличие от многих конкурентов, мы сможем нанести на поверхность рисунок большого формата с минимальным количеством стыков.
+									</p>
+									<div class="table">
+										<span class="table__caption">Цены на печать на зеркале от 1300 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 1800 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 1500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1300 руб.</span>
+										</div>
+
+										<span class="table__caption">Печать на зеркале + слой белым от 1700 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 2500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 2100 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1700 руб.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__form">
+					<div class="services__info" id="services__form3">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">УФ печать на металле</span>
+									<span class="col__price">от 1300 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1800 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1300 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">УФ печать на металле</span>
+									<p class="col__text col__text_pb">УФ-печать на металле – технология, которая применяется для изготовления рекламных конструкций, в декорировании частных и коммерческих интерьеров, создании уличных
+										носителей (в том числе табличек и вывесок), стоек на выставках, а также в сувенирной продукции и оформлении дипломов.
+									</p>
+									<p class="col__text">Наша компания специализируется на данном виде печати и гарантирует создание высококачественных изображений за счет использования современных принтеров,
+										обеспечивающих полноцветную УФ-печать на металле.
+									</p>
+									<span class="col__name col__name_pt">Наши работы</span>
+								</div>
+								
+								<div class="col__slider col__slider_three">
+									<div class="col__slide">
+										<a href="img/section_one/services/metal/open1.JPG"  class="mfp-gallery"><img src="img/section_one/services/metal/item1.JPG" alt="item1" class="col__images"></a>
+										<span class="col__nm">Уф-печать на шлифованном анодированном алюминии. Высокое качество печати позволяет
+										передать пастельные оттенки пейзажа, плавные переходы тонов и сохранить особенность фактурного металла.</span>
+									</div>
+								</div>
+								<div class="col__box">
+									<span class="col__name col__name_pt">Отличительные особенности УФ-печати на металле</span>
+									<p class="col__text">УФ-печать – универсальный метод нанесения графического изображения на металл,
+										который позволяет выполнять проекты любой сложности. К числу основных достоинств этого способа стоит отнести следующие:
+									</p>
+									<ul class="col__list">
+										<li class="col__li"><span class="col__sp">современные технологии нанесения изображения на металл позволяют добиваться
+											превосходного качества и первоклассной цветопередачи;</span>
+										</li>
+										<li class="col__li"><span class="col__sp">металлическая основа идеально подходит для производства рекламных и имиджевых
+											конструкций за счет более привлекательного внешнего вида по сравнению с пластиком;</span>
+										</li>
+										<li class="col__li"><span class="col__sp">металлический носитель оптимален для нанесения логотипов и надписей, а также
+											отлично подходит для оформления интерьера;</span>
+										</li>
+										<li class="col__li"><span class="col__sp">конструкция из металла отличается высокой устойчивостью к внешним воздействиям и повреждениям;</span>
+										</li>
+									</ul>
+									<span class="col__name col__name_pt">Где применятся УФ-печать на металле:</span>
+									<p class="col__text">УФ-печать на металле – успешно зарекомендовавший себя способ, который подходит для
+										изготовления самых разных конструкций, в числе которых:
+									</p>
+									<ul class="col__list">
+										<li class="col__li"><span class="col__sp">фасады зданий,</span></li>
+										<li class="col__li"><span class="col__sp">предметы интерьера,</span></li>
+										<li class="col__li"><span class="col__sp">рекламные стенды,</span></li>
+										<li class="col__li"><span class="col__sp">таблички,</span></li>
+										<li class="col__li"><span class="col__sp">уличные вывески,</span></li>
+										<li class="col__li"><span class="col__sp">сувенирная продукция,</span></li>
+										<li class="col__li"><span class="col__sp">уличные фонари,</span></li>
+										<li class="col__li"><span class="col__sp">мебель для улицы.</span></li>
+									</ul>
+									<span class="col__name col__name_pdt">Преимущества УФ-печати на металле:</span>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">эстетичность,</span></li>
+										<li class="col__li"><span class="col__sp">износоустойчивость,</span></li>
+										<li class="col__li"><span class="col__sp">долговечность надписи.</span></li>
+									</ul>
+									<p class="col__text col__text_pb">С помощью данного способа нанесения изображения вы сможете создать рекламные и
+										имиджевые конструкции любой сложности, которые сохранят безукоризненный внешний вид на протяжении многих лет.
+									</p>
+									<p class="col__text col__text_pb">Получите подробную консультацию и узнайте стоимость работы, связавшись с нами по
+										телефону, указанному на сайте.
+									</p>
+									<div class="table">
+										<span class="table__caption">Цены на печать на металле от 1300 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 1800 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 1500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1300 руб.</span>
+										</div>
+
+										<span class="table__caption">Печать на металле + слой белым от 1700 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 2500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 2100 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1700 руб.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="services__form">
+					<div class="services__info" id="services__form4">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">УФ печать на акриле и орстекле</span>
+									<span class="col__price">от 1300 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1800 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1300 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">УФ печать на пвх, акриле, оргстекле</span>
+									<p class="col__text col__text_pb">Технология ультрафиолетовой печати возникла на рынке полиграфических услуг
+										относительно недавно, но уже приобрела известность. УФ печать на оргстекле — способ
+										сделать этот универсальный материал ярким и выразительным. Это открывает большие
+										возможности для дизайна интерьеров, оформления витрин, изготовления перегородок и
+										других конструкций.
+									</p>
+									<p class="col__text col__text_pb">Наша компания предлагает фотографическое качество печати на акриловом стекле: 1440 dpi!
+										Высокотехнологичный метод прямой печати создаёт на поверхности прочную, плотную цветную плёнку.
+										Эта плёнка может быть полупрозрачной, тогда стекло будет напоминать витраж, или непрозрачной.
+										Чтобы добиться этого, на стекло наносят слой белил, а поверх них рисунок.</p>
+									<p class="col__text col__text_pb">Оргстекло – это синтетический полимер. Благодаря прочности, лёгкости и недорогой цене
+										он используется весьма широко:
+									</p>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">в дизайне жилых интерьеров,</span></li>
+										<li class="col__li"><span class="col__sp">в осветительной технике,</span></li>
+										<li class="col__li"><span class="col__sp">как материал для офисных перегородок,</span></li>
+										<li class="col__li"><span class="col__sp">в производстве автомобилей,</span></li>
+										<li class="col__li"><span class="col__sp">при создании аквариумов,</span></li>
+										<li class="col__li"><span class="col__sp">в остеклении транспорта,</span></li>
+										<li class="col__li"><span class="col__sp">при производстве мебели и бытовых аксессуаров (полок, журнальных столиков, рамок и т.д.)</span></li>
+									</ul>
+								</div>
+								<span class="col__name col__name_pt">Наши работы</span>
+								<div class="col__slider col__slider_four">
+									<div class="col__slide">
+										<a href="img/section_one/services/acrylic/open1.JPG"  class="mfp-gallery"><img src="img/section_one/services/acrylic/item1.JPG" alt="item1" class="col__images"></a>
+										<span class="col__nm">Печать на ПВХ, акриле и других полимерных материалах</span>
+									</div>
+								</div>
+								<div class="col__box">
+									<p class="col__text col__text_pb col__text_pt">Уф-печать способа преобразить стандартное изделие из оргстекла. Например, превратить
+										перегородку в яркий витраж, преломляющий солнечные лучи сквозь сочные оттенки цвета. Даже обычная дверь в офис компании может стать
+										ярким рекламным средством.
+									</p>
+									<p class="col__text">Таким образом можно преобразить дизайн жилого помещения, офиса или торгового зала, гостиницы или ресторана.
+										Методом прямой печати можно нанести на двери и перегородки логотип, название компании, слоган и другую информацию.
+									</p>
+									<span class="col__name col__name_pdd">Где применяют печать на акриле</span>
+									<p class="col__text">Метод печати на оргстекле служит для оформления разнообразных конструкций, в числе которых:
+									</p>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">информационные материалы,</span></li>
+										<li class="col__li"><span class="col__sp">панно и модульные картины,</span></li>
+										<li class="col__li"><span class="col__sp">интерьерные перегородки,</span></li>
+										<li class="col__li"><span class="col__sp">осветительная техника,</span></li>
+										<li class="col__li"><span class="col__sp">лайтбоксы,</span></li>
+										<li class="col__li"><span class="col__sp">рекламные инсталляции,</span></li>
+										<li class="col__li"><span class="col__sp">вывески на дверях руководителей.</span></li>
+									</ul>
+									<p class="col__text">При прямом методе УФ-печати чернила моментально застывают на поверхности акрилового стекла
+										под воздействием ультрафиолетовых лучей. А это открывает большие возможности для воплощения самых необычных
+										дизайнерских идей. Особенно эффектно, ярко и стильно выглядят рекламные композиции, оформленные с помощью этой
+										технологии: выставочные стенды, места продаж, POSM-конструкции.
+									</p>
+									<span class="col__name col__name_pdd">Технология печати на оргстекле: преимущества</span>
+									<p class="col__text">Уф-печать не позволяет краске впитываться в поверхность, надёжно закрепляя её на
+										материале. В результате вы получаете:
+									</p>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">яркое изображение с чистыми цветами;</span></li>
+										<li class="col__li"><span class="col__sp">плавные переходы оттенков;</span></li>
+										<li class="col__li"><span class="col__sp">фотографическое качество: на принте будут хорошо просматриваться даже мельчайшие детали;</span></li>
+										<li class="col__li"><span class="col__sp">отличную читабельность надписей, в том числе мелких;</span></li>
+										<li class="col__li"><span class="col__sp">в сочетании с подсветкой – хорошая светопроницаемость.</span></li>
+									</ul>
+									<div class="table">
+										<span class="table__caption">Печать на оргстекле, акриле от 570 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 740 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 630 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 570 руб.</span>
+										</div>
+
+										<span class="table__caption">Печать на оргстекле, акриле + слой белым от 870 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 1040 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 930 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 870 руб.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="services__form">
+					<div class="services__info" id="services__form5">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">УФ печать на МДФ</span>
+									<span class="col__price">от 1000 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1200 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1000 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">Печать на ДСП, ЛДСП, МДФ</span>
+									<p class="col__text col__text_pb">Прогресс сделал нашу жизнь удобнее, но окружил бетоном и пластиком. Люди начинают уставать от практичных,
+										но холодных «высокотехнологичных» материалов. Для офисов, а тем более собственных домов, мы стараемся приобретать натуральные, экологичные
+										материалы. Технология ультрафиолетовой печати способна сделать из них украшение интерьера не в ущерб вашему здоровью.
+									</p>
+									<span class="col__name">Своим клиентам мы предлагаем печать на разнообразных материалах, в том числе:</span>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">На ДСП – этот материал из древесных стружек и опилок, обладает хорошей прочностью.</span></li>
+										<li class="col__li"><span class="col__sp">На МДФ – плита из мелких древесных стружек, спрессованных при высоком давлении.</span></li>
+										<li class="col__li"><span class="col__sp">На ЛДСП – эта древесная плита более устойчива к повышенной влажности, так как покрыта специальной защитной плёнкой.</span></li>
+										<li class="col__li"><span class="col__sp">На шпоне, фанере, ламинате, паркете, деревянных дверях, столешницах и других поверхностях.</span></li>
+									</ul>
+									<p class="col__text col__text_pb">Дерево – непростой материал. Он может быть «капризным» и сложным в работе, как и всё
+										природное. Волокнистая фактура дерева – его преимущество, которое обязательно следует
+										сохранить при обработке. Наш метод прямой УФ-печати сохраняет и подчёркивает
+										фактуру дерева, его естественную красоту. При этом мы способны нанести на
+										поверхность изображение с яркими оттенками и чёткими контурами.
+									</p>
+									<p class="col__text">Под воздействием ультрафиолетовых лучей специальные чернила проникают в структуру
+										волокон. Дерево при этом не повреждается, зато краска прочно запечатывается в материале.
+									</p>
+									<span class="col__name col__name_pt">Наши работы</span>
+								</div>
+								
+								<div class="col__slider col__slider_five">
+									<div class="col__slide">
+										<a href="img/section_one/services/mdf/open1.jpg"  class="mfp-gallery"><img src="img/section_one/services/mdf/item1.jpg" alt="item1" class="col__images"></a>
+										<span class="col__nm">Уф-печать на МДФ - рекламно-выставочная конструкция. Габаритные размеры 2000 мм х 2500 мм.</span>
+									</div>
+								</div>
+								<div class="col__box">
+									<span class="col__name col__name_pt">Основные преимущества УФ-печати:</span>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">Несмотря на исходный цвет материала, такой метод печати позволяет получить
+											яркие, чистые, контрастные цвета.</span>
+										</li>
+										<li class="col__li"><span class="col__sp">Изображение выглядит, словно качественная фотография.</span></li>
+										<li class="col__li"><span class="col__sp">Поверхность с рисунком можно мыть и чистить с использованием моющих средств.</span></li>
+										<li class="col__li"><span class="col__sp">Результат УФ-печати не выцветает; не бликует и не отслаивается.</span></li>
+										<li class="col__li"><span class="col__sp">Услуга печати стоит недорого, зато дерево с полноцветным рисунком выглядит очень презентабельно.</span></li>
+									</ul>
+									<span class="col__name">УФ печать на дереве рекламных материалов</span>
+									<p class="col__text col__text_pb">В маркетинге происходит постоянный поиск рекламных носителей, которые выглядели
+										бы презентабельно и ярко, а их производство не требовало бы больших вложений. УФ-
+										печать на дереве – возможности для такой эффектной и недорогой рекламы.
+									</p>
+									<p class="col__text">Стеллаж или стенд из дерева привлекают своей натуральностью, красотой природных фактур.
+										Этот материал достаточно прочен, несложен в обработке, из него можно изготовить рекламный носитель любой формы.
+									</p>
+									<span class="col__name col__name_pt">Существует два способа нанесения на дерево краски при помощи УФ-печати:</span>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">В один слой. Готовое изображение получается полупрозрачным, сквозь краску
+											можно рассмотреть фактуру деревянной поверхности. Чаще всего такой метод
+											используют при декоре предметов интерьера.</span>
+										</li>
+										<li class="col__li"><span class="col__sp">В два слоя. Цвета на рекламном носителе должны быть яркими, а изображение
+											контрастным и броским. Поэтому при изготовлении рекламных материалов, на их поверхность сначала наносят слой краски
+											белого цвета. Вторым слоем наносится само изображение.</span>
+										</li>
+									</ul>
+									<p class="col__text col__text_pb">Крашеный МДФ – недорогой материал, служащий для изготовления POSM-конструкций.
+										К их категории относятся напольные или прилавочные стенды, стеллажи, стойки для листовок и т.д.
+										На них обычно наносят логотипы фирм и другую рекламную информацию. Лучший способ сделать это – УФ-печать.
+										Стенд с изображением, нанесённым по этой технологии, можно мыть с использованием чистящих средств, выставлять на улицу.
+										Ни перепады температур, ни солнечные лучи не повредят изображению.
+									</p>
+									<p class="col__text col__text_pb">Мы предлагаем качественную прямую УФ-печать в Москве. Наш широкоформатный
+										принтер имеет печатное поле 2х3 метра. Это позволяет печатать большие изображения без стыков.
+										Оценить примеры наших работ можно ниже, а узнать детали – по телефону.
+									</p>
+									<div class="table">
+										<span class="table__caption">Печать на дереве, МДФ, ДВП, ДСП от 1000 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 1500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 1200 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1000 руб.</span>
+										</div>
+
+										<span class="table__caption">Печать на дереве, МДФ, ДВП, ДСП + слой белым от 1 300 руб.</span>
+										<div class="table__string table__string_pt">
+											<span class="table__item">от 1кв.м</span>
+											<span class="table__item">от 1800 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 50кв.м</span>
+											<span class="table__item">от 1500 руб.</span>
+										</div>
+										<div class="table__string">
+											<span class="table__item">от 150кв.м</span>
+											<span class="table__item">от 1300 руб.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section_two" id="section_two">
+		<div class="section__body">
+			<div class="portfolio">
+				<div class="portfolio__item">
+					<span class="portfolio__about">наше портфолио</span>
+					<span class="line line_portfolio"></span>
+					<h3 class="portfolio__title">Просмотрите наши работы</h3>
+					<a href="#free" class="button button_portfolio">заказать расчет</a>
+				</div>
+				<div class="portfolio__item">
+					<img src="img/section_two/portfolio/item1.jpg" alt="item1" class="portfolio__img">
+					<span class="portfolio__watch">
+						<span class="portfolio__name portfolio__name_pdd"><span class="light">Стеновые</span><br> <span class="bold">панели</span></span>
+						<a href="#services__form6" class="button button_watch button_absolute button_one">смотреть</a>
+					</span>
+				</div>
+				<div class="portfolio__item">
+					<img src="img/section_two/portfolio/item2.jpg" alt="item2" class="portfolio__img">
+					<span class="portfolio__watch">
+						<span class="portfolio__name portfolio__name_pdd"><span class="light">Декоративные</span> <span class="bold">панно</span></span>
+						<a href="#services__form7" class="button button_watch button_absolute button_two">смотреть</a>
+					</span>
+				</div>
+				<div class="portfolio__item">
+					<img src="img/section_two/portfolio/item3.jpg" alt="item3" class="portfolio__img">
+					<span class="portfolio__watch">
+						<span class="portfolio__name portfolio__name_pdd"><span class="light">Двери</span><br> <span class="bold">и перегородки</span></span>
+						<a href="#services__form8" class="button button_watch button_absolute button_three">смотреть</a>
+					</span>
+				</div>
+				<div class="portfolio__item">
+					<img src="img/section_two/portfolio/item4.jpg" alt="item4" class="portfolio__img">
+					<span class="portfolio__watch">
+						<span class="portfolio__name portfolio__name_pdt"><span class="bold">Столешницы</span></span>
+						<a href="#services__form9" class="button button_watch button_absolute button_four">смотреть</a>
+					</span>
+				</div>
+				<div class="portfolio__item">
+					<img src="img/section_two/portfolio/item5.jpg" alt="item5" class="portfolio__img">
+					<span class="portfolio__watch">
+						<span class="portfolio__name portfolio__name_pdd"><span class="light">Скинали</span> <span class="bold"><br>и фартуки</span></span>
+						<a href="#services__form10" class="button button_watch button_absolute button_five">смотреть</a>
+					</span>
+				</div>
+				<div class="portfolio__item">
+					<img src="img/section_two/portfolio/item6.jpg" alt="item7" class="portfolio__img">
+					<span class="portfolio__watch">
+						<span class="portfolio__name portfolio__name_pt"><span class="light">Изделия по</span> <span class="bold">индивидуальным заказам</span></span>
+						<a href="#services__form11" class="button button_watch button_absolute button_six">смотреть</a>
+					</span>
+				</div>
+				<div class="portfolio__item">
+					<img src="img/section_two/portfolio/item7.jpg" alt="item7" class="portfolio__img">
+					<span class="portfolio__watch">
+						<span class="portfolio__name portfolio__name_pt"><span class="light">Имитация</span><br> <span class="bold">витража</span></span>
+						<a href="#services__form12" class="button button_watch button_absolute button_seven">смотреть</a>
+					</span>
+				</div>
+				<div class="services__form">
+					<div class="services__info" id="services__form6">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">Стеновые панели</span>
+									<span class="col__price">от 1000 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1200 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1000 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">Стеновые панели с уф-печатью</span>
+									<p class="col__text col__text_pb">Использование стеновых панелей с уф-печатью в качестве материала для финишной отделки помещений – практичный
+										и современный способ, который находит все более широкое применение как в коммерческом, так и в частном секторе. Он не требует
+										выравнивания стен до идеального состояния и позволяет легко и главное, быстро реализовать разнообразные декоративные решения.
+										Так в качестве материала для отделки может использоваться стекло, акрил, алюминиевые сотовые панели, МДФ, дерево и даже металл.
+										Выбор материала для отделки стен зависит от назначения помещения, а выбор декора от стилистических предпочтений заказчика.
+									</p>
+									<span class="col__name">Материал для отделки стен стеновыми панелями с уф-печатью:</span>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">стекло</span></li>
+										<li class="col__li"><span class="col__sp">зеркало</span></li>
+										<li class="col__li"><span class="col__sp">алюминиевые сотовые панели с отделкой из стекла, зеркала, различных видов металла, шпона и др. материалов в зависимости от особенностей и назначения помещения</span></li>
+										<li class="col__li"><span class="col__sp">декоративный алюминий и другие виды металла</span></li>
+										<li class="col__li"><span class="col__sp">оргстекло, акрил, ПВХ</span></li>
+										<li class="col__li"><span class="col__sp">дерево, МДФ, ДСП</span></li>
+									</ul>
+									<span class="col__name">Преимущества использования стеновых панелей с уф-печатью:</span>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">экономичность</span></li>
+										<li class="col__li"><span class="col__sp">простота монтажа</span></li>
+										<li class="col__li"><span class="col__sp">оперативность печати и, как следствие финишной отделки помещения</span></li>
+										<li class="col__li"><span class="col__sp">великое множество стилистических вариантов и декоративных возможностей</span></li>
+									</ul>
+									<span class="col__name">Наши работы</span>
+								</div>
+								
+							<div class="col__slider col__slider_six">
+									<div class="col__slide">
+										<a href="img/section_two/portfolio/wall/open1.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/wall/item1.jpg" alt="item" class="col__images"></a>
+										<span class="col__nm">УФ-печать на пленке. Остекление входных групп и лифтовых зон нового жилого комплекса.</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_two/portfolio/wall/open2.JPG" class="mfp-gallery"><img src="img/section_two/portfolio/wall/item2.JPG" alt="item" class="col__images"></a>
+										<span class="col__nm">УФ-печать на пленке. Остекление входных групп и лифтовых зон нового жилого комплекса.</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_two/portfolio/wall/open3.JPG" class="mfp-gallery"><img src="img/section_two/portfolio/wall/item3.JPG" alt="item" class="col__images"></a>
+										<span class="col__nm">УФ-печать на пленке. Остекление входных групп и лифтовых зон нового жилого комплекса.</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_two/portfolio/wall/open4.JPG" class="mfp-gallery"><img src="img/section_two/portfolio/wall/item4.JPG" alt="item" class="col__images"></a>
+										<span class="col__nm">УФ-печать на пленке. Остекление входных групп и лифтовых зон нового жилого комплекса.</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_two/portfolio/wall/open5.JPG" class="mfp-gallery"><img src="img/section_two/portfolio/wall/item6.JPG" alt="item" class="col__images"></a>
+										<span class="col__nm">УФ-печать на пленке. Остекление входных групп и лифтовых зон нового жилого комплекса.</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_two/portfolio/wall/open6.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/wall/item7.jpg" alt="item" class="col__images"></a>
+										<span class="col__nm">УФ-печать на пленке. Остекление входных групп и лифтовых зон нового жилого комплекса.</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_two/portfolio/wall/open7.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/wall/item8.jpg" alt="item" class="col__images"></a>
+										<span class="col__nm">УФ-печать на пленке. Остекление входных групп и лифтовых зон нового жилого комплекса.</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open1.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/wall/item9.jpg" alt="item" class="col__images"></a>
+										<span class="col__nm">Стеновые панели с уф-печатью</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open2.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/wall/item10.jpg" alt="item" class="col__images"></a>
+										<span class="col__nm">Стеновые панели с уф-печатью</span>
+									</div>
+									<div class="col__slide">
+										<a href="img/section_one/services/glass/open3.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/wall/item11.jpg" alt="item" class="col__images"></a>
+										<span class="col__nm">Стеновые панели с уф-печатью</span>
+									</div>
+								</div>
+								<div class="col__box">	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__form">
+					<div class="services__info" id="services__form7">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">Декоративные панно</span>
+									<span class="col__price">от 1000 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1200 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1000 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">Декоративные панно</span>
+									<p class="col__text col__text_pb">Настенное панно – простой способ сделать любое помещение уникальным, тем более что его легко изготовить
+										по собственному дизайну. Мы рекомендуем использовать технологию прямой ультрафиолетовой печати. Она не только позволяет точно передать
+										оттенки и их переходы, но и сделает изображение очень устойчивым. Такое панно выдержит солнечные лучи и высокую влажность,
+										потому его можно будет повесить даже в такое помещение, где нельзя разместить обычную картину.
+									</p>
+									<p class="col__text col__text_pb">Краска, запечатанная ультрафиолетовыми лучами, не облезает, не пузырится, а цвета не теряют яркость с течением
+										времени. Панно способно украсить и жилое, и офисное помещение. Красивое панно сделает уютнее гостиничный номер и разрядит строгую обстановку
+										рабочего офиса.
+									</p>
+									<p class="col__text col__text_pb">С помощью панно легко расставить акценты в интерьере, «освежить» его восприятие, добавить в помещение изюминку.
+										Огромный плюс панно в том, что они способны вписаться в интерьер любого стиля – в зависимости от нанесённого на них изображения.
+										Например, настенная композиция с любимыми сказочными персонажами ребёнка украсит детскую комнату. Панно с японским пейзажем разнообразит
+										лаконичный интерьер в восточном стиле, не терпящий излишеств в декоре. Милое панно с фотоколлажем будет напоминать о радостных моментах жизни:
+										его можно повесить в спальне, чтобы получать заряд бодрости с самого утра. А ещё панно во всю стену – оригинальный способ скрыть все её неровности и недостатки!
+									</p>
+									<span class="col__name">Преимущества технологии ультрафиолетовой печати</span>
+									<p class="col__text col__text_pb">Мы используем широкоформатные принтеры прямой ультрафиолетовой печати. Наша техника позволяет распечатать
+										любое изображение на любом плоском листовом материале: стекле, оргстекле, дереве, пластике. Дизайн мы спроектируем по вашим идеям или
+										распечатаем выбранное вами изображение. Это может быть фоторепродукция полотна вашего любимого художника, цветная или чёрно-белая фотография,
+										вызывающий вдохновение пейзаж, мозаичная картина или ваш собственный эскиз. Полёт вашей фантазии ничем не ограничен!
+										Главное, чтобы выбранное вами изображение было хорошего качества и имело высокое разрешение.
+									</p>
+									<p class="col__text col__text_pb">В результате вы получите эксклюзивную вещь, которую невозможно найти в продаже, ведь панно будет изготовлено
+										по индивидуальным размерам, на выбранном вами материале и с неповторимым дизайном. Такая вещь будет украшать ваш интерьер долгие
+										годы, не боясь царапин и солнечных лучей. Краска не боится воды, она не имеет неприятного запаха и безопасна для здоровья.
+									</p>
+									<p class="col__text">Хотите сделать ваш дом особенным? Изготовьте декоративное панно по уникальной технологии ультрафиолетовой печати!
+									</p>
+									<span class="col__name col__name_pt">Наши работы</span>
+									<div class="col__slider col__slider_seven">
+										<div class="col__slide">
+											<a href="img/section_one/services/glass/open9.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/panel/item1.jpg" alt="item" class="col__images"></a>
+											<span class="col__nm">Настенные декоративные панно с фотопечатью по эскизам заказчика</span>
+										</div>
+										<div class="col__slide">
+											<a href="img/section_one/services/glass/open7.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/panel/item2.jpg" alt="item" class="col__images"></a>
+											<span class="col__nm">Настенные декоративные панно с фотопечатью по эскизам заказчика</span>
+										</div>
+										<div class="col__slide">
+											<a href="img/section_one/services/glass/open3.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/panel/item3.jpg" alt="item" class="col__images"></a>
+											<span class="col__nm">Настенные декоративные панно с фотопечатью по эскизам заказчика</span>
+										</div>
+										<div class="col__slide">
+											<a href="img/section_one/services/glass/open2.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/panel/item4.jpg" alt="item" class="col__images"></a>
+											<span class="col__nm">Настенные декоративные панно с фотопечатью по эскизам заказчика</span>
+										</div>
+										<div class="col__slide">
+											<a href="img/section_one/services/glass/open1.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/panel/item5.jpg" alt="item" class="col__images"></a>
+											<span class="col__nm">Настенные декоративные панно с фотопечатью по эскизам заказчика</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__form">
+					<div class="services__info" id="services__form8">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">Двери</span>
+									<span class="col__price">от 1000 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1200 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1000 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">Межкомнатные перегородки и стеклянные двери с фотопечатью на заказ</span>
+									<p class="col__text col__text_pb">Стекло – красивейший материал, а современные технологии способны сделать его ещё и довольно прочным.
+										Дизайнеры очень любят работать со стеклом: оно не мешает солнечному свету, привносит в интерьер воздушность и изящество, наполняя его бликами.
+										Стеклянные двери визуально делают помещение больше. По сравнению с деревянными, они служат дольше, легко моются, не царапаются, не истираются.
+										Печать на стекле способна сделать из этого чисто функционального предмета произведение искусства. Вы можете выбрать любое изображение,
+										сделав интерьер неповторимым.
+									</p>
+									<p class="col__text col__text_pb">Среди услуг нашей компании – изготовление «под ключ» офисных и межкомнатных стеклянных дверей с фотопечатью.
+										Замерщик приедет к вам в офис или на дом, по индивидуальным размерам мы изготовим дверь из двойного закалённого стекла, скреплённого металлическим профилем.
+										Далее мы разработаем макет печати. После того как заказчик остаётся полностью доволен дизайном, мы нанесём изображение на стеклянную поверхность – на одну
+										или обе стороны. Изображение наносится методом прямой уф-печати, что делает его ярким, прочным, долговечным. Тончайшая цветная плёнка на поверхности стекла
+										«запечатывается» ульрафиолтовыми лучами, поэтому она не отслаивается и не соскабливается.
+									</p>
+									<p class="col__text col__text_pb">Краски выглядят глянцево-прозрачными, словно витражные окна. При этом стекло продолжает пропускать свет,
+										если только вы не захотите использовать белила, чтобы сделать изображение непрозрачным, более плотным. В этом случае белила наносятся под 
+										изображение как грунт, и принт получается более ярким, плотным, с чистыми сочными оттенками.
+									</p>
+									<p class="col__text">Мы можем нанести на поверхность двери ваше изображение или разработать дизайн с нуля.
+									</p>
+									<span class="col__name col__name_pt">Наши работы</span>
+									<div class="col__slider col__slider_eight">
+										<div class="col__slide">
+											<a href="img/section_one/services/glass/open8.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/door/item1.jpg" alt="item" class="col__images"></a>
+											<span class="col__nm">Перегородка из закаленного стекла с уф-печатью. Душевая в гостиничном номере.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__form">
+					<div class="services__info" id="services__form9">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">Столешницы</span>
+									<span class="col__price">от 1000 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1200 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1000 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">Столешницы</span>
+									<p class="col__text col__text_pb">Стекло – универсальный материал, который благодаря своей легкости и изяществу активно используется дизайнерами в интерьере.
+										Оно идеально смотрится в сочетании с самыми различными материалами, включая дерево, металл, пластик и т.д.
+									</p>
+									<p class="col__text col__text_pb">Наша компания предлагает уникальный способ УФ-печати на столешнице из стекла. Преимущество данного способа заключается в том,
+										что на стеклянную поверхность можно нанести абсолютно любое изображение, в том числе имитирующее текстуру дерева или фактуру камня
+										(мрамора, оникса, малахита и др.). Более того, самые смелые декораторы используют УФ-печать по стеклу для нанесения рисунка в виде бетонной
+										поверхности и даже ржавчины. Такой вариант идеально впишется в интерьер в лофтовом стиле.
+									</p>
+									<p class="col__text col__text_pb">Мы изготавливаем стеклянные столешницы для журнальных, обеденных и рабочих столов методом УФ-печати по эскизам заказчика,
+										а также готовы помочь нашим клиентам определиться в выборе стильной фактуры, которая украсит интерьер частного дома или офиса, оформленного в фирменном стиле компании.
+									</p>
+									<p class="col__text">Свяжитесь с нашим представителем уже сегодня, чтобы получить подробную консультацию и согласовать эскиз будущего изделия.
+									</p>
+									<span class="col__name col__name_pt">Наши работы</span>
+									<div class="col__slider col__slider_nine">
+										<div class="col__slide">
+											<a href="img/section_one/services/glass/open5.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/countertops/item1.jpg" alt="item" class="col__images"></a>
+											<span class="col__nm">Уф-печать по эскизу заказчика на столешнице из закаленного стекла.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__form">
+					<div class="services__info" id="services__form10">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">Скинали и фартуки</span>
+									<span class="col__price">от 1000 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1200 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1000 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">Скинали и фартуки с печатью</span>
+									<p class="col__text col__text_pb">Скинали, или кухонные фартуки – это панели, которые располагают вдоль кухонной рабочей зоны.
+										Они защищают стены от влаги, брызг жира и грязи. Такие панели делают готовку гораздо более удобной, хорошо вписываются в интерьер любого стиля, быстро
+										устанавливаются и легки в уходе. Достаточно протереть их тряпкой, смоченной мыльной водой, и они вновь наполняют помещение сияющими отблесками.
+									</p>
+									<p class="col__text col__text_pb">Ещё один плюс кухонных фартуков в том, что их дизайн легко оформить по собственной задумке, привнеся изюминку в интерьер
+										кухни. Так скинали будут выполнять и защитную, и декоративную функцию.
+									</p>
+									<p class="col__text col__text_pb">Фотопечать – самый простой и недорогой способ воплотить дизайнерскую идею, поэтому кухонные фартуки с принтами всё чаще можно
+										увидеть в современных жилищах. Печать не влияет на защитные свойства скинали: краска не облезает, не стирается, не пузырится. Цвета долго сохраняют яркость, а кухня – свой неповторимый стиль.
+									</p>
+									<p class="col__text">Скинали делают из нескольких типов материалов: стекло, пластик, оргстекло, МДФ. Наша техника позволяет нанести устойчивое,
+										яркое и долговечное изображение на любой из них, но каждый материал будет иметь свои особенности:
+									</p>
+									<ul class="col__list">
+										<li class="col__li"><span class="col__sp">Стекло.</span></li>
+									</ul>
+									<p class="col__text">Стекло – один из самых популярных материалов для кухонных фартуков. Стекло способно защитить благородные поверхности (камень, дерево),
+										не закрывая их природную красоту. Оно не перегружает интерьер, зато наполняет его благородным блеском. Этот материал удобен ещё и тем, что печать можно
+										наносить на его оборотную сторону, тогда изображение будет надёжно защищено. УФ-печать на стекле преображает кухонный фартук в оригинальный предмет декора.
+										Дополните скинали подсветкой, и ваша кухня заиграет новыми красками.
+									</p>
+									<ul class="col__list">
+										<li class="col__li"><span class="col__sp">Оргстекло</span></li>
+									</ul>
+									<p class="col__text">Скинали из акрила, или оргстекла, очень удобны и настолько просты в установке, что легко можно обойтись без мастера.
+										Этот материал прочнее обычного стекла: даже если на него прядётся сильный удар, акриловое стекло потрескается или сомнётся, но не рассыплется
+										на острые осколки. Сами по себе акриловые фартуки для кухни выглядят скучновато, но УФ-печать способна сделать из них эксклюзивный, яркий и красивый
+										предмет интерьера! Особенно элегантно выглядят такие скинали в сочетании с подсветкой.
+									</p>
+									<ul class="col__list">
+										<li class="col__li"><span class="col__sp">Фартук из МДФ</span></li>
+									</ul>
+									<p class="col__text">МДФ – это древесно-волокнистая плита из прессованных опилок. Материал по экологичности не уступает дереву, он прост в обработке,
+										устойчив к влаге, достаточно прочен и бюджетен. Единственный минус МДФ как материала для изготовления кухонных фартуков – опасность воспламенения.
+										Поэтому для кухни с газовыми плитами лучше выбрать другой материал. Кроме того, кухонная среда агрессивна, поэтому чтобы панели из МДФ прослужили долго,
+										им нужна дополнительная защита.
+									</p>
+									<ul class="col__list">
+										<li class="col__li"><span class="col__sp">Пластик ПВХ.</span></li>
+									</ul>
+									<p class="col__text">Фартук из пластика – бюджетный вариант. Такие скинали легки в монтаже, они плотно прилегают к стене, не боятся влажности,
+										за ними легко ухаживать. Минус пластиковых панелей в неустойчивости к огню: при температуре выше 80 градусов они начинают плавиться, выделяя едкий запах.
+										Также этот материал легко повредить механически, но при бережном обращении такие панели способны прослужить до пяти лет.
+									</p>
+									<span class="col__name col__name_pt">Наши работы</span>
+										<div class="col__slider col__slider_ten">
+											<div class="col__slide">
+												<a href="img/section_two/portfolio/skinned/item1.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/skinned/item1.jpg" alt="item1" class="col__images"></a>
+												<span class="col__nm">Скинали из закаленного стекла с уф-печатью по эскизу заказчика</span>
+											</div>
+											<div class="col__slide">
+												<a href="img/section_two/portfolio/skinned/item2.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/skinned/item2.jpg" alt="item2" class="col__images"></a>
+												<span class="col__nm">Скинали из закаленного стекла с уф-печатью по эскизу заказчика</span>
+											</div>
+											<div class="col__slide">
+												<a href="img/section_two/portfolio/skinned/item3.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/skinned/item3.jpg" alt="item1" class="col__images"></a>
+												<span class="col__nm">Скинали из закаленного стекла с уф-печатью по эскизу заказчика</span>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__form">
+					<div class="services__info" id="services__form11">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">Изделия по индивидуальным заказам</span>
+									<span class="col__price">от 1000 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1200 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1000 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">Изделия с уф-печатью по индивидуальным заказам</span>
+									<p class="col__text col__text_pb">Ежедневно наша компания принимает индивидуальные заказы на изготовление десятков изделий методом УФ-печати.
+										Согласно нашим наблюдениям, сфера применения этой технологии постоянно расширяется, и это вполне закономерно. Доступная цена, превосходное качество
+										изображения и декоративное многообразие являются ключевыми факторами в данном вопросе.
+									</p>
+									<p class="col__text col__text_pb">В нашем портфолио вы найдете примеры самых разных изделий (УФ-печать на стекле, металле), 
+										выполненных нами как для частных интерьеров, так и для общественных пространств.
+									</p>
+									<p class="col__text col__text_pb">Наши специалисты всегда готовы помочь вам с выбором оптимального изображения. Обратившись в нашу компанию,
+										вы сможете оформить заказ на УФ-печать на стекле, металле, дереве и других материалах «под ключ». Наши производственные мощности позволяют
+										производить полный цикл работ.
+									</p>
+									<p class="col__text">Все выполненные проекты вы можете посмотреть и оценить в разделе Портфолио. Чтобы получить подробную
+										консультацию специалиста, свяжитесь с нашим представителем по телефону, указанному на сайте. Убедитесь лично в том, что мы всегда готовы выполнить
+										ваш заказ в кратчайшие сроки на самом высоком уровне!
+									</p>
+									<span class="col__name col__name_pt">Наши работы</span>
+										<div class="col__slider col__slider_eleven">
+											<div class="col__slide">
+												<a href="img/section_one/services/glass/open6.JPG" class="mfp-gallery"><img src="img/section_two/portfolio/order/item1.JPG" alt="item1" class="col__images"></a>
+												<span class="col__nm">Уф-печать на деталях  и изделиях  сложной формы, изготовленных по индивидуальным заказам.</span>
+											</div>
+											<div class="col__slide">
+												<a href="img/section_one/services/glass/open4.JPG" class="mfp-gallery"><img src="img/section_two/portfolio/order/item2.JPG" alt="item2" class="col__images"></a>
+												<span class="col__nm">Фотопечать на стекле на лицевой поверхности дизайнерских полотенцесушителей Samvalini.
+													Современная технология уф-печати позволяет передавать сложные фактуры камня (малахит, оникс), создавать эффект 3D изображения.
+												</span>
+											</div>
+											<div class="col__slide">
+												<a href="img/section_two/portfolio/order/open3.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/order/item3.jpg" alt="item2" class="col__images"></a>
+												<span class="col__nm">Уф-печать на деталях  и изделиях  сложной формы, изготовленных по индивидуальным заказам.</span>
+											</div>
+											<div class="col__slide">
+												<a href="img/section_two/portfolio/order/open4.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/order/item4.jpg" alt="item2" class="col__images"></a>
+												<span class="col__nm">Уф-печать на деталях  и изделиях  сложной формы, изготовленных по индивидуальным заказам.</span>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__form">
+					<div class="services__info" id="services__form12">
+						<div class="scroll">
+							<div class="col col_left">
+								<div class="col__item col__item_first">
+									<span class="col__about">наши услуги</span>
+									<span class="col__line"></span>
+									<span class="col__title">Имитация витража</span>
+									<span class="col__price">от 1000 руб/кв.м</span>
+								</div>
+								<div class="col__item col__item_second">
+									<span class="col__name col__name_pd">Стоимость печати</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">от 1 кв.м <span class="bold">1500 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 50 кв.м <span class="bold">1200 руб</span></span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">от 150 кв.м <span class="bold">1000 руб</span></span>
+										</li>
+									</ul>
+									<a href="#free" class="button button_col">Заказать расчет</a>
+								</div>
+								<div class="col__item col__item_third">
+									<span class="col__name col__name_pd">Другие услуги</span>
+									<ul class="col__navigation">
+										<li class="col__items">
+											<span class="col__span">Печать на зеркале</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на металле</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на ПВХ</span>
+										</li>
+										<li class="col__items">
+											<span class="col__span">Печать на МДФ</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col_right">
+								<div class="col__box">
+									<span class="col__name">Имитация витража методом уф-печати на стекле</span>
+									<p class="col__text col__text_pb">Витраж позволяет наполнить любое помещение невероятным колоритом, изяществом и игрой света.
+										Однако, несмотря на все преимущества, эксклюзивная витражная конструкция отличается высокой стоимостью и сравнительно долгим сроком изготовления.
+									</p>
+									<p class="col__text col__text_pb">Существует более доступный и быстрый способ сделать интерьер неповторимым – заказать имитацию витража.
+										В этом случае изображение наносится на стеклянную поверхность методом УФ-печати. Чтобы создать эксклюзивный витраж, достаточно лишь 
+										выбрать подходящее изображение и определиться с размерами конструкции.
+									</p>
+									<p class="col__text col__text_pb">Наша команда поможет вам подготовить эскиз будущего витража и мы подробно проконсультируем по всем сопутствующим
+										вопросам.
+									</p>
+									<p class="col__text col__text_pb">УФ-печать витража состоит из двух стадий. На первом этапе наносится фоновое изображение, пропускающее свет.
+										Второй этап – печать рельефного изображения, которое наносится, по меньшей мере, в 32 слоя.
+									</p>
+									<p class="col__text col__text_pb">При необходимости витражное изделие подвергается температурной обработке. В закаленном виде стекло становится
+										намного более устойчивым к ударам и повреждениям. При этом по своему внешнему виду такая конструкция доподлинно имитирует реальный витраж и выглядит
+										безукоризненно.
+									</p>
+									<span class="col__name">Где используется имитация витражей:</span>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">стеклянные вставки в дверях,</span>
+										</li>
+										<li class="col__li"><span class="col__sp">стеклянные перегородки,</span></li>
+										<li class="col__li"><span class="col__sp">фальш-окна,</span></li>
+										<li class="col__li"><span class="col__sp">настенные панно,</span></li>
+										<li class="col__li"><span class="col__sp">элементы потолка.</span></li>
+									</ul>
+									<span class="col__name">В чем плюсы витража с УФ-печатью:</span>
+									<ul class="col__list col__list_pb">
+										<li class="col__li"><span class="col__sp">рельефное изображение, которое выглядит как настоящий витраж;</span>
+										</li>
+										<li class="col__li"><span class="col__sp">доступная цена;</span></li>
+										<li class="col__li"><span class="col__sp">продолжительный срок службы;</span></li>
+										<li class="col__li"><span class="col__sp">отличное качество за счет применения современных технологий;</span></li>
+										<li class="col__li"><span class="col__sp">насыщенные цвета, многообразие оттенков и превосходная цветопередача.</span></li>
+									</ul>
+									<p class="col__text col__text_pb">Свяжитесь с нашим представителем любым удобным способом, чтобы получить подробную консультацию о сроках
+										и стоимости работы!
+									</p>
+									<span class="col__name">Наши работы</span>
+										<div class="col__slider col__slider_twelve">
+											<div class="col__slide">
+												<a href="img/section_two/portfolio/imitation/item1.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/imitation/item1.jpg" alt="item1" class="col__images"></a>
+												<span class="col__nm">Имитация витража</span>
+											</div>
+											<div class="col__slide">
+												<a href="img/section_two/portfolio/imitation/item2.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/imitation/item2.jpg" alt="item2" class="col__images"></a>
+												<span class="col__nm">Имитация витража</span>
+											</div>
+											<div class="col__slide">
+												<a href="img/section_two/portfolio/imitation/item3.jpg" class="mfp-gallery"><img src="img/section_two/portfolio/imitation/item3.jpg" alt="item1" class="col__images"></a>
+												<span class="col__nm">Имитация витража</span>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<a href="#section_three" class="btn btn_three">
+					<img src="img/btn_down/down_three.png" alt="down">
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section_three" id="section_three">
+		<div class="section__body">
+			<div class="advantages">
+				<div class="advantages__item">
+					<span class="advantages__about">наши преимущества</span>
+					<span class="line line_advantages"></span>
+					<h3 class="advantages__title">Почему работать с нами выгодно?</h3>
+				</div>
+				<a href="#!" class="advantages__item advantages__item_border advantages__item_hover">
+					<span class="advantages__block">
+						<img src="img/section_three/advantages/medal.png" alt="medal" class="advantages__img">
+						<span class="advantages__name advantages__name_blue">высокое качество всех процессов</span>
+						<span class="advantages__text advantages__text_black">Собственное производство позволяет контролировать процесс печати на всех этапах реализации заказа</span>
+					</span>
+					<span class="advantages__two">
+						<img src="img/section_three/advantages/white1.png" alt="white1" class="advantages__img">
+						<span class="advantages__name advantages__name_white">высокое качество всех процессов</span>
+						<span class="advantages__text advantages__text_white">Собственное производство позволяет контролировать процесс печати на всех этапах реализации заказа</span>
+					</span>
+				</a>
+				<a href="#!" class="advantages__item advantages__item_border advantages__item_hover">
+					<span class="advantages__block">
+						<img src="img/section_three/advantages/truck.png" alt="truck" class="advantages__img">
+						<span class="advantages__name advantages__name_blue">Быстрая доставка заказа</span>
+						<span class="advantages__text advantages__text_black">У нас налажены все каналы логистики, чтобы Вы смогли получить свой заказ в оговоренные сроки</span>
+					</span>
+					<span class="advantages__two">
+						<img src="img/section_three/advantages/white2.png" alt="white2" class="advantages__img">
+						<span class="advantages__name advantages__name_white">Быстрая доставка заказа</span>
+						<span class="advantages__text advantages__text_white">У нас налажены все каналы логистики, чтобы Вы смогли получить свой заказ в оговоренные сроки</span>
+					</span>
+				</a>
+				<a href="#!" class="advantages__item advantages__item_border advantages__item_hover">
+					<span class="advantages__block">
+						<img src="img/section_three/advantages/robot.png" alt="robot" class="advantages__img">
+						<span class="advantages__name advantages__name_blue">высокая скорость производства</span>
+						<span class="advantages__text advantages__text_black">Собственное производство позволяет ускорить процесс реализации вашего заказа</span>
+					</span>
+					<span class="advantages__two">
+						<img src="img/section_three/advantages/white3.png" alt="white3" class="advantages__img">
+						<span class="advantages__name advantages__name_white">высокая скорость производства</span>
+						<span class="advantages__text advantages__text_white">Собственное производство позволяет ускорить процесс реализации вашего заказа</span>
+					</span>
+				</a>
+				<a href="#!" class="advantages__item advantages__item_border advantages__item_hover">
+					<span class="advantages__block">
+						<img src="img/section_three/advantages/wallet.png" alt="wallet" class="advantages__img">
+						<span class="advantages__name advantages__name_blue">выгодные цены для наших клиентов</span>
+						<span class="advantages__text advantages__text_black">Мы всегда предлагаем нашим клиентам лучшие цены на рынке печатных услуг</span>
+					</span>
+					<span class="advantages__two">
+						<img src="img/section_three/advantages/white4.png" alt="white4" class="advantages__img">
+						<span class="advantages__name advantages__name_white">выгодные цены для наших клиентов</span>
+						<span class="advantages__text advantages__text_white">Мы всегда предлагаем нашим клиентам лучшие цены на рынке печатных услуг</span>
+					</span>
+				</a>
+				<a href="#!" class="advantages__item advantages__item_border advantages__item_hover">
+					<span class="advantages__block">
+						<img src="img/section_three/advantages/headphone.png" alt="headphone" class="advantages__img">
+						<span class="advantages__name advantages__name_blue">Мы предлагаем безупречный сервис</span>
+						<span class="advantages__text advantages__text_black">Наши специалисты всегда готовы помочь нашим клиентам в решении их вопросов и задач</span>
+					</span>
+					<span class="advantages__two">
+						<img src="img/section_three/advantages/white5.png" alt="white5" class="advantages__img">
+						<span class="advantages__name advantages__name_white">Мы предлагаем безупречный сервис</span>
+						<span class="advantages__text advantages__text_white">Наши специалисты всегда готовы помочь нашим клиентам в решении их вопросов и задач</span>
+					</span>
+				</a>
+			</div>
+			<div class="print">
+				<div class="print__col">
+					<span class="print__title" id="about_us">О печати</span>
+					<p class="print__text print__text_pt">Вам необходимо получить максимально качественное изображение на металле, МДФ, ДСП, стекле или других листоваых материалах?
+						Ищете технологию, которая позволила бы сделать это недорого, оперативно и качественно?
+					</p>
+					<p class="print__text print__text_pt">Решение есть: технология широкоформатной ультрафиолетовой печати. В своей работе мы используем УФ-принтер IQ Maglev.
+						Это профессиональная промышленная модель, которая способна создавать изображения безупречного качества. Принтер оснащен печатающими головками нового поколения
+						от Ricoh и работает по технологии «магнитной левитации», что гарантирует отличное качество печати даже при экстремальных скоростях работы.
+						Печать происходит восемью точками разного размера одновременно. Результат – фотографическая точность изображения и плавность перехода из одного оттенка в другой.
+					</p>
+					<p class="print__text print__text_pt">Мы – команда профессионалов с большим опытом в различных сферах производства.
+						Наша задача – изготовление продукции, в которой высокое техническое качество сочетается с художественной ценностью.
+						Мастеров нашей компании объединяет стремление к постоянному развитию, интерес к инновационным технологиям,
+						преданность своей работе и профессиональный подход к каждому проекту, а главное – желание делать для людей качественные
+						и красивые вещи, способные служить долгие годы.
+					</p>
+					<p class="print__text print__text_pt">Мы любим сложные заказы и не боимся трудностей. Ведь они позволяют расширять горизонты
+						наших умений и выходить за пределы возможностей! Вам требуется решить нестандартную задачу, от которой отказываются другие
+						мастера? Обращайтесь! Мы стремимся расти вместе с нашими заказчиками и готовы приложить все свои силы на решение сложной задачи.
+						Ведь мастерство специалиста познаётся именно так!
+					</p>
+					
+					<p class="print__text">Технология УФ-печати становится всё более популярной, а сфера её применения расширяется:
+						от изготовления материалов для декора интерьера до решений всевозможных бизнес-задач.
+					</p>
+					<p class="print__text print__text_pt print__text_pb">Узнайте подробнее о возможностях и услугах компании на страницах сайта или по телефону у наших консультантов!</p>
+				</div>
+				<div class="print__col">
+					<p class="print__name">Широкоформатная уф-печать имеет множество достоинств, среди которых:</p>
+					<ul class="print__list print__list_pb">
+						<li class="print__item">
+							<span class="print__link">невысокая стоимость,</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">яркие и насыщенные цвета,</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">контрастность и чёткость контуров,</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">отсутствие неприятных запахов у готовой продукции,</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">быстрота печати,</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">устойчивость напечатанного полотна к перепадам температуры,</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">возможность печати на разнообразных листовых и рулонных материалах,</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">в процессе печати не выделяются токсичные испарения.</span>
+						</li>
+					</ul>
+					<p class="print__name print__name_pt">Неограниченный выбор материала для запечатывания:</p>
+					<ul class="print__list">
+						<li class="print__item">
+							<span class="print__link">Стеклотканевые обои</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">Стекло, оргстекло</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">Керамогранит, мрамор</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">Металл, композиционный материал</span>
+						</li>
+						<li class="print__item">
+							<span class="print__link">Дерево, МДФ, ЛДСП, пробковое покрытие</span>
+						</li>
+					</ul>
+				</div>
+				<a href="#section_four" class="btn btn_four">
+					<img src="img/btn_down/down_four.png" alt="down">
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section_four" id="section_four">
+		<div class="section__body">
+			<div class="block">
+				<span class="block__about">заполните поля формы</span>
+				<span class="line line_block"></span>
+				<h2 class="block__title">Получите бесплатный расчет стоимости проекта</h2>
+			</div>
+			<form class="form" action="mail.php" id="form">
+				<div class="form__item">
+					<img src="img/section_four/form/item1.png" alt="item1" class="form__icon">
+					<span class="form__name">Ваше имя:</span>
+					<input type="text" class="form__input" placeholder="Введите имя" required name="name" minlength="3">
+				</div>
+				<div class="form__item">
+					<img src="img/section_four/form/item2.png" alt="item2" class="form__icon">
+					<span class="form__name">Адрес электронной почты:</span>
+					<input type="email" class="form__input" placeholder="E-mail" required name="email">
+				</div>
+				<div class="form__item">
+					<img src="img/section_four/form/item3.png" alt="item3" class="form__icon">
+					<span class="form__name">Номер телефона:</span>
+					<input type="tel" class="form__input" placeholder="Введите телефон" required id="form__phone" name="phone">
+				</div>
+				<div class="form__item">
+					<img src="img/section_four/form/item4.png" alt="item4" class="form__icon">
+					<span class="form__name">Выберите материал для печати:</span>
+					<input type="text" class="form__hide" name="hide">
+					<div class="select select_width" tabindex="1" id="selection">
+						<span class="select__down"><img src="img/section_four/form/down.png" alt="down" class="select__arrow"></span>
+						<span class="material material_white">Материал не выбран</span>
+						<ul class="list">
+							<li class="list__item">
+								<a href="#" class="list__link">Стекло</a>
+							</li>
+							<li class="list__item">
+								<a href="#" class="list__link">Зеркало</a>
+							</li>
+							<li class="list__item">
+								<a href="#" class="list__link">Металл</a>
+							</li>
+							<li class="list__item">
+								<a href="#" class="list__link">Акрил и оргстекло</a>
+							</li>
+							<li class="list__item">
+								<a href="#" class="list__link">МДФ</a>
+							</li>
+							<li class="list__item">
+								<a href="#" class="list__link">Печать белилами</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="form__item">
+					<img src="img/section_four/form/item5.png" alt="item5" class="form__icon">
+					<span class="form__name">Количество квадратных метров (м2):</span>
+					<input type="text" class="form__input" placeholder="Введите значение" required name="square">
+				</div>
+				<div class="form__item">
+					<input type="checkbox" class="connection__checkbox connection__checkbox_form" required>
+					<p class="connection__text connection__text_white">Я согласен на обработку персональных данных. Ваши данные не будут переданы третьим лицам</p>
+				</div>
+				<button class="button button_form" type="submit" name="submit">заказать расчет</button>
+			</form>
+		</div>
+	</section>
+
+	<footer class="footer" id="footer">
+		<div class="footer__body">
+			<div class="footer__block">
+				<div class="footer__col footer__col_one">
+					<a href="#header" class="footer__logo"><span class="logo__images"></span></a>
+					<a href="#about_us" class="footer__name">О компании</a>
+						<a href="#section_two" class="footer__name">Портфолио</a>
+						<a href="#section_one" class="footer__name footer__name_pb">Цены</a>
+					<a href="https://omicron.sergwd.com/artprint/sogl.pdf" class="footer__text footer__text_bold footer__text_border">Согласие на обработку данных</a>
+					<a href="https://omicron.sergwd.com/artprint/conf.pdf" class="footer__text footer__text_bold footer__text_border">Политика конфиденциальности</a>
+					<p class="footer__text light">© 2018 архпринт.рф. Все права защищены. </p>
+				</div>
+				<div class="footer__col footer__col_two">
+					<div class="footer__box footer__box_one">
+						<span class="footer__name">Услуги</span>
+						<ul class="menu">
+							<li class="menu__item">
+								<a href="#!" class="menu__link">УФ-Печать на стекле</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">Печать на зеркале</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">УФ-печать белилами</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">УФ-печать на металле</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">УФ-печать на ПВХ</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">акриле и оргстекле</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">УФ-печать на МДФ</a>
+							</li>
+						</ul>
+						<!--<ul class="menu">
+							<li class="menu__item">
+								<a href="#!" class="menu__link">О нас</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">Наши клиенты</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">Отзовы</a>
+							</li>
+						</ul>-->
+					</div>
+					<div class="footer__box footer__box_two">
+						<ul class="menu menu_pt">
+							<li class="menu__item">
+								<a href="#!" class="menu__link">Стеновые панели с уф-печатью</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">Двери и перегородки с уф-печатью</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">Скинали и фартуки с уф-печатью</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">Столешницы с уф-печатью</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">Имитация витража</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">Дикоративные панно с уф-печатью</a>
+							</li>
+							<li class="menu__item">
+								<a href="#!" class="menu__link">Изделия по индивидуальным заказам с печатью</a>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				<div class="footer__col footer__col_three">
+					<div class="contact">
+						<span class="contact__name">Электронная почта:</span>
+						<a href="mailto:archprint@yandex.ru" class="contact__data">archprint@yandex.ru</a>
+					</div>
+					<div class="contact">
+						<span class="contact__name">Часы работы:</span>
+						<span class="contact__data">пн.-птн. с 9:00 до 18:00</span>
+					</div>
+					<div class="contact">
+						<span class="contact__name">Номер телефона:</span>
+						<a href="tel:+74995040407" class="contact__data">+7 499 504 04 07</a>
+					</div>
+					<div class="contact">
+						<span class="contact__name">Адрес:</span>
+						<span class="contact__adress">141595, Московская область, Солнечногорский район, дер. Есипово, 04 СК.</span>
+					</div>
+				</div>
+			</div>
+			<div class="up"></div>
+		</div>
+	</footer>
+
+
+
+
+
+	<script src="js/script.js"></script>
+	<script src="slick/slick.min.js"></script>
+	
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	
+	
+</body>
+</html>
