@@ -1,0 +1,1235 @@
+@import "fonts"
+@import "libs"
+@import "smart-grid"
+
+
+div
+	box-sizing: border-box
+
+a
+	text-decoration: none
+	transition: all .3s
+
+
+body.none
+	overflow: hidden
+
+.navigation
+	display: flex
+	top: 0
+	left: 0
+	flex-wrap: wrap
+	width: 61px
+	height: 100vh
+	position: fixed
+	align-items: flex-start
+	background: #101020
+	z-index: 10000
+	@include md(height, 61px)
+	@include md(width, 100%)
+
+.hamburger
+	height: 61px
+	width: 61px
+	padding: 20px 0 20px 14px
+	background: #A81F25
+	transition: all .3s
+	&:hover .hamburger-inner
+		background: #fff
+	&:hover .hamburger-inner::before
+		background: #fff
+	&:hover .hamburger-inner::after
+		background: #fff
+
+.hamburger-inner
+	width: 30px
+	border-radius: 0
+	background: #CCCCCC
+	transition: all .3s
+	&::before
+		width: 30px
+		border-radius: 0
+		background: #CCCCCC
+	&::after
+		width: 30px
+		border-radius: 0
+		background: #CCCCCC
+
+
+
+.nav
+	display: flex
+	position: fixed
+	top: 0
+	left: -300px
+	flex-wrap: wrap
+	flex-direction: column
+	width: 100%
+	max-width: 300px
+	height: 100vh
+	min-height: 500px
+	background: #21212B
+	z-index: 1001
+	transition: transform .3s ease
+	@include md(min-width, 100%)
+	@include md(left, - 100%)
+	&__list
+		display: block
+		position: absolute
+		top: 20px
+		left: 0
+		right: 0
+		margin: 0 auto
+		padding: 0 0 20px 0
+		width: 100%
+		max-width: 170px
+		list-style: none
+		text-align: center
+		border-bottom: 1px solid #eee
+		box-sizing: border-box
+		@include md(top, 30%)
+		@include md(transform, translate3d(0, -30%, 0))
+	&__item
+		display: block
+		text-align: left
+		padding: 0 0 10px 0
+		width: 100%
+	&__link
+		display: block
+		color: #85898f
+		font-size: 1.875rem
+		text-transform: uppercase
+		font-family: 'yanone-kaffeesatz', sans-serif
+		@include md(text-align, center)
+		&:hover
+			color: #fff
+
+
+.copy
+	display: block
+	text-align: center
+	position: absolute
+	left: 0
+	right: 0
+	margin: 0 auto
+	bottom: 30px
+	font-size: 0.875rem
+	color: #fff
+	font-family: 'yanone-kaffeesatz', sans-serif
+
+.visible
+	transform: translate3d(361px, 0, 0)
+	@include md(transform, translate3d(100%, 0, 0))
+
+.menu__animatable .nav
+	transition: all 130ms ease-in
+
+.visible.menu__animatable .nav
+	transition: all 330ms ease-out
+
+
+.social
+	margin: 0
+	padding: 0
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	width: 100%
+	position: absolute
+	left: 15px
+	bottom: 20px
+	@include md(flex-direction, row)
+	@include md(width, 150px)
+	@include md(top, 15px)
+	@include md(left, auto)
+	@include md(right, 10px)
+	&__item
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 40px
+		@include md(margin-left, 50px)
+	&__link
+		display: block
+		position: relative
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 30px
+			width: 30px
+			top: 0
+			left: 0
+			transition: all .3s
+		&_vk::before
+			background: url("../img/vk.svg")no-repeat
+			background-size: cover
+		&_tg::before
+			background: url("../img/telegram.svg")no-repeat
+			background-size: cover
+
+.social__link_vk:hover::before
+	background: url("../img/vk_hover.svg")no-repeat
+	background-size: cover
+
+.social__link_tg:hover::before
+	background: url("../img/telegram_hover.svg")no-repeat
+	background-size: cover
+
+
+.header
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	min-height: 500px
+	width: 100%
+	background-size: cover
+	position: relative
+	overflow: hidden
+	@include md(padding-top, 70px)
+	&_bh
+		background: #967673
+		height: 100vh
+		@include sm(background, url("../img/header_bg.jpg")no-repeat center)
+		@include sm(background-size, cover)
+	&_mh
+		height: 60vh
+	&__video
+		display: block
+		height: 2000px
+		width: 2000px
+		min-width: 100%
+		position: absolute
+		top: -500px
+		left: 0
+		z-index: 0
+		box-sizing: border-box
+		@include sm(display, none)
+	&__body
+		height: 100vh
+		@include wrapper()
+		width: 100%
+		position: relative
+		z-index: 3
+	&__item
+		@include col()
+		@include xs(margin, 0)
+	&__info
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		margin: 0 auto
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		text-align: center
+		color: #fff
+		transform: translate3d(0, -50%, 0)
+	&__title
+		margin: 0
+		font-size: 3.125rem
+		font-family: 'open-sansbold', sans-serif
+		@include lg(font-size, 2.500rem)
+		@include sm(font-size, 1.875rem)
+		&_mt
+			margin-top: 200px
+			@include sm(margin-top, 70px)
+		&_pink
+			color: #E70041
+			font-size: 70px
+			@include md(font-size, 40px)
+			@include xs(font-size, 30px)
+	&__about
+		margin: 20px 0 0 0
+		font-size: 1.250rem
+		font-family: 'open-sanslight', sans-serif
+		@include lg(max-width, 700px)
+		@include lg(margin, 20px auto 0)
+		@include sm(font-size, 1.125rem)
+		@include sm(min-width, 100%)
+	&__text
+		font-size: 25px
+		max-width: 900px
+		color: #333
+		font-family: 'open-sanslight', sans-serif
+		@include md(font-size, 20px)
+
+
+.popup
+	display: none
+	height: 100%
+	width: 100%
+	background: rgba(0,0,0, 0.9)
+	position: fixed
+	top: 0
+	left: 0
+	transition: all .3s ease-out
+	z-index: 10000
+	overflow-y: scroll
+	&__item
+		display: none
+		position: absolute
+		height: 100%
+		width: 85%
+		left: 0
+		right: 0
+		margin: 70px auto
+		max-width: 1170px
+	&__img
+		display: block
+		height: auto
+		max-width: 100%
+		margin-bottom: 70px
+
+.popup.active
+	display: block
+
+.popup__item_first.block
+	display: block
+
+.popup__item_second.block
+	display: block
+
+.popup__item_three.block
+	display: block
+
+.popup__item_four.block
+	display: block
+
+
+.row
+	@include row-flex()
+	&_sb
+		justify-content: space-between
+		
+
+.logo
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	max-width: 140px
+	margin: 20px 0 0 50px
+	text-transform: uppercase
+	position: relative
+	&_white
+		color: #fff
+		@include sm(color, #333)
+	&_pink
+		color: #E70041
+	&::before
+		content: ''
+		display: inline-block
+		position: absolute
+		height: 40px
+		width: 40px
+		top: 0
+		left: -50px
+		background: url("../img/logo.png")no-repeat
+	&__name
+		font-size: 1.125rem
+		font-family: 'open-sansbold', sans-serif
+	&__web
+		font-size: 0.625rem
+		font-family: 'open-sanslight', sans-serif
+
+
+.block
+	margin-top: 20px
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	&__item
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		align-items: flex-start
+		box-sizing: border-box
+		@include col()
+		&_border
+			border-top: 1px solid #fff
+			padding: 20px 0 0 0
+	&__name
+		display: block
+		font-size: 14px
+		font-family: 'open-sansbold', sans-serif
+		&_hover:hover
+			box-shadow: 0 5px 10px rgba(168, 31, 37, .8)
+		&_pd
+			padding: 10px 15px 10px 15px
+			background-image: linear-gradient(to right, #DE5347, #912283)
+			border-radius: 5px
+		&_pink
+			color: #FF0047
+		&_white
+			color: #fff
+	&__link
+		margin-top: 5px
+		position: relative
+		display: inline-block
+		font-size: 18px
+		font-family: 'open-sanslight', sans-serif
+		outline: 0
+		&_orange
+			color: #de5347
+		&_white
+			color: #fff
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 2px
+			width: 0
+			left: 0
+			bottom: -5px
+			background: #de5347
+			opacity: 0
+			transition: all 1s
+			
+.block__link:hover.block__link::before
+	opacity: 1		
+
+.footer .block__link:hover.block__link::before
+	width: 100%
+	background: #fff
+
+.footer .block__item
+	@include size(4)
+	@include size-xs(12)
+	@include xs(margin-bottom, 20px)
+	@include xs(text-align, center)
+
+.footer .block__name
+	@include xs(width, 100%)
+
+.footer	.block__link
+	@include xs(font-size, 14px)
+	@include xs(width, 100%)
+
+.box
+	margin-top: 50px
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	&__button
+		display: inline-block
+		color: #fff
+		line-height: 50px
+		font-size: 18px
+		border-radius: 4px
+		min-width: 200px
+		text-align: center
+		font-family: 'yanone-kaffeesatz', sans-serif
+		&_red
+			background: #DE5347
+			background-image: -webkit-linear-gradient(left, #DE5347, #912283)
+			background-image: -moz-linear-gradient(left, #DE5347, #912283)
+			background-image: -o-linear-gradient(left, #DE5347, #912283)
+			background-image: -ms-linear-gradient(left, #DE5347, #912283)
+			background-image: linear-gradient(to right, #DE5347, #912283)
+			&:hover
+				box-shadow: 0 5px 10px rgba(168, 31, 37, .8)
+		
+.scroll 
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 20px
+	display: block
+	margin: 0 auto
+	width: 24px
+	height: 100px
+
+
+
+.scroll__arrows
+	display: block
+	width: 5px
+	height: 5px
+	transform: rotate(45deg)  
+	border-right: 2px solid white
+	border-bottom: 2px solid white
+	margin: 0 0 3px 4px
+	width: 16px
+	height: 16px
+
+.unu
+	margin-top: 1px
+
+.unu, .doi, .trei
+	-webkit-animation: mouse-scroll 1s infinite
+	-moz-animation: mouse-scroll 1s infinite
+
+.unu
+	-webkit-animation-delay: .1s
+	-moz-animation-delay: .1s
+	-webkit-animation-direction: alternate
+
+.doi
+	-webkit-animation-delay: .2s
+	-moz-animation-delay: .2s
+	-webkit-animation-direction: alternate
+	margin-top: -6px
+
+.trei
+	-webkit-animation-delay: .3s
+	-moz-animation-delay: .3s
+	-webkit-animation-direction: alternate
+	margin-top: -6px
+
+
+.mouse
+	height: 42px
+	width: 24px
+	border-radius: 14px
+	transform: none
+	border: 2px solid white
+	top: 170px
+
+
+.wheel
+	height: 5px
+	width: 2px
+	display: block
+	margin: 5px auto
+	background: white
+	position: relative
+	height: 4px
+	width: 4px
+	border: 2px solid #fff
+	border-radius: 8px
+  
+
+.wheel
+	-webkit-animation: mouse-wheel 0.6s linear infinite;
+	-moz-animation: mouse-wheel 0.6s linear infinite;
+
+
+@-webkit-keyframes mouse-wheel
+	0% 
+		opacity: 1
+		transform: translateY(0)
+	100% 
+		opacity: 0
+		transform: translateY(6px)
+  
+
+
+@-moz-keyframes mouse-wheel
+	0% 
+		top: 1px
+	25% 
+		top: 2px
+	50% 
+		top: 3px
+	75% 
+		top: 2px
+	100% 
+		top: 1px
+
+
+@-webkit-keyframes mouse-scroll 
+	0%
+		opacity: 0
+	50%
+		opacity: .5
+	100%
+		opacity: 1
+
+@-moz-keyframes mouse-scroll 
+	0%
+		opacity: 0
+	50%
+		opacity: .5
+	100%
+		opacity: 1
+
+@-o-keyframes mouse-scroll 
+	0%
+		opacity: 0
+	50%
+		opacity: .5
+	100%
+		opacity: 1
+
+@keyframes mouse-scroll
+	0%
+		opacity: 0
+	50%
+		opacity: .5
+	100% 
+		opacity: 1
+
+.contact.none
+	transform: translate3d(0, 300px, 0)
+
+.contact
+	display: none
+	position: fixed
+	color: #fff
+	min-width: 210px
+	padding-left: 50px
+	cursor: pointer
+	right: 30px
+	bottom: 20px
+	font-size: 0.875rem
+	font-family: 'open-sansbold', sans-serif
+	background: #DE5347
+	background-image: -webkit-linear-gradient(left, #DE5347, #B52CAC)
+	background-image: -moz-linear-gradient(left, #DE5347, #B52CAC)
+	background-image: -o-linear-gradient(left, #DE5347, #B52CAC)
+	background-image: -ms-linear-gradient(left, #DE5347, #B52CAC)
+	background-image: linear-gradient(to right, #DE5347, #B52CAC)
+	border-radius: 30px
+	transition: all 1s
+	z-index: 1000
+	&::before
+		content: ''
+		display: inline-block
+		position: absolute
+		height: 20px
+		width: 20px
+		top: 50%
+		left: 20px
+		background: url("../img/mail.svg")no-repeat
+		background-size: cover
+		transform: translate3d(0, -50%, 0)
+	&:hover
+		box-shadow: 0 5px 10px rgba(168, 31, 37, .8) 
+
+.emerge.active
+	transform: translate3d(0, -460px, 0)
+
+.emerge
+	display: inline-block
+	position: fixed
+	width: 100%
+	max-width: 300px
+	right: 30px
+	bottom: -430px
+	background: #101020
+	border-radius: 20px
+	transition: all .5s
+	z-index: 1000
+	@include xs(right, 0)
+	&__text
+		margin: 0 
+		padding: 10px 0 10px 0
+		cursor: pointer
+		text-align: center
+		font-size: 0.875rem
+		color: #fff
+		font-family: 'open-sansbold', sans-serif
+		border-top-left-radius: 10px
+		border-top-right-radius: 10px
+		background: #DE5347
+		background-image: linear-gradient(to right, #DE5347, #B52CAC)
+		position: relative
+		&::after
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 25px
+			width: 25px
+			top: 7px
+			right: 10px
+			background: url("../img/cancel.svg")no-repeat
+			background-size: cover
+	&__form
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		align-items: flex-start
+		width: 100%
+		max-width: 260px
+		margin: 0 auto
+	&__input
+		margin: 20px 0 20px 0
+		padding-left: 15px
+		width: 100%
+		box-sizing: border-box
+		line-height: 40px
+		height: 40px
+		color: #fff
+		font-family: 'open-sanslight', sans-serif
+		outline: none
+		background: none
+		border: 1px solid #777
+		&::placeholder
+			color: #fff
+			font-size: 14px
+			font-family: 'open-sanslight', sans-serif
+	&__textarea
+		margin: 0 0 20px 0
+		padding: 20px 0 0 15px
+		height: 200px
+		width: 100%
+		color: #fff
+		font-family: 'open-sanslight', sans-serif
+		box-sizing: border-box
+		background: none
+		border: 1px solid #777
+		outline: none
+		resize: none
+		&::placeholder
+			color: #fff
+			font-size: 14px
+			font-family: 'open-sanslight', sans-serif
+		
+.section
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	flex-direction: column
+	box-sizing: border-box
+	background: #fff
+	&__body
+		@include wrapper()
+		width: 100%
+	&_fifth
+		padding-bottom: 30px
+		position: relative
+		z-index: 1
+	&__title
+		margin: 30px 0 0 0
+		color: #E70041
+		font-size: 40px
+		text-transform: uppercase
+		font-family: 'open-sansbold', sans-serif
+		@include md(font-size, 30px)
+		@include xs(font-size, 20px)
+	&__caption
+		margin: 20px 0 0 0
+		color: #333
+		font-size: 18px
+		font-family: 'open-sanslight', sans-serif
+	&__col
+		margin-top: 20px
+		@include col()
+		@include size(3)
+		@include size-lg(4)
+		@include lg(margin-bottom, 10px)
+		@include size-sm(6)
+		@include size-xs(12)
+		&_width
+			width: 100%
+	&__label
+		display: block
+		position: relative
+		margin: 0
+		height: 50px
+		line-height: 50px
+		padding: 0 0 0 60px
+		width: 100%
+		font-size: 16px
+		box-sizing: border-box
+		border-radius: 4px
+		border: 1px solid #DBDBDB
+		background: #FBFDFF
+		cursor: pointer
+		transition: all .3s
+		font-family: 'open-sanslight', sans-serif
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 25px
+			width: 25px
+			top: 10px
+			left: 15px
+			border: 1px solid #DBDBDB
+			border-radius: 50%
+		&::after
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 15px
+			width: 15px
+			top: 16px
+			left: 21px
+			background: #fff
+			border-radius: 50%
+			opacity: 0
+			transition: all .3s
+	&__checkbox
+		display: none
+	&__input
+		padding-left: 15px
+		line-height: 50px
+		height: 50px
+		width: 100%
+		box-sizing: border-box
+		border-radius: 4px
+		border: 1px solid #DBDBDB
+		font-size: 16px
+		background: #FBFDFF
+		font-family: 'open-sanslight', sans-serif
+		outline: none
+		transition: all .3s
+		&::placeholder
+			color: #333
+			font-family: 'open-sanslight', sans-serif
+		&:focus
+			border: 1px solid #E70041
+	&__textarea
+		padding: 15px 0 0 15px
+		width: 100%
+		outline: none
+		background: #FBFDFF
+		border-radius: 4px
+		border: 1px solid #DBDBDB
+		box-sizing: border-box
+		resize: vertical
+		font-family: 'open-sanslight', sans-serif
+		&::placeholder
+			color: #333
+			font-family: 'open-sanslight', sans-serif
+		&:focus
+			border: 1px solid #E70041
+
+
+.formas input[type="checkbox"]:checked + label:after
+	opacity: 1
+
+.formas input[type="radio"]:checked + label:after
+	opacity: 1
+
+.andr.active
+	color: #fff
+	background: #E70041
+	border-color: #E70041
+
+
+.act.activer
+	color: #fff
+	background: #E70041
+	border-color: #E70041
+
+.btn
+	width: 100px
+	height: 100px
+	border-radius: 50%
+	cursor: pointer
+	position: absolute
+	bottom: -150px
+	left: 0
+	right: 0
+	margin: 0 auto
+	color: #fff
+	text-align: center
+	line-height: 100px
+	font-size: 1.125rem
+	border: 3px solid #fff
+	font-family: 'yanone-kaffeesatz', sans-serif
+	background: #de5347
+	background-image: -webkit-linear-gradient(left,#de5347,#b52cac)
+	background-image: -o-linear-gradient(left,#de5347,#b52cac)
+	background-image: -webkit-gradient(linear,left top,right top,from(#de5347),to(#b52cac))
+	background-image: linear-gradient(to right,#de5347,#b52cac)
+
+.btn:hover + .skills__circle
+	transform: rotate3d(60,35,0,360deg)
+
+
+.mfp-counter
+	display: none
+
+
+.mfp-content figure
+	max-width: 1170px
+
+.work
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	align-items: flex-start
+	width: 100%
+	margin: 50px 0 0 0
+	@include lg(padding, 0 20px 0 20px)
+	&__title
+		margin: 20px auto 0
+		color: #333
+		font-size: 3.125em
+		text-align: center
+		font-family: 'open-sansbold', sans-serif
+		@include sm(font-size, 2.500rem)
+		@include xs(font-size, 1.875rem)
+	&__box
+		display: block
+		width: 100%
+		text-align: center
+		padding-bottom: 90px
+		margin: 50px 0 50px 0
+		border-bottom: 1px solid #e0e0e0
+		position: relative
+		@include lg(padding-bottom, 0)
+	&__row
+		@include row-flex()
+	&__item
+		position: relative
+		cursor: pointer
+		transition: all .3s ease-out
+		@include size(6)
+		@include col()
+		@include size-lg(12)
+		@include lg(text-align, center)
+		@include lg(margin-bottom, 90px)
+	&__images
+		display: block
+		padding: 20px
+		height: auto
+		width: auto
+		max-width: 100%
+		box-sizing: border-box
+		@include lg(margin, 0 auto)
+	&__caption
+		margin: 0
+		color: #333
+		font-size: 1.875rem
+		font-family: 'open-sansbold', sans-serif
+		@include sm(margin-top, 20px )
+		@include xs(font-size, 1.500rem)
+	&__about
+		margin: 0
+		color: #777
+		line-height: 1.3em
+		font-size: 1.250rem
+		font-family: 'yanone-kaffeesatz', sans-serif
+		@include md(max-width, 500px)
+		@include md(margin, 20px auto 0)
+		@include xs(font-size, 1.000rem)
+	&__line
+		display: inline-block
+		position: absolute
+		height: 9px
+		max-width: 600px
+		left: 0
+		right: 0
+		bottom: -10px
+		margin: 0 auto
+		background: url("../img/line.png")no-repeat
+		background-size: cover
+	&__link
+		margin: 20px auto 0
+		display: block
+		color: #fff
+		font-size: 1.125rem
+		padding: 10px 0 10px 0
+		text-align: center
+		border-radius: 4px
+		max-width: 150px
+		font-family: 'yanone-kaffeesatz', sans-serif
+		background: #DE5347
+		background-image: linear-gradient(to right, #DE5347, #912283)
+		transition: all .3s
+		&:hover
+			box-shadow: 0 5px 10px rgba(168, 31, 37, .8)
+
+
+
+
+.form
+	display: flex
+	flex-wrap: wrap
+	align-content: flex-start
+	flex-direction: column
+	width: 100%
+	max-width: 900px
+	margin: 50px auto 0
+	box-sizing: border-box
+	z-index: 100
+	@include lg(max-width, 800px)
+	@include lg(margin, 0 auto)
+	&__row
+		@include row-flex()
+	&__item
+		@include size(6)
+		@include col()
+		margin-bottom: 20px
+		@include size-xs(12)
+	&__label
+		display: block
+		margin: 0 0 10px 0
+		padding-left: 20px
+		color: #777777
+		font-size: 1.563rem
+		position: relative
+		font-family: 'yanone-kaffeesatz', sans-serif
+		font-weight: 900
+		@include xs(font-size, 1.125rem)
+		&::before
+			content: '*'
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			color: #FF0047
+			font-weight: 900
+	&__input
+		line-height: 50px
+		height: 50px
+		width: 100%
+		padding-left: 15px
+		outline: none
+		color: #333
+		font-family: 'open-sanslight', sans-serif
+		border: 1px solid #A0A0A0
+		box-sizing: border-box
+		@include xs(line-height, 40px)
+		@include xs(height, 40px)
+		&_mb
+			margin-bottom: 20px
+	&__textarea
+		margin-bottom: 20px
+		padding: 20px 0 0 15px
+		border: 1px solid #A0A0A0
+		height: 100px
+		width: 100%
+		resize: none
+		color: #333
+		font-family: 'open-sanslight', sans-serif
+		box-sizing: border-box
+		outline: none
+
+
+.button
+	display: inline-block
+	text-decoration: none
+	cursor: pointer
+	border-radius: 4px
+	border: none
+	transition: all .3s
+	outline: none
+	&_form
+		line-height: 40px
+		max-width: 200px
+		color: #fff
+		font-size: 1.125rem
+		font-family: 'yanone-kaffeesatz', sans-serif
+		background: #DE5347
+		background-image: -webkit-linear-gradient(left, #DE5347, #912283)
+		background-image: -moz-linear-gradient(left, #DE5347, #912283)
+		background-image: -o-linear-gradient(left, #DE5347, #912283)
+		background-image: -ms-linear-gradient(left, #DE5347, #912283)
+		background-image: linear-gradient(to right, #DE5347, #912283)
+		animation: contact-button-shake 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+		@include sm(min-width, 200px)
+		@include sm(margin, 0 auto)
+		&:hover
+			box-shadow: 0 5px 10px rgba(168, 31, 37, .8)
+	&_emerge
+		margin: 0 auto 20px
+		line-height: 30px
+		min-width: 130px
+		color: #fff
+		font-size: 1.125rem
+		background: #DE5347
+		font-family: 'yanone-kaffeesatz', sans-serif
+		background-image: linear-gradient(to right, #DE5347, #B52CAC)
+	&_contact
+		margin: 30px 0 30px 0
+		line-height: 50px
+		height: 50px
+		width: 100%
+		color: #fff
+		font-size: 25px
+		background: #E70041
+		text-transform: uppercase
+		font-family: 'yanone-kaffeesatz', sans-serif
+		&:hover
+			box-shadow: 0 5px 10px rgba(168, 31, 37, .8)
+	&_up
+		position: absolute
+		top: 20px
+		padding: 5px 15px 5px 15px
+		right: 0
+		color: #de5347
+		font-size: 18px
+		background: #fff
+		font-family: 'open-sanslight', sans-serif
+		@include xs(top, auto)
+		@include xs(margin-right, 20px)
+		@include xs(bottom, -35px)
+		@include xs(font-size, 14px)
+		&:hover
+			color: #fff
+			background: #101020
+	&_load
+		padding: 10px 15px 10px 15px
+		color: #fff
+		font-size: 1.125rem
+		min-width: 200px
+		margin: 0 auto 30px
+		background-image: linear-gradient(to right, #DE5347, #B52CAC)
+		font-family: 'yanone-kaffeesatz', sans-serif
+		&:hover
+			box-shadow: 0 5px 10px rgba(168, 31, 37, .8)
+		
+
+
+@keyframes contact-button-shake 
+	0%, 50%, 100% 
+	transform: translateX(0)
+	5%, 15%, 25%, 35% 
+		transform: translateX(-3px)
+	10%, 20%, 30%  
+		transform: translateX(3px)
+	40% 
+		transform: translateX(2px)
+	45% 
+		transform: translateX(-2px)
+
+
+.footer
+	padding: 0 70px 30px 70px
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	background: #de5347
+	background-image: linear-gradient(to right,#de5347,#912283)
+	box-sizing: border-box
+	z-index: 1000
+	@include md(padding, 0 0 30px 0)
+	&__body
+		@include wrapper()
+		width: 100%
+	&__title
+		margin: 50px 0 20px 0
+		@include xs(width, 100%)
+	&__titles
+		display: block
+		margin-left: 10px
+		color: #fff
+		font-size: 50px
+		position: relative
+		font-family: 'open-sansbold', sans-serif
+		@include sm(font-size, 40px)
+		@include xs(font-size, 25px)
+		@include xs(text-align, center)
+		@include xs(width, 100%)
+		@include xs(margin-left, 0)
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 2px 
+			width: 0
+			left: 0
+			bottom: 0
+			background: #fff
+			opacity: 1
+			transition: all 1s
+	&__copy
+		margin: 20px 0 0 0
+		position: relative
+		@include col()
+		color: #fff
+		width: 100%
+		font-family: 'open-sanslight', sans-serif
+		border-top: 1px solid #fff
+		@include xs(margin, 0 15px 20px 15px)
+	&__text
+		margin: 30px 0 0 0
+		@include xs(text-align, center)
+
+.footer__titles:hover::before
+	width: 100%
+	opacity: 1
+
+
+.message
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	margin: auto
+	background: white
+	max-width: 100%
+	width: 560px
+	text-align: center
+	padding: 40px 20px 27px
+	border: 1px solid #e2e2e2
+	border-top: 3px solid #26c19a
+	transform: translate3d(0, -100%, 0)
+	transition: all .3s ease
+	z-index: 1000000000
+	box-sizing: border-box
+	&__text
+		line-height: 1.5em
+		font-family: 'open-sanslight', sans-serif
+
+.message_active
+	transform: translate3d(0, 0, 0)
+
+
+@media(max-width: 1300px)
+	.logo
+		margin-left: 130px
+	.header_mh
+		padding-left: 70px
+		box-sizing: border-box
+		overflow: visible
+	.section_first
+		padding-left: 70px
+
+@media(max-width: 1200px)
+	.row
+		margin: 0
+	.work__row
+		margin: 0
+	.form
+		padding: 0 20px 0 20px
+	.section__title
+		margin-left: 15px
+	.section__caption
+		margin-left: 15px
+
+
+
+@media(max-width: 960px)
+	.logo
+		margin-left: 80px
+	.header_mh
+		padding-left: 20px
+		padding-right: 20px
+	.section_first
+		margin-top: 50px
+		padding-left: 20px
+		padding-right: 20px
+
+
+
+@media(max-width: 650px)
+	.row_sb
+		justify-content: center
+	.header__item
+		margin-bottom: 30px
+	.logo
+		margin-left: 40px
+
+
+@media(max-width: 560px)
+	.form
+		padding: 0 30px 0 30px
+	.block__name_pd
+		padding: 10px
+
+@media(max-width: 360px)
+	.block__name_pd
+		padding: 5px
+		font-size: 12px
+	.emerge
+		left: 0
+		right: 0
+		margin: 0 auto
+
+
+
+
+
+
+
+		
+
+	
+
