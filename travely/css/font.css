@@ -1,0 +1,75 @@
+@font-face {
+	font-family: RalewayBold;
+	src: url("../font/RalewayBold.eot");
+	src: url("../font/RalewayBold.eot?#iefix")format("embedded-opentype"),
+	url("../font/RalewayBold.woff") format("woff"),
+	url("../font/RalewayBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: RalewayRegular;
+	src: url("../font/RalewayRegular.eot");
+	src: url("../font/RalewayRegular.eot?#iefix")format("embedded-opentype"),
+	url("../font/RalewayRegular.woff") format("woff"),
+	url("../font/RalewayRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: RalewayHeavy;
+	src: url("../font/RalewayHeavy.otf"),
+	url("../font/RalewayHeavy.woff") format("woff"),
+	url("../font/RalewayHeavy.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: RalewayExtraBold;
+	src: url("../font/RalewayExtraBold.eot");
+	src: url("../font/RalewayExtraBold.eot?#iefix")format("embedded-opentype"),
+	url("../font/RalewayExtraBold.woff") format("woff"),
+	url("../font/RalewayExtraBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: KaushanScript;
+	src: url("../font/KaushanScript.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: RalewayMedium;
+	src: url("../font/RalewayMedium.eot");
+	src: url("../font/RalewayMedium.eot?#iefix")format("embedded-opentype"),
+	url("../font/RalewayMedium.woff") format("woff"),
+	url("../font/RalewayMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: OxygenRegular;
+	src: url("../font/OxygenRegular.eot");
+	src: url("../font/OxygenRegular.eot?#iefix")format("embedded-opentype"),
+	url("../font/OxygenRegular.woff") format("woff"),
+	url("../font/OxygenRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: RalewayLight;
+	src: url("../font/RalewayLight.eot");
+	src: url("../font/RalewayLight.eot?#iefix")format("embedded-opentype"),
+	url("../font/RalewayLight.woff") format("woff"),
+	url("../font/RalewayLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
