@@ -1,0 +1,919 @@
+@import "fonts"
+@import "libs"
+@import "smart-grid"
+
+
+
+a
+	text-decoration: none
+	transition: all .3s
+
+div
+	box-sizing: border-box
+
+
+
+.header
+	display: flex
+	flex-wrap: wrap
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+	align-items: flex-start
+	justify-content: space-between
+	flex-direction: column
+	width: 100%
+	background: #161616
+	box-sizing: border-box
+	&__body
+		@include wrapper()
+		width: 100%
+		margin: 0 auto
+	&__row
+		@include row-flex()
+		justify-content: center
+		@include sm(justify-content, flex-start)
+	&__col
+		@include size(4)
+		@include col()
+		@include size-xs(10)
+		&:first-child
+			@include size-xs(2)
+
+.hamburger-inner
+	position: absolute
+	left: 0
+	margin-left: 0
+	margin-top: 14px
+	height: 5px
+	width: 48px
+	background: #fff
+	border-radius: 0
+	z-index: 120
+	@include xs(height, 4px)
+	@include xs(width, 30px)
+	@include xs(margin-left, - 15px)
+	&::before
+		top: 13px
+		height: 5px
+		width: 48px
+		border-radius: 0
+		background: #fff
+		@include xs(height, 4px)
+		@include xs(width, 30px)
+	&::after
+		height: 5px
+		width: 48px
+		border-radius: 0
+		background: #fff
+		@include xs(height, 4px)
+		@include xs(width, 30px)
+
+
+
+.navigation
+	display: block
+	margin-top: 24px
+	height: 5px
+	width: 48px
+	background: #ffffff
+	position: relative
+	@include xs(height, 4px)
+	@include xs(width, 30px)
+	&::after
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 13px
+		left: 0
+		height: 5px
+		width: 48px
+		background: #ffffff
+		@include xs(height, 4px)
+		@include xs(width, 30px)
+		@include xs(top, 10px)
+	&::before
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 26px
+		left: 0
+		height: 5px
+		width: 48px
+		background: #ffffff
+		@include xs(height, 4px)
+		@include xs(width, 30px)
+		@include xs(top, 20px)
+
+
+.logo
+	display: block
+	margin: 16px auto 16px
+	height: 50px
+	width: 245px
+	background: url("../img/sprites.png")no-repeat
+	background-position: 4% 2%
+
+
+.social
+	display: flex
+	float: right
+	flex-wrap: wrap
+	margin: 16px 0 16px 0
+	padding: 0
+	@include sm(display, none)
+	&_two
+		display: none
+		@include sm(display, flex)
+	&__item
+		display: flex
+		flex-wrap: wrap
+		margin: 0 11px 0 11px
+		box-sizing: border-box
+		&:last-child
+			margin-right: 0
+	&__link
+		height: 50px
+		width: 50px
+		border-radius: 50%
+		position: relative
+		&:hover
+			margin-top: -5px
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			height: 48px
+			width: 48px
+			background: url("../img/sprites.png")no-repeat
+		&_phone::before
+			background-position: 45% 89.2%
+		&_mail::before
+			background-position: 29.5% 89.2%
+		&_insta::before
+			background-position: 89.2% 53.5%
+
+.visible
+	transform: translate3d(0, 100%, 0)
+
+.menu__animatable .navigation
+	transition: all 130ms ease-in
+
+.visible.menu__animatable .navigation
+	transition: all 330ms ease-out
+
+
+.nav
+	display: flex
+	flex-wrap: wrap
+	position: fixed
+	top: 20px
+	margin-top: 0
+	align-content: flex-start
+	left: 0
+	z-index: 50
+	flex-direction: column
+	width: 100%
+	background-color: #c30000
+	background-image: -webkit-linear-gradient(left, #c30000, #610000)
+	background-image: -moz-linear-gradient(left, #c30000, #610000)
+	background-image: -o-linear-gradient(left, #c30000, #610000)
+	background-image: -ms-linear-gradient(left, #c30000, #610000)
+	background-image: linear-gradient(to right, #c30000, #610000)
+	transition: transform .3s ease
+	&__body
+		@include wrapper()
+		width: 100%
+
+.menu
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	box-sizing: border-box
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0
+		padding: 0
+		list-style: none
+	&__item
+		display: block
+		margin-right: 90px
+		box-sizing: border-box
+		&_last
+			margin-right: 0
+	&__link
+		display: block
+		padding: 18px 0 15px 0
+		color: #fff
+		font-size: 1.500rem
+		font-family: 'montserrat-bold', sans-serif
+
+
+.hero
+	display: flex
+	flex-wrap: wrap
+	height: 100vh
+	min-height: 500px
+	width: 100%
+	background: url("../img/hero_bg.jpg")no-repeat
+	background-size: cover
+	position: relative
+	&__body
+		@include wrapper()
+		width: 100%
+		margin: 0 auto
+		position: relative
+	&__block
+		display: flex
+		flex-wrap: wrap
+		position: absolute
+		top: 71%
+		left: 0
+		max-width: 870px
+		width: 100%
+		transform: translate3d(0, -71%, 0)
+	&__title
+		margin: 0
+		color: #fff
+		font-size: 6.250rem
+		font-family: 'montserrat-black', sans-serif
+		@include md(font-size, 4.375rem)
+		@include xs(font-size, 3.125rem)
+	&__about
+		margin: 80px 0 0 0
+		color: #fff
+		font-size: 3.000rem
+		font-family: 'montserratt-lightt', sans-serif
+		@include md(font-size, 2.500rem)
+		@include md(margin-top, 25px)
+		@include sm(font-size, 1.875rem)
+		@include xs(font-size, 1.250rem)
+	&__btn
+		display: block
+		height: 40px
+		width: 73px
+		position: absolute
+		left: 0
+		right: 0
+		margin: 0 auto
+		bottom: 36px
+		background: url("../img/sprites.png")no-repeat
+		background-position: 95% 36%
+
+.section
+	position: relative
+	width: 100%
+	&_first
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		background: #111111
+	&__body
+		@include wrapper()
+		width: 100%
+		margin: 0 auto
+	&__title
+		display: block
+		margin: 44px auto 0
+		text-align: center
+		color: #fff
+		font-size: 2.250rem
+		font-weight: 900
+		letter-spacing: 4.5px
+		font-family: 'montserrat-black', sans-serif
+		@include md(font-size, 1.500rem)
+		@include xs(font-size, 1.125rem)
+		@include xs(letter-spacing, 0)
+	&_second
+		display: flex
+		flex-wrap: wrap
+		background: url("../img/second_bg.jpg")no-repeat
+		background-size: cover
+		flex-direction: column
+	&_three
+		display: flex
+		flex-wrap: wrap
+		background: #111111
+		flex-direction: column
+	&_four
+		display: flex
+		flex-wrap: wrap
+		background: url("../img/four_bg.jpg")no-repeat
+		background-size: cover
+		flex-direction: column
+		@include md(padding-bottom, 50px)
+	&_fifth
+		display: flex
+		flex-wrap: wrap
+		background: #111111
+		flex-direction: column
+
+
+
+.services
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	flex-direction: column
+	margin-top: 50px
+	width: 100%
+	color: #fff
+	&__caption
+		display: block
+		margin: 0
+		font-size: 1.875rem
+		font-family: 'montserrat-bold', sans-serif
+		position: relative
+		@include md(font-size, 1.250rem)
+		@include xs(margin, 0 auto)
+		@include xs(text-align, center)
+		&::after
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 4px
+			width: 68px
+			left: 0
+			bottom: -10px
+			background: #a21212
+			@include xs(right, 0)
+			@include xs(margin, 0 auto)
+	&__text
+		display: block
+		margin: 44px 0 50px 0
+		font-size: 1.125rem
+		font-family: 'montserrat-regular', sans-serif
+		@include md(font-size, 1.000rem)
+		@include xs(text-align, center)
+	&__row
+		@include row-flex()
+	&__item
+		@include size(3)
+		@include col()
+		margin-bottom: 38px
+		@include size-sm(6)
+		@include size-xs(12)
+	&__img
+		display: block
+		height: auto
+		width: auto
+		max-width: 100%
+		@include sm(margin, 0 auto 38px)
+
+.result
+	display: flex
+	flex-wrap: wrap
+	max-width: 1030px
+	width: 100%
+	margin: 32px auto 0
+	&__row
+		@include row-flex()
+	&__item
+		@include size(6)
+		@include col()
+		@include size-xs(12)
+		@include xs(text-align, center)
+	&__block
+		display: block
+		max-width: 480px
+		width: 100%
+		color: #fff
+		text-decoration: none
+		position: relative
+		padding: 11px 16px 11px 0
+		&:hover .result__bg
+			opacity: 1
+	&__bg
+		position: absolute
+		top: 0
+		left: -19px
+		height: 100%
+		border-left: 4px solid #a21212
+		width: 100%
+		background: rgba(255, 255, 255, .3)
+		transition: all .3s
+		opacity: 0
+		@include xs(left, -10px)
+	&__caption
+		margin: 0
+		font-size: 1.500rem
+		font-family: 'montserrat-semibold', sans-serif
+		@include md(font-size, 1.250rem)
+	&__text
+		margin: 8px 0 0 0
+		font-size: 1.125rem
+		line-height: 1.3em
+		font-family: 'montserrat-regular', sans-serif
+		@include md(font-size, 1.000rem)
+	&__btn
+		display: block
+		margin: 45px auto 31px
+		text-align: center
+		min-width: 332px
+		line-height: 50px
+		color: #fff
+		font-size: 1.500rem
+		font-family: 'montserrat-semibold', sans-serif
+		background-color: #c30000
+		background-image: -webkit-linear-gradient(left, #c30000, #900000)
+		background-image: -moz-linear-gradient(left, #c30000, #900000)
+		background-image: -o-linear-gradient(left, #c30000, #900000)
+		background-image: -ms-linear-gradient(left, #c30000, #900000)
+		background-image: linear-gradient(to right, #c30000, #900000)
+		@include xs(min-width, 100%)
+	
+	
+.cooperation
+	display: flex
+	flex-wrap: wrap
+	max-width: 1030px
+	margin: 118px auto 0
+	width: 100%
+	&__row
+		@include row-flex()
+	&__item
+		color: #fff
+		@include size(4)
+		@include col()
+		text-align: center
+		margin-bottom: 190px
+		@include size-xs(12)
+		@include xs(margin-bottom, 80px)
+	&__logo
+		font-size: 3.750rem
+		font-family: 'montserrat-bold', sans-serif
+
+
+.advantages
+	display: flex
+	flex-wrap: wrap
+	margin-top: 50px
+	width: 100%
+	&__row
+		@include row-flex()
+	&__item
+		margin: 0 0 50px 0
+		padding-top: 124px
+		color: #fff
+		@include size(3)
+		@include col()
+		position: relative
+		@include size-sm(6)
+		@include size-xs(12)
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 105px
+			width: 105px
+			top: 0
+			left: 0
+			right: 0
+			margin: 0 auto
+			background: url("../img/sprites.png")no-repeat
+		&_time::before
+			background-position: 71% 3%
+		&_lock::before
+			background-position: 100% 3%
+		&_bag::before
+			background-position: 34% 25%
+		&_phone::before
+			background-position: 2% 100%
+		&_protection::before
+			background-position: 62% 65%
+		&_photo::before
+			background-position: 34% 65%
+		&_wheel::before
+			background-position: 2% 65%
+		&_rectangle::before
+			background-position: 2% 25%
+	&__text
+		margin: 0
+		text-align: center
+		font-size: 1.000rem
+		font-family: 'montserrat-regular', sans-serif
+		@include sm(padding, 0 30px 0 30px)
+		@include sm(font-size, 0.875rem)
+		@include xs(padding, 0 20px 0 20px)
+
+
+.advantages__item_time:hover::before
+	background: url("../img/sprites_hover.png")no-repeat
+	background-position: 50% 3%
+
+.advantages__item_lock:hover::before
+	background: url("../img/sprites_hover.png")no-repeat
+	background-position: 94% 50%
+
+.advantages__item_bag:hover::before
+	background: url("../img/sprites_hover.png")no-repeat
+	background-position: 3% 3%
+
+.advantages__item_phone:hover::before
+	background: url("../img/sprites_hover.png")no-repeat
+	background-position: 44% 90%
+
+.advantages__item_protection:hover::before
+	background: url("../img/sprites_hover.png")no-repeat
+	background-position: -2% 97%
+
+
+.advantages__item_photo:hover::before
+	background: url("../img/sprites_hover.png")no-repeat
+	background-position: 98% 3%
+
+
+.advantages__item_wheel:hover::before
+	background: url("../img/sprites_hover.png")no-repeat
+	background-position: 50% 50%
+
+.advantages__item_rectangle:hover::before
+	background: url("../img/sprites_hover.png")no-repeat
+	background-position: 3% 50%
+
+
+.form
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	width: 100%
+	color: #fff
+	box-sizing: border-box
+	&__text
+		display: block
+		margin: 0 0 20px 0
+		font-size: 0.875rem
+		text-align: center
+		line-height: 1.3em
+		font-family: 'montserrat-regular', sans-serif
+		box-sizing: border-box
+		&_mt
+			margin-top: 44px
+	&__row
+		@include row-flex()
+	&__item
+		@include size(6)
+		@include col()
+		@include size-xs(12)
+	&__input
+		display: inline-block
+		padding-top: 8px
+		margin-bottom: 30px
+		line-height: 44px
+		height: 44px
+		width: 100%
+		background: none
+		padding-left: 17px
+		color: #fff
+		border: 3px solid #790000
+		font-family: 'montserrat-regular', sans-serif
+		box-sizing: border-box
+		outline: none
+		@include xs(padding-top, 5px)
+		&::placeholder
+			color: #fff
+			font-size: 1.500rem
+			font-family: 'montserrat-regular', sans-serif
+			@include sm(font-size, 1.125rem)
+
+
+.button
+	display: block
+	margin: 10px auto 31px
+	font-size: 24px
+	border: none
+	color: #fff
+	line-height: 50px
+	min-width: 332px
+	font-family: 'montserrat-semibold', sans-serif
+	cursor: pointer
+	background-color: #c30000
+	background-image: -webkit-linear-gradient(left, #c30000, #900000)
+	background-image: -moz-linear-gradient(left, #c30000, #900000)
+	background-image: -o-linear-gradient(left, #c30000, #900000)
+	background-image: -ms-linear-gradient(left, #c30000, #900000)
+	background-image: linear-gradient(to right, #c30000, #900000)
+	@include xs(min-width, 100%)
+
+
+.get
+	display: flex
+	flex-wrap: wrap
+	padding-bottom: 22px
+	width: 100%
+	&__row
+		@include row-flex()
+		justify-content: space-between
+	&__item
+		margin-top: 50px
+		@include size(12)
+		@include col()
+	&__text
+		margin: 0 0 0 0
+		color: #fff
+		font-size: 1.125rem
+		font-family: 'montserrat-regular', sans-serif
+		box-sizing: border-box
+		@include md(font-size, 1.000rem)
+		@include md(padding, 0 )
+		@include sm(text-align, center)
+		@include sm(padding, 0 20px 20px 0)
+		&_mt
+			margin-top: 33px
+	&__images
+		@include size(4)
+		@include col()
+		@include size-md(6)
+		@include size-sm(12)
+		&_mr
+			float: right
+			margin-right: 0
+	&__img
+		display: block
+		height: auto
+		width: auto
+		max-width: 100%
+		@include sm(margin, 0 auto)
+	&__block
+		display: block
+		@include size(8)
+		@include col()
+		@include size-md(6)
+		@include size-sm(12)
+		&_mr
+			float: right
+			margin-right: 0
+
+
+.work
+	display: flex
+	margin: 44px 0 0 0
+	flex-wrap: wrap
+	width: 100%
+	color: #fff
+	&__text
+		text-align: center
+		margin: 0
+		font-size: 1.125rem
+		font-family: 'montserrat-regular', sans-serif
+		@include xs(font-size, 0.875rem)
+	&__block
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+	&__row
+		@include row-flex()
+	&__item
+		margin-top: 30px
+		padding-top: 104px
+		@include size(2)
+		@include col()
+		margin-bottom: 30px
+		color: #fff
+		text-decoration: none
+		border-right: 1px solid #790000
+		position: relative
+		@include size-md(4)
+		@include size-sm(6)
+		@include size-xs(12)
+		@include md(border-left, 1px solid #790000)
+		&:last-child
+			border-right: none
+			@include md(border-right, 1px solid #790000)
+		&:hover .work__bg
+			opacity: .3
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		background: url("../img/img.jpg")no-repeat
+		background-size: cover
+		opacity: 0
+		transition: all .3s
+	&__number
+		padding-left: 22px
+		font-size: 3.000rem
+		font-family: 'montserrat-regular', sans-serif
+	&__txt
+		margin: 40px 0 30px 0
+		padding-right: 20px
+		font-size: 0.750rem
+		line-height: 1.3em
+		font-family: 'montserrat-regular', sans-serif
+		box-sizing: border-box
+		@include xs(padding-right, 0)
+		@include xs(text-align, center)
+
+
+
+.footer
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	box-sizing: border-box
+	background: #790000
+	&__body
+		@include wrapper()
+		width: 100%
+		margin: 0 auto
+	&__row
+		@include row-flex()
+		margin-left: 0
+		margin-right: 0
+	&__item
+		display: flex
+		flex-wrap: wrap
+		align-content: flex-start
+		box-sizing: border-box
+		@include size(6)
+		@include col()
+		@include size-xs(12)
+		@include xs(justify-content, center)
+		@include xs(text-align, center)
+		@include xs(margin, 0 auto)
+		&_right
+			justify-content: flex-end
+			@include xs(flex-direction, column)
+			@include xs(justify-content, center)
+	&__list
+		display: inline-flex
+		flex-wrap: wrap
+		flex-direction: column
+		margin: 36px 0 40px 0
+		padding: 0 
+		list-style: none
+		box-sizing: border-box
+		@include xs(margin-bottom, 0)
+		@include shift-left(1)
+		@include xs(margin, 30px auto 0)
+		@include xs(width, 100%)
+		@include xs(justify-content, center)
+		&:first-child
+			@include shift-sm-left(0)
+			@include xs(margin-left, 0)
+	&__items
+		display: flex
+		flex-wrap: wrap
+		box-sizing: border-box
+		width: 100%
+		@include xs(text-align, center)
+		@include xs(justify-content, center)
+	&__link
+		color: #fff
+		margin-bottom: 10px
+		font-size: 1.500rem
+		font-family: 'montserrat-regular', sans-serif
+		@include md(font-size, 1.125rem)
+		@include sm(font-size, 0.875rem)
+		&:hover
+			text-decoration: underline
+			
+
+
+
+.contact
+	display: flex
+	margin: 35px 30px 0 0
+	flex-wrap: wrap
+	flex-direction: column
+	@include sm(margin-right, 0)
+	@include xs(text-align, center)
+	&__data
+		color: #fff
+		margin: 0 0 14px 0
+		font-size: 1.500rem
+		font-family: 'montserrat-bold', sans-serif
+		font-weight: 700
+		@include md(font-size, 1.125rem)
+		@include sm(font-size, 0.875rem)
+	&__link
+		color: #fff
+		font-weight: 100
+		letter-spacing: 2px
+		font-family: 'montserrat-regular', sans-serif
+		&:hover
+			text-decoration: underline
+
+
+
+.soc
+	display: flex
+	flex-wrap: wrap
+	box-sizing: border-box
+	list-style: none
+	margin: 10px 0 0 0
+	padding: 0
+	@include xs(margin, 10px auto 20px)
+	&__item
+		margin-left: 40px
+		@include md(margin-left, 10px)
+	&__link
+		display: block
+		position: relative
+		height: 50px
+		width: 50px
+		border-radius: 50%
+		@include sm(height, 40px)
+		@include sm(width, 40px)
+		&:hover
+			margin-top: -5px
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 50px
+			width: 50px
+			top: 0
+			left: 0
+			background: url("../img/sprites.png")no-repeat
+		&_inst::before
+			background-position: 89.6% 53.5%
+
+
+@media(max-width: 1200px)
+	.header__body
+		padding: 0 20px 0 20px
+	.nav
+		padding: 0 20px 0 20px
+		top: -45px
+	.services
+		padding: 0 20px 0 20px
+	.advantages
+		padding: 0 20px 0 20px
+	.cooperation
+		padding: 0 20px 0 20px
+	.hero
+		padding: 0 20px 0 20px
+	.form
+		padding: 0 20px 0 20px
+	.get
+		padding: 0 20px 0 20px
+	.work
+		padding: 0 20px 0 20px
+
+
+@media(max-width: 960px)
+	.nav
+		top: -40px
+
+@media(max-width: 768px)
+	.nav
+		top: 0
+		left: -100%
+		height: 100vh
+	.visible
+		transform: translate3d(100%, 0, 0)
+	.menu
+		padding-top: 100px
+	.menu__item
+		width: 100%
+		text-align: center
+		margin-right: 0
+	.social_two
+		text-align: center
+		margin: 20px auto 0
+		
+
+
+.message
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	margin: auto
+	background: white
+	max-width: 100%
+	width: 560px
+	text-align: center
+	padding: 40px 20px 27px
+	border: 1px solid #e2e2e2
+	border-top: 3px solid #26c19a
+	transform: translate3d(0, -100%, 0)
+	transition: all .3s ease
+	z-index: 1000000000
+	box-sizing: border-box
+	&__text
+		line-height: 1.5em
+		font-family: 'sans-regular', sans-serif
+
+.message_active
+	transform: translate3d(0, 0, 0)
+
+		
+		
+
+
+
+
+
+
+
+
+
+	
