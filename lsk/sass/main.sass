@@ -1,0 +1,2221 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+html, body
+	margin-right: 0!important
+
+.black
+	width: 100%
+	height: 100vh
+	background: rgba(0,0,0,0.8)
+	position: fixed
+	z-index: 0
+	transition: all .3s
+	overflow: hidden
+	opacity: 0
+
+.header
+	display: inline-block
+	position: relative
+	vertical-align: top
+	width: 100%
+	box-shadow: 0 3px 59px rgba(0,0,0,.80)
+	&:after
+		content: ''
+		display: inline-block
+		position: absolute
+		left: 0
+		right: 0
+		bottom: -60px
+		margin: auto
+		height: 24.5vh
+		max-height: 224px
+		width: 100%
+		background: url("../img/header_after.png")no-repeat center
+		background-size: contain
+	&__width
+		display: inline-block
+		width: 100%
+		box-sizing: border-box
+	&__form
+		display: inline-block
+		position: fixed
+		top: 0
+		left: -394px
+		height: 100vh
+		width: 394px
+		background: #fff
+		box-sizing: border-box
+		z-index: 3000
+		overflow: hidden
+		transition: transform .3s ease
+		background: url(../img/pops_bg.png) no-repeat 75% 95%, #fff
+	&__content
+		display: inline-block
+		position: relative
+		vertical-align: top
+		float: right
+		margin-right: 35px
+		max-width: 300px
+		padding-top: 120px
+		box-sizing: border-box
+	&__input
+		display: block
+		position: relative
+		outline: none
+		line-height: 56px
+		height: 56px
+		width: 100%
+		padding-left: 15px
+		border-top: 2px solid transparent
+		border-right: 2px solid transparent
+		border-left: 2px solid transparent
+		border-bottom: 2px solid #cecece
+		font-family: "roboto-thin"
+		transition: all .3s
+		box-sizing: border-box
+		color: #000
+		&:hover
+			border-bottom: 2px solid #77c9a7
+		&::placeholder
+			color: #000
+		
+.header__adb
+	display: inline-block
+	position: relative
+	text-align: center
+	width: 100%
+	margin-bottom: 20px
+	box-sizing: border-box
+
+.header__line
+	display: inline-block
+	text-align: center
+	height: 2px
+	width: 0
+	position: absolute
+	left: 0
+	right: 0
+	margin: auto
+	background-color: #cecece
+	transition: .3s width ease-in-out
+	position: absolute
+	bottom: 0
+	z-index: 1
+
+.header__content input:focus + label+.header__line
+	width: 100%
+	background-color: #03603A
+
+
+.header__placeholder
+	position: absolute
+	top: 20px
+	left: 15px
+	color: #000
+	font-family: "roboto-thin"
+	font-size: 1.000em
+	transition: all .2s ease
+	&:hover
+		font-family: "roboto-light"
+		color: #000
+		cursor: text
+
+.header__adb input:focus + label
+	font-size: 0.750em
+	color: #000
+	font-family: "roboto-light"
+
+.header__adb input.active + label
+	font-size: 0.750em
+	color: #000
+	font-family: "roboto-light"
+
+.header__adb input:focus + label, input.active + label
+	transform: translateY(-30px)
+	transition: all .3s
+
+
+
+.message
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	margin: auto
+	background: white
+	max-width: 100%
+	width: 560px
+	text-align: center
+	padding: 40px 20px 27px
+	border: 1px solid #e2e2e2
+	border-top: 3px solid #0f603a
+	transform: translate3d(0, -100%, 0)
+	transition: all .3s ease
+	z-index: 10000
+
+
+.message_active
+	transform: translate3d(0, 0, 0)
+
+.aircraft
+	display: inline-block
+	position: relative
+	float: right
+	height: 111px
+	width: 111px
+	background: #0f603a
+	&:before
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 50%
+		left: 50%
+		height: 80px
+		width: 80px
+		background: url("../img/sprites.png")no-repeat
+		background-position: 79% 55%
+		transform: translate3D(-50%,-50%,0)
+
+.input_hide
+	display: none
+
+.close
+	display: block
+	position: relative
+	margin: 70px 0 0 70px
+	color: #000
+	cursor: pointer
+	text-transform: uppercase
+	transition: all .3s
+	&:hover
+		color: #10af6e
+	&:active
+		color: #10af6e
+	&:before
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 10px
+		left: -40px
+		height: 0
+		width: 18px
+		border: 1px solid #000
+		transform: rotate(45deg)
+	&:after
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 10px
+		left: -40px
+		height: 0
+		width: 18px
+		border: 1px solid #000
+		transform: rotate(-45deg)
+
+
+.hamburger
+	position: absolute
+	top: 30px
+	left: 60px
+	z-index: 1100
+
+.hamburger-inner
+	background: #fff
+	height: 5px
+	width: 30px
+	&:before
+		background: #fff
+		height: 5px
+		width: 30px
+	&:after
+		background: #fff
+		height: 5px
+		width: 30px
+
+.nav
+	display: inline-block
+	background: #fff
+	position: fixed
+	top: 0
+	left: 0
+	vertical-align: top
+	width: 100%
+	box-sizing: border-box
+	transition: all .3s
+	z-index: 1000
+	&__body
+		max-width: 1370px
+		margin: auto
+	&__block
+		display: inline-block
+		position: rrelative
+		vertical-align: top
+		width: 100%
+		box-sizing: border-box
+
+.nav_before
+	transition: all .3s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: -80%
+		height: 110px
+		width: 100%
+		transition: all .3s
+		background: #0f603a
+
+.nav_transparent
+	background: rgba(255, 255, 255, .9)
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: -80%
+		height: 110px
+		width: 100%
+		transition: all .3s
+		background: rgba(15, 96, 58, .9)
+
+.navigation
+	display: inline-block
+	vertical-align: top
+	position: fixed
+	top: 110px
+	left: -20%
+	width: 20%
+	height: 100vh
+	background: rgba(15,95,58, .65)
+	transition: transform .3s ease
+	box-sizing: border-box
+	z-index: 100
+	&__list
+		display: inline-block
+		margin: 0
+		padding: 0
+		width: 100%
+		box-sizing: border-box
+	&__item
+		display: block
+		position: relative
+		width: 100%
+		text-align: right
+		box-sizing: border-box
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			height: 1px
+			width: 90%
+			border-bottom: 1px solid #137547
+	&__link
+		color: #fff
+		line-height: 61px
+		font-family: "museo-seven"
+		text-transform: uppercase
+		transition: all .3s
+		&_medium
+			font-size: 0.875em
+		&_block
+			display: block
+			padding-right: 20px
+			&:hover
+				text-decoration: none
+				color: #7bffc8
+				background: rgba(20,118,72, .80)
+
+.visible
+	transform: translate3d(100%, 0, 0)
+
+.menu__animatable .navigation
+	transition: all 130ms ease-in
+
+.visible.menu__animatable .navigation
+	transition: all 330ms ease-out
+
+
+.logo
+	display: inline-block
+	position: absolute
+	vertical-align: top
+	top: 10px
+	left: -10%
+	right: 0
+	width: 110px
+	margin: auto
+	text-align: center
+	height: 80px
+	background: url("../img/sprites.png")no-repeat
+	background-position: 5% 20%
+	&:hover
+		text-decoration: none
+
+.name
+	display: block
+	position: absolute
+	top: 85px
+	left: -10%
+	right: 0
+	margin: auto
+	font-size: 0.750em
+	color: #000
+	text-align: center
+	font-family: "roboto-light"
+
+.phone
+	display: inline-block
+	margin: 19px 0 19px 0
+	position: relative
+	vertical-align: top
+	line-height: 1.5em
+	float: right
+	&:before
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 50%
+		left: -40px
+		height: 40px
+		width: 30px
+		background: url("../img/sprites.png")no-repeat
+		transform: translate3D(0,-50%,0)
+		background-position: 14% 68%
+	&__tel
+		display: block
+		font-size: 1.250em
+		color: #000
+		font-family: "roboto-bold"
+
+.hero
+	display: inline-block
+	position: relative
+	vertical-align: top
+	width: 100%
+	height: 95vh
+	max-height: 975px
+	background: url("../img/hero_bg.jpg")no-repeat center, #202020
+	background-size: cover
+	box-sizing: border-box
+	&__body
+		max-width: 1370px
+		margin: auto
+	&__block
+		display: inline-block
+		position: absolute
+		max-width: 1370px
+		top: 50%
+		left: 0
+		right: 0
+		margin: auto
+		transform: translate3D(0,-50%,0)
+		text-align: center
+		box-sizing: border-box
+		z-index: 200
+	&__title
+		color: #fff
+		line-height: 2.5em
+		text-transform: uppercase
+		padding-bottom: 30px
+		&_big
+			display: block
+			font-size: 90px
+			font-family: "museo-seven"
+		&_small
+			display: block
+			font-size: 45px
+			font-weight: 100
+			font-family: "museo-one"
+
+.button
+	display: inline-block
+	cursor: pointer
+	outline: none
+	color: #fff
+	&:hover
+		text-decoration: none
+	&_hero
+		line-height: 58px
+		border: 1px solid #ffffff
+		text-transform: uppercase
+		font-family: "roboto-bold"
+		font-size: 1.125em
+		border-radius: 5px
+		min-width: 368px
+		transition: all .3s
+		&:hover
+			color: #0fba74
+			border: 1px solid #0fba74
+		&:active
+			color: #0fba74
+			border: 1px solid #0fba74
+	&_price
+		margin-top: 66px
+		line-height: 58px
+		border: 1px solid #ffffff
+		text-transform: uppercase
+		font-size: 1.125em
+		font-family: "roboto-bold"
+		border-radius: 5px
+		min-width: 368px
+		transition: all .3s
+		&:hover
+			color: #0fba74
+			border: 1px solid #0fba74
+		&:active
+			color: #0fba74
+			border: 1px solid #0fba74
+	&_work
+		line-height: 45px
+		position: absolute
+		top: 49%
+		left: 0
+		right: 0
+		margin: auto
+		text-align: center
+		background: #03603a
+		max-width: 130px
+		border-radius: 5px
+		transform: translate3D(0,-49%,0)
+		font-family: "roboto-bold"
+		box-shadow: 0 15px 30px rgba(3,96,58,.5)
+		transition: all .3s
+		&:hover
+			background: #0fba74
+			box-shadow: 0 15px 30px rgba(15,186,116,.5)
+		&:active
+			background: #0fba74
+			box-shadow: 0 15px 30px rgba(15,186,116,.5)
+	&_question
+		min-width: 230px
+		line-height: 50px
+		font-size: 0.938em
+		height: 50px
+		border-radius: 5px
+		background: none
+		text-transform: uppercase
+		font-family: "roboto-bold"
+		border: 1px solid #ffffff
+		transition: all .3s
+		&:hover
+			color: #0fba74
+			border: 1px solid #0fba74
+		&:active
+			color: #0fba74
+			border: 1px solid #0fba74
+		&:focus
+			outline: none
+	&_header
+		outline: none
+		margin-top: 110px
+		line-height: 52px
+		height: 56px
+		background: none
+		border-radius: 5px
+		min-width: 266px
+		color: #000
+		text-transform: uppercase
+		border: 2px solid #000
+		font-family: "roboto-bold"
+		transition: all .3s
+		&:hover
+			color: #fff
+			background: #03603a
+			border: 2px solid #03603a
+		&:active
+			color: #fff
+			background: #03603a
+			border: 2px solid #03603a
+	&_pops
+		outline: none
+		margin-top: 70px
+		line-height: 52px
+		height: 56px
+		background: none
+		border-radius: 5px
+		min-width: 266px
+		color: #000
+		text-transform: uppercase
+		border: 2px solid #000
+		font-family: "roboto-bold"
+		transition: all .3s
+		&:hover
+			color: #fff
+			background: #03603a
+			border: 2px solid #03603a
+		&:active
+			color: #fff
+			background: #03603a
+			border: 2px solid #03603a
+
+.section
+	position: relative
+	&_first
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		min-height: 614px
+		box-sizing: border-box
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 12%
+			left: 0
+			right: 0
+			margin: auto
+			width: 100%
+			height: 100%
+			z-index: -10
+			background: url("../img/hoard.png")no-repeat center
+	&__box
+		display: inline-block
+		margin-top: 183px
+		width: 100%
+		min-height: 261px
+		box-sizing: border-box
+		background: #fff
+		background-size: cover
+	&__body
+		max-width: 1370px
+		margin: auto
+		position: relative
+	&_second
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		min-height: 623px
+		background: url("../img/section_second.jpg")no-repeat center, #15161A
+		box-shadow: 0 3px 59px rgba(0,0,0,.80)
+		background-size: cover
+		box-sizing: border-box
+	&_third
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		height: 100%
+	&_pops
+		display: block
+		max-width: 1000px
+		margin: auto
+	&_fourth
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		margin-top: 161px
+		min-height: 520px
+		background: #e9e9e9
+		overflow: hidden
+		box-shadow: 0 3px 59px rgba(0,0,0,.25)
+		&:before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 110px
+			left: 5%
+			height: 400px
+			width: 100%
+			background: url("../img/images.png")no-repeat
+			background-size: cover
+	&_fifth
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		min-height: 1171px
+	&_sixth
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		min-height: 357px
+	&_seventh
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		min-height: 396px
+		background: url("../img/section_seventh.jpg")no-repeat center, #15161A
+		box-shadow: 0 3px 59px rgba(0,0,0,.80)
+		background-size: cover
+	&_eight
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		min-height: 368px
+		box-sizing: border-box
+
+
+canvas
+	display: block
+	vertical-align: bottom
+
+.particles-js
+	display: inline-block
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	background-color: #10603B
+	background-repeat: no-repeat
+	background-size: cover
+	box-sizing: border-box
+
+.particles-js-canvas-el
+	width: 100%
+	margin-top: -288px
+	height: 357px
+	z-index: 0
+	
+
+.hide
+	display: block
+	&__block
+		display: block
+		position: relative
+		margin: auto
+		max-width: 1000px
+		box-sizing: border-box
+
+.popupes
+	display: inline-block
+	width: 100%
+	box-sizing: border-box
+	&__images
+		display: block
+		margin: auto
+		width: auto
+		max-width: 100%
+		max-height: 680px
+	&__item
+		display: inline-block
+		width: 100%
+		outline: none
+		box-sizing: border-box
+	&__blue
+		display: inline-block
+		min-width: 100%
+		background: #0055b5
+		cursor: pointer
+		transition: all .3s
+		&:hover
+			background: #004697
+	&__people
+		display: inline-block
+		font-size: 0.875em
+		padding: 15px 0 15px 15px
+		color: #59a7ff
+		font-family: "roboto-regular"
+	&__like
+		display: inline-block
+		position: absolute
+		bottom: 15px
+		left: 0
+		right: 0
+		margin: auto
+		width: 160px
+		color: #fff
+		font-family: "roboto-bold"
+		&:before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 1px
+			left: -40px
+			height: 30px
+			width: 30px
+			background: url("../img/sprites.png")no-repeat
+			background-position: 53% 84%
+
+
+.popupes__blue_green
+	color: white
+	background: #0f603a
+
+
+.popupes__blue_green:hover
+	background: #0d5433
+
+
+.popupes__blue_green .popupes__people
+	color: #ededed
+
+
+.animated
+	opacity: 0
+	transform: translate3D(0, 40px, 0) scale(1)
+	&_visible
+		transform: translate3D(0, 0, 0) scale(1)
+		opacity: 1
+		transition: transform 0.5s ease-out 0.2s, opacity 0.5s ease-out 0.2s
+
+$class-slug: animated !default
+
+@for $i from 1 through 9
+	.#{$class-slug}_#{$i}
+		transition-delay: 300ms + ($i * 100)
+
+
+.mfp-close-btn-in .mfp-close:before
+	transform: translate3D(0,-50%,0)
+
+.mfp-close-btn-in .mfp-close 
+  float: right
+  position: absolute
+  top: 0
+  right: 0
+  height: 70px
+  width: 70px
+  background: #fff
+  color: transparent
+  transition: all .3s
+
+.popupes .slick-prev
+	background: url("../img/sprites.png")no-repeat
+	background-position: 1% 100%
+	height: 100px
+	width: 40px
+
+.popupes .slick-next
+	background: url("../img/sprites.png")no-repeat
+	background-position: 100% 32%
+	height: 100px
+	width: 40px
+
+.connection .slick-prev
+	background: url("../img/sprites.png")no-repeat
+	background-position: 24% 90%
+	height: 70px
+	width: 30px
+
+.connection .slick-next
+	background: url("../img/sprites.png")no-repeat
+	background-position: 32% 90%
+	height: 70px
+	width: 30px
+
+.connection
+	display: inline-block
+	max-width: 970px
+	min-width: 100%
+	left: 50%
+	box-sizing: border-box
+	transform: translate3D(-50%,0,0)
+	&__item
+		display: inline-block
+		position: relative
+		width: 100px
+		outline: none
+		cursor: pointer
+		transition: all .3s
+	&__img
+		display: block
+		margin: auto
+		height: auto
+		width: auto
+		max-width: 100%
+
+.services
+	display: inline-block
+	position: relative
+	width: 100%
+	&:after
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		margin: auto
+		height: 267px
+		width: 1px
+		background: #03603a
+	&__item
+		display: inline-block
+		position: relative
+		width: 50%
+		float: left
+		min-height: 130px
+		border-bottom: 1px solid #F1F1F1
+		box-sizing: border-box
+		&:before
+			content: ''
+			position: absolute
+			display: inline-block
+			width: 100%
+			height: 100%
+			background-size: cover
+			background-repeat: no-repeat
+			opacity: 0
+			transition: opacity .2s ease
+		&:hover
+			text-decoration: none
+		&:hover .services__name
+			color: #fff
+	&__name
+		display: block
+		position: relative
+		color: #03603a
+		font-size: 1.875em
+		margin-top: 43px
+		z-index: 10
+		font-family: "roboto-medium"
+		&_first
+			text-align: right
+			margin-right: 220px
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				top: -10px
+				right: -132px
+				height: 80px
+				width: 72px
+				background: url("../img/sprite_two.png")no-repeat
+				background-position: 0% 0%
+		&_second
+			text-align: left
+			margin-left: 220px
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				top: -10px
+				left: -132px
+				height: 80px
+				width: 72px
+				background: url("../img/sprite_two.png")no-repeat
+				background-position: 100% 0%
+		&_third
+			text-align: right
+			margin-right: 220px
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				top: -10px
+				right: -132px
+				height: 80px
+				width: 72px
+				background: url("../img/sprite_two.png")no-repeat
+				background-position: 80% 100%
+		&_fourth
+			text-align: left
+			margin-left: 220px
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				top: -10px
+				left: -132px
+				height: 80px
+				width: 72px
+				background: url("../img/sprite_two.png")no-repeat
+				background-position: 0% 100%
+
+
+.services__item:hover::before
+	opacity: 1
+
+.services__item_first:hover .services__name_first::after
+	background: url("../img/sprites.png")
+	background-position: 78% 32%
+	
+.services__item_first::before
+	background-image: url("../img/item1.jpg")
+
+.services__item_second:hover .services__name_second::after
+	background: url("../img/sprites.png")
+	background-position: 37% 17%
+
+.services__item_second::before
+	background-image: url("../img/item2.jpg")
+
+.services__item_third::before
+	background-image: url("../img/item3.jpg")
+
+.services__item_third:hover .services__name_third::after
+	background: url("../img/sprites.png")
+	background-position: 55.5% 17%
+
+.services__item_fourth:hover .services__name_fourth::after
+	background: url("../img/sprites.png")
+	background-position: 56.5% 44%
+
+.services__item_fourth::before
+	background-image: url("../img/item4.jpg")
+
+
+.price
+	display: inline-block
+	width: 100%
+	text-align: center
+	box-sizing: border-box
+	&__title
+		display: block
+		position: relative
+		color: #fff
+		font-size: 2.500em
+		text-align: center
+		margin: 45px 0 58px 0
+		font-family: "museo-nine"
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -5px
+			margin: auto
+			height: 2px
+			width: 170px
+			background: #ff4c3c
+	&__item
+		display: inline-block
+		position: relative
+		width: 100%
+		box-sizing: border-box
+		&_border
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				left: 0
+				height: 270px
+				width: 1px
+				background: #078954
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				right: 0
+				height: 270px
+				width: 1px
+				background: #078954
+	&__name
+		display: block
+		color: $green
+		margin-top: 130px
+		font-size: 1.500em
+		font-family: "roboto-regular"
+		&_first
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 10px
+				left: 0
+				right: 0
+				margin: auto
+				height: 100px
+				width: 90px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 4% 48%
+		&_second
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 10px
+				left: 0
+				right: 0
+				margin: auto
+				height: 100px
+				width: 90px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 83% 0%
+		&_third
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 10px
+				left: 0
+				right: 0
+				margin: auto
+				height: 100px
+				width: 90px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 33% 48%
+	&__square
+		display: block
+		color: #fff
+		font-size: 3.438em
+		font-family: "helvetica-bold"
+		&_sprint
+			opacity: 0
+			display: inline-block
+			min-width: 62px
+
+.sup
+	font-size: 35px
+
+.col-pd
+	padding: 0 0 0 0
+
+.work
+	display: inline-block
+	width: 100%
+	padding: 0 20px 0 20px
+	box-sizing: border-box
+	&__title
+		display: block
+		position: relative
+		margin: 150px 0 40px 0
+		text-align: center
+		color: #000
+		font-size: 2.500em
+		font-family: "museo-nine"
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -5px
+			margin: auto
+			height: 2px
+			width: 170px
+			background: #ff4c3c
+	&__item
+		display: inline-block
+		outline: none
+		position: relative
+		vertical-align: top
+		width: 100%
+		float: left
+		box-sizing: border-box
+		&:hover
+			background: rgba(28,30,73, .60)
+	&__img
+		display: block
+		vertical-align: top
+		width: 100%
+		height: 100%
+		max-width: 100%
+	&__dark
+		display: inline-block
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		margin: auto
+		width: 100%
+		height: 100%
+		box-sizing: border-box
+		background: rgba(28,30,37, .60)
+		transition: all .3s
+		opacity: 0
+	&__popup
+		display: inline-block
+		position: fixed
+		top: 0
+		left: -394px
+		height: 100vh
+		width: 394px
+		background: #fff
+		box-sizing: border-box
+		z-index: 3000
+		transition: transform .3s ease
+		background: url(../img/pops_bg.png) no-repeat 75% 95%, #fff
+	&__width
+		display: inline-block
+		width: 100%
+		box-sizing: border-box
+	&__content
+		display: inline-block
+		vertical-align: top
+		float: right
+		margin-right: 35px
+		max-width: 300px
+		padding-top: 120px
+		box-sizing: border-box
+	&__abs
+		display: inline-block
+		position: relative
+		margin-bottom: 20px
+		text-align: center
+		width: 100%
+		box-sizing: border-box
+	&__line
+		display: inline-block
+		text-align: center
+		height: 2px
+		width: 0
+		position: absolute
+		left: 0
+		right: 0
+		margin: auto
+		background-color: #cecece
+		transition: .3s width ease-in-out
+		position: absolute
+		bottom: 0
+	&__input
+		display: block
+		position: relative
+		outline: none
+		line-height: 56px
+		height: 56px
+		width: 100%
+		padding-left: 15px
+		border-top: 2px solid transparent
+		border-right: 2px solid transparent
+		border-left: 2px solid transparent
+		border-bottom: 2px solid #cecece
+		font-family: "roboto-thin"
+		transition: all .3s
+		box-sizing: border-box
+		&::placeholder
+			color: #000
+			text-transform: uppercase
+			font-size: 0.875em
+		&:hover
+			border-bottom: 2px solid  #77c9a7
+			font-family: "roboto-light"
+		&:focus
+			font-family: "roboto-light"
+	&__boxs
+		display: inline-block
+		width: 100%
+		box-sizing: border-box
+		&_pt
+			margin-top: 35px
+	&__checkbox
+		display: inline-block
+		width: 100%
+		margin-bottom: 5px
+		box-sizing: border-box
+	&__label
+		position: relative
+		padding-left: 37px
+		&:before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 3px
+			left: 0
+			height: 20px
+			width: 20px
+			cursor: pointer
+			border: 1px solid #cecece
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 8px
+			left: 4px
+			height: 12px
+			width: 12px
+			cursor: pointer
+			transition: all .3s
+			background: url("../img/checked.png")no-repeat
+			opacity: 0
+
+.work__content input:focus + label+.work__line
+	width: 100%
+	background-color: #03603A
+
+.work__checkbox input[type="checkbox"]:checked + label:after
+	opacity: 1
+
+.work__item:hover .work__dark
+	opacity: 9
+	box-shadow: 0 20px 135px rgba(3,96,58,.5)
+
+.work__placeholder
+	position: absolute
+	top: 20px
+	left: 15px
+	color: #000
+	font-family: "roboto-thin"
+	font-size: 1.000em
+	transition: all .2s ease
+	&:hover
+		font-family: "roboto-light"
+		color: #000
+		cursor: text
+
+.work__abs input:focus + label
+	font-size: 0.750em
+	color: #000
+	font-family: "roboto-light"
+
+.work__abs input.active + label
+	font-size: 0.750em
+	color: #000
+	font-family: "roboto-light"
+
+.work__abs input:focus + label, input.active + label
+	transform: translateY(-30px)
+	transition: all .3s
+
+.hidden
+	display: none
+
+.achievements
+	display: inline-block
+	position: relative
+	width: 100%
+	padding-left: 10px
+	box-sizing: border-box
+	&__title
+		display: block
+		position: relative
+		margin: 66px 0 0 0
+		text-align: center
+		color: #000
+		font-size: 2.500em
+		font-family: "museo-nine"
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -5px
+			margin: auto
+			height: 2px
+			width: 170px
+			background: #ff4c3c
+	&__item
+		display: inline-block
+		float: left
+		position: relative
+		vertical-align: top
+		box-sizing: border-box
+		&_pl
+			padding-left: 100px
+		&_border
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 45px
+				left: 10%
+				border: 1px solid #5ecb9e
+				width: 67px
+				height: 0
+				transform: rotate(70deg)
+	&__right
+		padding: 119px 22px 0 0
+		display: inline-block
+		float: right
+	&__first
+		display: block
+		color: $green
+		font-size: 3.875em
+		font-family: "museo-nine"
+	&__number
+		display: block
+		margin-left: -5px
+		color: $green
+		font-size: 20.688em
+		line-height: 0.8em
+		opacity: 0
+		font-family: "museo-nine"
+	&__absolute
+		max-height: 99px
+		display: inline-block
+		position: absolute
+		bottom: 0
+		width: calc(100% - 430px)
+		font-size: 3.6rem
+		left: 405px
+		font-family: "museo-one"
+		text-align: justify
+		&:after
+			content: ''
+			width: 100%
+			display: inline-block
+	&__quantity
+		display: block
+		color: $green
+		font-size: 4.813em
+		line-height: 0.9em
+		opacity: 0
+		font-family: "museo-nine"
+		&_pl
+			padding-left: 60px
+	&__txt
+		display: block
+		position: relative
+		color: #000
+		font-family: "museo-one"
+		font-size: 1.375em
+		&_pl
+			padding-left: 60px
+		&_one
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				left: 0
+				bottom: -10px
+				height: 2px
+				min-width: 254px
+				background: #000000
+		&_two
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				left: 0
+				bottom: -10px
+				height: 2px
+				min-width: 112px
+				background: #000000
+		&_three
+			&:after
+				content: ''
+				display: inline-block
+				position: absolute
+				left: 60px
+				bottom: -10px
+				height: 2px
+				min-width: 133px
+				background: #000000
+
+
+.achievements__quantity_finished::after
+	content: '+'
+
+.recommendation
+	display: inline-block
+	width: 100%
+	box-sizing: border-box
+	&__title
+		display: block
+		position: relative
+		margin: 145px 0 40px 0
+		text-align: center
+		color: #000
+		font-size: 2.500em
+		font-family: "museo-nine"
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -5px
+			margin: auto
+			height: 2px
+			width: 170px
+			background: #ff4c3c
+	&__item
+		display: inline-block
+		position: relative
+		max-width: 300px
+		width: 100%
+		box-sizing: border-box
+		min-height: 150px
+		margin-bottom: 60px
+		box-shadow: 0 20px 15px rgba(0,0,0,.08)
+		transition: all .3s
+	&__img
+		display: inline-block
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		margin: 0 auto
+		height: auto
+		width: auto
+		max-width: 100%
+		transform: translate3D(0,-50%,0)
+
+.question
+	display: inline-block
+	width: 100%
+	box-sizing: border-box
+	&__title
+		display: block
+		position: relative
+		margin: 60px 0 40px 0
+		text-align: center
+		color: #fff
+		font-size: 2.500em
+		font-family: "museo-nine"
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -5px
+			margin: auto
+			height: 2px
+			width: 170px
+			background: #ff4c3c
+	&__span
+		display: block
+		text-align: center
+		color: #fff
+		font-size: 1.875em
+		font-family: "roboto-regular"
+	&__form
+		display: block
+		max-width: 970px
+		padding: 33px 30px 0 30px
+		margin: auto
+		box-sizing: border-box
+	&__input
+		display: inline-block
+		min-width: 300px
+		line-height: 50px
+		float: left
+		margin-right: 32px
+		height: 50px
+		padding-left: 30px
+		border-radius: 5px
+		outline: none
+		box-sizing: border-box
+		border: 3px solid transparent
+		box-shadow: 0 5px 15px rgba(3,96,58,.2)
+		transition: all .3s
+		border: 3px solid transparent
+		&:hover
+			border: 3px solid #77c9a7
+		&:focus
+			border: 3px solid #0fba74
+		&::placeholder
+			color: #D5D5D5
+			text-transform: uppercase
+			font-size: 0.813em
+			font-family: "roboto-regular"
+
+.contacts
+	display: inline-block
+	width: 100%
+	padding: 0 20px 0 20px
+	box-sizing: border-box
+	&__title
+		display: block
+		position: relative
+		margin: 70px 0 40px 0
+		text-align: center
+		color: #fff
+		font-size: 2.500em
+		font-family: "museo-nine"
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -5px
+			margin: auto
+			height: 2px
+			width: 170px
+			background: #ff4c3c
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 100%
+	&__name
+		display: inline-block
+		color: #fff
+		font-size: 2.500em
+		line-height: 1.3em
+		font-family: "museo-one"
+	&__caption
+		display: block
+		position: relative
+		color: $red
+		font-size: 1.250em
+		font-family: "museo-one"
+		&_phone
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				left: -50px
+				height: 44px
+				width: 30px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 4% 70%
+		&_email
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				left: -50px
+				height: 44px
+				width: 30px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 32% 70%
+		&_loc
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				left: -50px
+				height: 44px
+				width: 30px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 22% 70%
+	&__data
+		display: block
+		color: #fff
+		font-size: 1.125em
+		font-family: "roboto-regular"
+		&:hover
+			color: #fff
+
+.map
+	display: inline-block
+	width: 100%
+	height: 100%
+	box-sizing: border-box
+	&__item
+		min-height: 368px
+		width: 100%
+		box-sizing: border-box
+
+.footer
+	display: inline-block
+	position: relative
+	vertical-align: top
+	width: 100%
+	z-index: 1000
+	&__body
+		max-width: 1370px
+		margin: auto
+	&__logo
+		display: inline-block
+		position: relative
+		float: left
+		vertical-align: top
+		height: 80px
+		width: 120px
+		&:before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			height: 80px
+			width: 120px
+			background: url("../img/sprites.png")no-repeat
+			background-position: 2% 19%
+	&__copy
+		display: inline-block
+		vertical-align: top
+		font-size: 1.125em
+		font-family: "roboto-regular"
+		margin: 25px 0 0 43px
+	&__link
+		color: #078954
+		transition: all .3s
+		&:hover
+			color: #078954
+
+.copyright
+	display: inline-block
+	float: right
+	margin-top: 28px
+	font-size: 0.875em
+	font-weight: bold
+	font-family: "roboto-thin"
+	&__link
+		color: #078954
+		transition: all .3s
+		&:hover
+			color: #078954
+
+
+.social
+	display: inline-block
+	vertical-align: top
+	box-sizing: border-box
+	margin-top: 20px
+	&__link
+		display: inline-block
+		position: relative
+		margin-right: 20px
+		float: left
+		height: 35px
+		width: 30px
+		transition: all .3s
+		&:hover
+			margin-top: -5px
+		&_facebook
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				left: 0
+				height: 30px
+				width: 30px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 4% 6%
+		&_twitter
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				left: 0
+				height: 30px
+				width: 30px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 19% 6%
+		&_odnoklassniki
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				left: 0
+				height: 30px
+				width: 30px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 33% 6%
+		&_google
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				left: 0
+				height: 30px
+				width: 30px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 48% 6%
+		&_youtube
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 0
+				left: 0
+				height: 30px
+				width: 30px
+				background: url("../img/sprites.png")no-repeat
+				background-position: 62% 6%
+
+.random
+	opacity: 1
+
+
+.input-ok
+	border-bottom-color: #77c9a7
+
+.input-alert
+	border-bottom-color: #ff4c3c
+
+
+.input-ok + label
+	color: #0f603a!important
+
+
+.input-alert + label
+	color: red!important
+
+
+.button[disabled]
+	opacity: .4
+	cursor: default
+
+
+.button[disabled]:hover
+	background: #e2e2e2
+	color: #111
+	border-color: #111
+
+
+@media(max-width: 1420px)
+	.row
+		margin-left: 0
+		margin-right: 0
+	.mfp-close-btn-in .mfp-close
+		right: 15px
+
+@media(max-width: 1200px)
+	.header__form
+		left: -100%
+		width: 100%
+	.header__content
+		padding-top: 0
+		display: block
+		text-align: center
+		float: none
+		margin: auto
+	.services__name
+		font-size: 1.500em
+		margin-top: 50px
+	.work__popup
+		left: -100%
+		width: 100%
+	.work__content
+		max-width: 400px
+		padding-top: 0
+		display: block
+		text-align: center
+		float: none
+		margin: auto
+	.work__label_two
+		margin-left: -2px
+	.close
+		margin-left: 0
+	.close:before
+		top: 12px
+		left: 50px
+	.close:after
+		top: 12px
+		left: 50px
+	.achievements__first
+		font-size: 3.125em
+	.achievements__number
+		font-size: 11.875em
+	.achievements__quantity
+		font-size: 3.125em
+	.achievements__absolute
+		left: 342px
+		text-align: left
+		width: 100%
+		font-size: 2.188em
+		bottom: -70px
+	.achievements__right
+		float: left
+		padding-top: 100px
+		padding-left: 40px
+	.achievements__item_br
+		padding-left: 80px
+	.achievements__item_pl
+		padding-left: 60px
+		padding-right: 0
+	.achievements__item_border:after
+		left: 0
+	.achievements__quantity_pl
+		padding-left: 0
+	.achievements__txt_pl
+		padding-left: 0
+	.achievements__txt_three:after
+		left: 0
+	.hide__block
+		width: 100%
+		padding: 0 20px 0 20px
+	.mfp-close-btn-in .mfp-close
+		right: 35px
+	.connection
+		width: 100%
+	.section_fourth:before
+		background-size: 100%
+		background-position: bottom
+
+
+@media(max-width: 991px)
+	.phone__tel
+		font-size: 1.000em
+	.navigation
+		left: -100%
+		width: 100%
+	.navigation__item
+		text-align: center
+	.navigation__link_block
+		padding-right: 0
+	.navigation__item:after
+		min-width: 100%
+	.hero__title_big
+		line-height: 1em
+		font-size: 60px
+	.hero__title_small
+		line-height: 1em
+		font-size: 34px
+	.section_first:after
+		display: none
+	.services:after
+		height: 330px
+	.services__name
+		font-size: 1.875em
+		margin-bottom: 10px
+	.services__name_first
+		padding-top: 60px
+		text-align: center
+		margin-right: 0
+	.services__name_first:after
+		top: -30px
+		left: 0
+		right: 0
+		margin: auto
+	.services__name_second
+		padding-top: 60px
+		text-align: center
+		margin-left: 0
+	.services__name_second:after
+		top: -30px
+		left: 0
+		right: 0
+		margin: auto
+	.services__name_third
+		padding-top: 60px
+		text-align: center
+		margin-right: 0
+	.services__name_third:after
+		top: -30px
+		left: 0
+		right: 0
+		margin: auto
+	.services__name_fourth
+		padding-top: 60px
+		text-align: center
+		margin-left: 0
+	.services__name_fourth:after
+		top: -30px
+		left: 0
+		right: 0
+		margin: auto
+	.achievements__txt
+		font-size: 1.125em
+	.price__square
+		font-size: 2.500em
+	.price__name
+		font-size: 1.250em
+	.sup
+		top: -20px
+		font-size: 20px
+	.popupes__images
+		max-height: 500px
+	.achievements__item_br
+		margin-top: 20px
+		width: 100%
+		text-align: center
+		padding-left: 0
+	.achievements__absolute
+		left: 0
+		right: 0
+		margin: auto
+		text-align: center
+		top: 220px
+	.achievements__item_wd
+		width: 33%
+	.achievements__item_pl
+		width: 33%
+	.achievements__right
+		text-align: center
+		width: 100%
+		padding: 80px 20px 40px 20px
+	.achievements__txt_one:after
+		left: 0
+		right: 0
+		margin: auto
+	.achievements__txt_two:after
+		left: 0
+		right: 0
+		margin: auto
+	.achievements__txt_three:after
+		left: 0
+		right: 0
+		margin: auto
+	.achievements__item_border:after
+		left: -10px
+	.recommendation__item
+		max-width: 100%
+		margin-bottom: 40px
+	.contacts__item
+		margin-bottom: 40px
+	.social
+		display: block
+		float: right
+	.section__box
+		background: none
+	.section_sixth
+		padding-bottom: 450px
+	.particles-js-canvas-el 
+    margin-top: -388px
+	.col-pd
+		padding: 0 0 0 0
+	.section_first
+		padding-bottom: 183px
+	.question__form
+		text-align: center
+	.question__input
+		min-width: 49%
+		margin-right: 1%
+	.button_question
+		margin: 40px 0 40px 0
+	.contacts__caption_phone:before
+		top: -10px
+		left: auto
+		right: 40%
+	.contacts__caption_email:before
+		left: auto
+		right: 40%
+	.contacts__caption_loc:before
+		top: -5px
+		left: auto
+		right: 60%
+
+
+@media(max-width: 970px)
+	.connection
+		max-width: 500px
+
+@media(max-width: 767px)
+	.hero__title_big
+		font-size: 46px
+	.hero__title_small
+		font-size: 30px
+	.price__title
+		font-size: 1.875em
+	.work__title
+		font-size: 1.875em
+	.achievements__title
+		font-size: 1.875em
+	.recommendation__title
+		font-size: 1.875em
+	.question__title
+		font-size: 1.875em
+	.contacts__title
+		font-size: 1.875em
+	.popupes__images
+		max-height: 300px
+	.popupes__like
+		left: auto
+		right: 0
+	.achievements__first
+		font-size: 2.750em
+	.achievements__number
+		font-size: 8.750em
+	.achievements__absolute
+		top: 200px
+		font-size: 1.625em
+	.achievements__quantity
+		font-size: 2.500em
+	.achievements__item_border:after
+		left: 10px
+		top: 30px
+		width: 50px
+	.achievements__txt_one:after
+		display: none
+	.achievements__txt_two:after
+		display: none
+	.achievements__txt_three:after
+		display: none
+	.services:after
+		height: 306px
+	.footer__copy
+		display: block
+		float: right
+	.social
+		float: left
+	.contacts__item
+		text-align: center
+	.contacts__name
+		font-size: 1.875em
+	.contacts__caption_phone:before
+		top: -40px
+		left: 0
+		right: 0
+		margin: auto
+	.contacts__caption_email:before
+		top: -20px
+		left: 0
+		right: 0
+		margin: auto
+	.contacts__caption_loc:before
+		top: -30px
+		left: 0
+		right: 0
+		margin: auto
+	.contacts__data
+		font-size: 1.000em
+	.services__name
+		font-size: 1.375em
+	.price__name
+		font-size: 1.125em
+	.price__square
+		font-size: 1.500em
+	.sup
+		top: -10px
+		font-size: 14px
+	.price__item_border:before
+		display: none
+	.price__item_border:after
+		display: none
+	.question__span
+		padding: 0 20px 0 20px
+		font-size: 1.750em
+
+@media(max-width: 575px)
+	.hamburger
+		left: 30px
+	.phone
+		display: none
+	.nav__block
+		height: 109px
+	.logo
+		left: 10%
+	.name
+		left: 10%
+	.navigation
+		top: 110px
+	.services:after
+		display: none
+	.contacts__item
+		text-align: center
+		margin-top: 20px
+	.contacts__caption_phone:before
+		top: -40px
+		left: 0
+		right: 0
+		margin: auto
+	.contacts__caption_email:before
+		top: -20px
+		left: 0
+		right: 0
+		margin: auto
+	.contacts__caption_loc:before
+		top: -30px
+		left: 0
+		right: 0
+		margin: auto
+	.price
+		padding: 0 20px 40px 20px
+	.price__item
+		padding-bottom: 20px
+	.price__square
+		font-size: 1.875em
+	.footer__logo
+		display: block
+		float: none
+		margin: 20px auto
+	.footer__copy
+		float: none
+		text-align: center
+		margin: 0 0 0 0
+	.social
+		float: none
+		text-align: center
+	.social__link
+		float: none
+	.copyright
+		width: 100%
+		float: none
+		margin-top: 0
+		text-align: center
+
+@media(max-width: 520px)
+	.nav
+		min-height: 110px
+	.hamburger
+		left: 4%
+		transform: translate3D(-4%,0,0)
+	.logo
+		left: 5%
+	.name
+		left: 5%
+	.hero__title_big
+		font-size: 30px
+		padding: 0 20px 10px 20px
+	.hero__title_small
+		font-size: 20px
+		line-height: 1.3em
+	.button_hero
+		min-width: 100%
+	.button_price
+		min-width: 100%
+	.popupes__images
+		max-height: 200px
+	.popupes__like
+		text-align: center
+		left: 0
+		right: 0
+		bottom: 5px
+		margin: auto
+		font-size: 0.875em
+	.popupes__like:before
+		top: -1px
+		left: -15px
+	.popupes__people
+		text-align: center
+		width: 100%
+		margin: auto
+		padding-top: 0
+		padding-bottom: 30px
+		font-size: 0.875em
+	.services__item
+		width: 100%
+	.question__span
+		font-size: 1.125em
+	.question__input
+		min-width: 100%
+		margin-right: 0
+		margin-bottom: 20px
+	.achievements__right
+		padding-top: 40px
+	.achievements__item
+		margin-bottom: 30px
+	.achievements__quantity
+		font-size: 3.125em
+	.achievements__txt
+		font-size: 1.500em
+	.button_question
+		margin-top: 20px
+	.achievements__item_wd
+		width: 100%
+	.achievements__item_pl
+		padding-left: 0
+		width: 100%
+	.achievements__absolute
+		top: -100px
+		font-size: 1.500em
+	.achievements__item_border:after
+		display: none
+	.mfp-close-btn-in .mfp-close
+		height: 40px
+		width: 40px
+		color: #0f603a
+	.mfp-close-btn-in .mfp-close:before
+		background: none
+		height: 40px
+		width: 40px
+	.header__content
+		padding: 0 20px 0 20px
+	.work__content
+		padding: 0 20px 0 20px
+	.button_pops
+		margin-top: 20px
+	.work__popup .close
+		margin-top: 20px
+	.close:before
+		left: 25%
+	.close:after
+		left: 25%
+	.connection .slick-slide
+		margin: 0 5px
+	.section_fourth:before
+		top: 330px
+
+@media(max-width: 380px)
+	.hamburger
+		left: 1%
+		transform: translate3D(1%,0,0)
+	.popupes__images
+		max-height: 180px
+	.button_question
+		margin-top: 0
+		width: 100%
+	.achievements__first
+		font-size: 1.875em
+	.achievements__number
+		font-size: 6.250em
+	.achievements__absolute
+		top: -140px
+		font-size: 1.250em
+	.achievements__txt
+		font-size: 1.250em
+	.section_fourth:before
+		top: 260px
+
+
+
+@import "media" // Always at the end

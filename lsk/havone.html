@@ -1,0 +1,124 @@
+	<section class="section section_pops" id="popupes_nine">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="popupes popupes_nn">
+						<div class="popupes__item">
+							<img src="img/popup/item9/image1.jpg" alt="item" class="popupes__images">
+							<span class="popupes__blue">
+								<span class="popupes__people">279 человеку понравилось</span>
+								<span class="popupes__like">Мне это нравится</span>
+							</span>
+						</div>
+						<div class="popupes__item">
+							<img src="img/popup/item9/image2.jpg" alt="item" class="popupes__images">
+							<span class="popupes__blue">
+								<span class="popupes__people">279 человеку понравилось</span>
+								<span class="popupes__like">Мне это нравится</span>
+							</span>
+						</div>
+						<div class="popupes__item">
+							<img src="img/popup/item9/image3.jpg" alt="item" class="popupes__images">
+							<span class="popupes__blue">
+								<span class="popupes__people">279 человеку понравилось</span>
+								<span class="popupes__like">Мне это нравится</span>
+							</span>
+						</div>
+						<div class="popupes__item">
+							<img src="img/popup/item9/image4.jpg" alt="item" class="popupes__images">
+							<span class="popupes__blue">
+								<span class="popupes__people">279 человеку понравилось</span>
+								<span class="popupes__like">Мне это нравится</span>
+							</span>
+						</div>
+						<div class="popupes__item">
+							<img src="img/popup/item9/image5.jpg" alt="item" class="popupes__images">
+							<span class="popupes__blue">
+								<span class="popupes__people">279 человеку понравилось</span>
+								<span class="popupes__like">Мне это нравится</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="connection connection_nine">
+						<div class="connection__item connection__item_pd">
+							<img src="img/popup/item9/mini/image1.jpg" alt="" class="connection__img">
+						</div>
+						<div class="connection__item connection__item_pd">
+							<img src="img/popup/item9/mini/image2.jpg" alt="" class="connection__img">
+						</div>
+						<div class="connection__item connection__item_pd">
+							<img src="img/popup/item9/mini/image3.jpg" alt="" class="connection__img">
+						</div>
+						<div class="connection__item connection__item_pd">
+							<img src="img/popup/item9/mini/image4.jpg" alt="" class="connection__img">
+						</div>
+							<div class="connection__item connection__item_pd">
+							<img src="img/popup/item9/mini/image5.jpg" alt="" class="connection__img">
+						</div>
+					</div>
+				</div>
+			</div>	
+		<script>
+			$(document).ready(function() {
+				$(".popupes_nn").slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: !0,
+					fade: !0,
+					asNavFor: ".connection_nine"
+				}) 
+				$(".connection_nine").slick({
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					asNavFor: ".popupes_nn",
+					dots: !1,
+					centerMode: !1,
+					focusOnSelect: !0,
+					centerMode: !0,
+					responsive: [{
+						breakpoint: 971,
+						settings: {
+							slidesToShow: 3
+						}
+					}, {
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 3,
+							arrows: !1
+						}
+					}, {
+						breakpoint: 521,
+						settings: {
+							slidesToShow: 2
+						}
+					}]
+				})
+			})
+		</script>
+		<script>
+			$(".popupes__blue").click(function() {
+				$(".work__popup").addClass("visible");
+				$(".black").css({
+					"opacity": "0.8",
+					"z-index": "800"
+				});
+				$.magnificPopup.close();
+				$("body").css("overflow", "hidden");
+				$(".hero__block").css("z-index", "10");
+				$(".nav").css("z-index", "10");
+			});
+			$(".close").click(function() {
+				$(".work__popup").removeClass("visible");
+				$(".black").css({
+					"opacity": "0",
+					"z-index": "0"
+				});
+				$("body").css("overflow", "visible");
+				$(".hero__block").css("z-index", "999");
+				$(".nav").css("z-index", "1000");
+			});
+		</script>
+	</section>
