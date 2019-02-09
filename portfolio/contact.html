@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+	<meta name="msapplication-TileColor" content="#0f603a">
+	<meta name="theme-color" content="#0f603a">
+	<title>Andrey Lykyanov | Web Development</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+	<div class="navigation">
+		<div class="hamburger hamburger--squeeze">
+			<div class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</div>
+		</div>
+		<ul class="social">
+			<li class="social__item">
+				<a href="https://vk.com/andreyweb" class="social__link social__link_vk" target="blank"></a>
+			</li>
+			<li class="social__item">
+				<a href="https://t.me/AndreLuckyanov" class="social__link social__link_tg" target="blank"></a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="nav">
+		<ul class="nav__list">
+			<li class="nav__item">
+				<a href="index.html" class="nav__link">Главная</a>
+			</li>
+			<li class="nav__item">
+				<a href="index.html" class="nav__link">Примеры работ</a>
+			</li>
+			<li class="nav__item">
+				<a href="contact.html" class="nav__link">Контакты</a>
+			</li>
+		</ul>
+		<span class="copy">2018 © Все права защещины</span>
+	</div>
+
+	<header class="header header_mh">
+		<div class="header__body">
+			<div class="row row_sb">
+				<div class="header__item">
+					<a href="/" class="logo logo_pink">
+						<span class="logo__name">Andrey-Web</span>
+						<span class="logo__web">FRONT-END WEB DEVELOPER</span>
+					</a>
+				</div>
+				<div class="header__item">
+					<div class="block">
+						<div class="block__item">
+							<a href="mailto:Lukyanov-Andrey-V@yandex.ru" class="block__name block__name_hover block__name_white block__name_pd">E-mail</a>
+						</div>
+						<div class="block__item">
+							<a href="tel:+79164630443" class="block__name block__name_hover block__name_white block__name_pd">WhatsApp</a>
+						</div>
+						<div class="block__item">
+							<a href=skype:shatge@mail.ru" class="block__name block__name_hover block__name_white block__name_pd">Skype</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+				<h1 class="header__title header__title_mt header__title_pink">ДАВАЙТЕ ПРИСТУПИМ</h1>
+				<p class="header__text">Я здесь, чтобы помочь вам воплощать идеи в реальность, большие и маленькие, простые и сложные. Вы обязательно получите решение. Свяжитесь со мной.</p>
+			
+		</div>
+	</header>
+
+	<main>
+		<section class="section section_first">
+			<div class="section__body">
+				<h2 class="section__title">Свяжитесь со мной:</h2>
+				<p class="section__caption">Расскажите немного о себе</p>
+				<form action="mail.php" method="POST" class="formas" id="form_second">
+					<div class="row">
+						<div class="section__col">
+							<input type="text" class="section__input" placeholder="Имя" name="names" minlength="3" required>
+						</div>
+						<div class="section__col">
+							<input type="email" class="section__input" placeholder="E-mail" name="emails" required>
+						</div>
+						<div class="section__col">
+							<input type="text" class="section__input" placeholder="Компания" name="company" required>
+						</div>
+					</div>
+					<p class="section__caption">Вам нужны:</p>
+					<div class="row">
+						<div class="section__col">
+							<input type="checkbox" class="section__checkbox" id="label1" name="saits">
+							<label for="label1" class="section__label andr">
+								Сайт под ключ
+							</label>
+						</div>
+						<div class="section__col">
+							<input type="checkbox" class="section__checkbox" id="label2" name="typesetting">
+							<label for="label2" class="section__label andr">
+								Верстка и код
+							</label>
+						</div>
+						<div class="section__col">
+							<input type="checkbox" class="section__checkbox" id="label3" name="design">
+							<label for="label3" class="section__label andr">
+								Дизайн и логотип
+							</label>
+						</div>
+					</div>
+					<p class="section__caption">Какой у вас бюджет?</p>
+					<div class="row">
+						<div class="section__col">
+							<input type="radio" value="< 20000₽" class="section__checkbox one" id="label4" name="price">
+							<label for="label4" class="section__label act">
+								< 20000 ₽
+							</label>
+						</div>
+						<div class="section__col">
+							<input type="radio" value="20000 - 40000 ₽" class="section__checkbox two" id="label5" name="price">
+							<label for="label5" class="section__label act">
+								20000 - 40000 ₽
+							</label>
+						</div>
+						<div class="section__col">
+							<input type="radio" value="40000 - 70000 ₽" class="section__checkbox three" id="label6" name="price">
+							<label for="label6" class="section__label act">
+								40000 - 70000 ₽
+							</label>
+						</div>
+						<div class="section__col">
+							<input type="radio" value="70000 - 100000 ₽" class="section__checkbox four" id="label7" name="price">
+							<label for="label7" class="section__label act">
+								70000 - 100000 ₽
+							</label>
+						</div>
+					</div>
+					<p class="section__caption">Расскажите, пожалуйста, о вашем проекте</p>
+					<div class="row">
+						<div class="section__col section__col_width">
+							<textarea name="description" id="" cols="30" rows="10" placeholder="Описание проекта" class="section__textarea" required></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="section__col">
+							<button class="button button_contact" type="submit" name="submits">Отправить запрос</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</section>
+	</main>
+
+
+	<div class="message">
+		<p class="message__text">Спасибо. Мы свяжемся с вами в ближайшее время!</p>
+	</div>
+
+
+	
+
+
+
+
+
+	<script src="js/scripts.min.js"></script>
+	<script>
+
+		var message = $('.message');
+      function form__send(){
+        message.addClass('message_active');
+        setTimeout(function() {message.removeClass('message_active')}, 3000);
+      }
+
+      var checkbox1, checkbox2, checkbox3;
+			checkbox1 = document.getElementById("label1");
+			checkbox2 = document.getElementById("label2");
+			checkbox3 = document.getElementById("label3");
+
+		document.getElementById('form_second').addEventListener('submit', function(evt){
+				var data = '';
+				
+				var http = new XMLHttpRequest(), f = this;
+				evt.preventDefault();
+				http.open("POST", "mail.php", true);
+				http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				data += "&names=" + f.names.value + "&emails=" + f.emails.value + "&company=" + f.company.value;
+				if (checkbox1.checked) {
+					data += "&saits=" + "Сайт под ключ";
+				}
+				if (checkbox2.checked) {
+					data += "&typesetting=" + "Верстка и код";
+				}
+				if (checkbox3.checked) {
+					data += "&design=" + "Дизайн и логотип";
+				}
+				data += "&price=" + f.price.value + "&description=" + f.description.value;
+				console.log(data);
+				http.send(data);
+				http.onreadystatechange = function() {
+					if (http.readyState == 4 && http.status == 200) {
+						form__send();
+						f.names.value='';
+						f.emails.value='';
+						f.company.value='';
+						f.saits.value='';
+						f.typesetting.value='';
+						f.design.value='';
+						f.price.value='';
+						f.description.value='';
+					}
+				}
+				http.onerror = function() {
+					alert('Извините, данные не были переданы');
+				}
+			}, false);
+
+	</script>
+	
+</body>
+</html>
