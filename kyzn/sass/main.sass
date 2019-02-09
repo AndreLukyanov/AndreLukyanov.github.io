@@ -1,0 +1,587 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+html, body
+	min-width: 1170px !important
+
+a
+	text-decoration: none
+	transition: all .3s
+
+div
+	box-sizing: border-box
+
+.container
+	max-width: 1170px !important
+
+
+.header
+	display: flex
+	flex-wrap: wrap
+	position: fixed
+	flex-direction: column
+	align-items: flex-start
+	width: 100%
+	background: #292929
+	z-index: 10
+
+
+
+.logo
+	display: block
+	margin-top: 18px
+	color: #fff
+	font-size: 1.375rem
+	font-family: 'montserrat-medium', sans-serif
+	&:hover
+		color: #fff
+		text-decoration: none
+		
+.phone
+	display: block
+	float: right
+	margin-top: 18px 
+	color: #fff
+	font-size: 1.375rem
+	font-family: 'montserrat-medium', sans-serif
+	&:hover
+		color: #fff
+		text-decoration: none
+
+
+
+
+.social
+	display: flex
+	flex-wrap: wrap
+	float: right
+	list-style: none
+	margin: 14px 0 10px 0
+	padding: 0
+	&__item
+		margin-left: 20px
+		&:first-child
+			margin-left: 0
+	&__link
+		display: block
+		height: 36px
+		width: 36px
+		position: relative
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 36px
+			width: 36px
+			top: 0
+			left: 0
+			background: url("../img/sprites.png")no-repeat
+		&_vk::before
+			background-position: 82.8% 32%
+		&_facebook::before
+			background-position: 82.8% 18.5%
+		&_insta::before
+			background-position: 82.8% 5%
+		&:hover
+			margin-top: -8px
+
+
+.nav
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	width: 100%
+	background: #383838
+
+
+.navigation
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	box-sizing: border-box
+	&__list
+		margin: 0
+		padding: 0
+		display: flex
+		flex-wrap: wrap
+		list-style: none
+	&__item
+		margin: 7px 84px 6px 0
+		&:last-child
+			margin-right: 0
+	&__link
+		display: block
+		color: #fff
+		font-size: 1.125rem
+		font-weight: bold
+		font-family: 'montserrat-semibold', sans-serif
+		&:hover
+			color: #ff9600
+			text-decoration: none
+
+
+.hero
+	display: flex
+	flex-wrap: wrap
+	padding-top: 202px
+	min-height: 769px
+	padding-bottom: 130px
+	width: 100%
+	background: url("../img/hero_bg.jpg")no-repeat
+	background-size: cover
+	position: relative
+	&__title
+		margin: 73px 0 0 0
+		padding: 0 140px 0 140px
+		color: #fff
+		line-height: 1.3em
+		font-size: 3.000rem
+		text-align: center
+		font-family: 'montserrat-black', sans-serif
+	&__about
+		margin: 40px auto 0
+		max-width: 800px
+		color: #fff
+		text-align: center
+		line-height: 1.3em
+		font-size: 1.500rem
+		font-family: 'montserrat-regular', sans-serif
+
+
+.form
+	display: block
+	max-width: 970px
+	width: 100%
+	margin: 184px auto 0
+	box-sizing: border-box
+	&__input
+		display: inline-block
+		min-width: 300px
+		outline: none
+		background: none
+		border-top: none
+		border-right: none
+		border-left: none
+		color: #fff
+		line-height: 40px
+		height: 40px
+		border-bottom: 2px solid #ffffff 
+		box-sizing: border-box
+		&::placeholder
+			color: #fff
+			font-size: 1.250rem
+			font-family: 'montserrat-regular', sans-serif
+
+
+.section
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	width: 100%
+	box-sizing: border-box
+	&__title
+		margin: 57px 0 0 0
+		color: #000000
+		text-align: center
+		font-size: 2.250rem
+		font-family: 'montserrat-black', sans-serif
+	&_sixth
+		padding-bottom: 30px
+	&__about
+		padding: 0
+		margin: 35px 0 0 0
+		color: #000000
+		font-size: 1.125rem
+		text-align: center
+		font-family: 'montserrat-regular', sans-serif
+	&_seventh
+		padding-bottom: 50px
+		
+.about
+	max-width: 600px
+	text-align: center
+	margin: 5px auto 0
+	color: #000000
+	font-size: 1.500rem
+	line-height: 1.3em
+	font-family: 'montserrat-regular', sans-serif
+
+.catalog
+	display: inline-block
+	margin-top: 45px
+	width: 100%
+	&__item
+		display: flex
+		margin-bottom: 38px
+		flex-wrap: wrap
+		width: 100%
+	&__images
+		display: block
+		height: 400px
+		width: 270px
+		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7)
+	&__name
+		margin: 0
+		font-size: 2.000rem
+		color: #000000
+		font-family: 'montserrat-bold', sans-serif
+	&__text
+		margin: 0
+		color: #000000
+		font-size: 1.500rem
+		line-height: 1.3em
+		font-family: 'montserrat-regular', sans-serif
+		&_mt
+			margin-top: 30px
+	&__after
+		padding-left: 32px
+		color: #6b6b6b
+		font-size: 1.500rem
+		font-family: 'montserrat-regular', sans-serif
+	&__before
+		margin-top: 30px
+		display: block
+		color: #000000
+		font-size: 2.250rem
+		font-family: 'montserrat-bold', sans-serif
+
+.company
+	display: flex
+	flex-wrap: wrap
+	margin: 39px 0 0 0
+	width: 100%
+	&__text
+		margin: 0
+		color: #000000
+		font-size: 1.313rem
+		font-family: 'montserrat-regular', sans-serif
+	&__iframe
+		display: block
+		height: 100%
+		width: 100%
+
+.work
+	display: inline-block
+	margin-top: 40px
+	width: 100%
+	&__img
+		display: block
+		margin-bottom: 30px
+		height: auto
+		width: auto
+		max-width: 100%
+		box-shadow: 0 0 20px rgba(0,0,0, .25)
+
+
+
+
+.bold
+	font-weight: bold
+	font-family: 'montserrat-bold', sans-serif
+
+.orange
+	color: #ff9600
+
+
+.line
+	display: block
+	margin: 26px 0 0 76px
+	height: 3px
+	max-width: 326px
+	background: #a2a2a2
+
+.button
+	display: inline-block
+	text-align: center
+	border: none
+	outline: none
+	transition: all .3s
+	cursor: pointer
+	background: none
+	&__form
+		color: #fff
+		font-size: 1.250rem
+		line-height: 34px
+		min-width: 232px
+		border: 3px solid #fff
+		border-radius: 30px
+		font-family: 'montserrat-regular', sans-serif
+		&:hover
+			border: 3px solid #ff9600
+			color: #ff9600
+			text-decoration: none
+	&_catalog
+		margin-top: 20px
+		line-height: 40px
+		min-width: 240px
+		color: #fff
+		font-size: 1.500rem
+		background: #0013ff
+		background-image: -webkit-linear-gradient(left,#0013ff,#00a0ff)
+		background-image: -o-linear-gradient(left,#0013ff,#00a0ff)
+		background-image: -webkit-gradient(linear,left top,right top,from(#0013ff),to(#00a0ff))
+		background-image: linear-gradient(to right,#0013ff,#00a0ff)
+		border-radius: 30px
+		font-family: 'montserrat-regular', sans-serif
+		&:hover
+			color: #ff9600
+			text-decoration: none
+	&_down
+		display: block
+		height: 18px
+		width: 34px
+		position: absolute
+		left: 0
+		right: 0
+		margin: 0 auto
+		bottom: 29px
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 18px
+			width: 34px
+			top: 0
+			left: 0
+			background: url("../img/sprites.png")no-repeat
+			background-position: 51.5% 92%
+	&_goods
+		margin: 10px 0 0 89px
+		color: #000000
+		font-size: 1.500rem
+		line-height: 44px
+		min-width: 294px
+		border: 3px solid #000000
+		border-radius: 30px
+		&:hover
+			border: 3px solid #ff9600
+			color: #ff9600
+			text-decoration: none
+	&__footer
+		color: #fff
+		font-size: 0.875rem
+		line-height: 23px
+		min-width: 100%
+		border: 3px solid #fff
+		border-radius: 30px
+		font-weight: bold
+		font-family: 'montserrat-semibold', sans-serif
+		&:hover
+			border: 3px solid #ff9600
+			color: #ff9600
+			text-decoration: none
+
+
+
+.command
+	display: inline-block
+	margin-top: 30px
+	width: 100%
+	&__item
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		border-radius: 10px
+		box-shadow: 0 0 20px rgba(0,0,0, .25)
+	&__box
+		display: inline-block
+		width: 50%
+		float: left
+		position: relative
+	&__images
+		display: block
+		height: auto
+		width: auto
+		max-width: 100%
+		border-top-right-radius: 10px
+		border-bottom-right-radius: 10px
+	&__name
+		display: block
+		padding: 22px 0 0 12px
+		color: #000000
+		font-size: 1.125rem
+		line-height: 1.3em
+		font-weight: bold
+		font-family: 'montserrat-bold', sans-serif
+	&__info
+		display: block
+		color: #000000
+		position: absolute
+		top: 144px
+		left: 12px
+		color: #000000
+		font-size: 1.125rem
+		line-height: 1.3em
+		font-family: 'montserrat-regular', sans-serif
+
+
+.customers
+	display: inline-block
+	margin-top: 30px
+	width: 100%
+	&__item
+		display: flex
+		flex-wrap: wrap
+		align-content: flex-start
+		padding: 0 8px 0 8px
+		min-height: 274px
+		width: 100%
+		border-radius: 10px
+		color: #000000
+		box-shadow: 0 0 20px rgba(0,0,0, .25)
+	&__images
+		display: block
+		margin-top: 10px
+		height: 50px
+		width: 50px
+		border-radius: 50%
+	&__name
+		display: block
+		margin: 20px 0 0 10px
+		font-size: 1.500rem
+		font-weight: bold
+		font-family: 'montserrat-bold', sans-serif
+	&__line
+		display: block
+		margin-top: 7px
+		height: 3px
+		width: 100%
+		background: #dddddd
+	&__txt
+		padding-top: 15px
+		font-size: 1.125rem
+		line-height: 1.3em
+		font-family: 'montserrat-regular', sans-serif
+
+
+.footer
+	display: inline-block
+	padding-bottom: 30px
+	width: 100%
+	color: #fff
+	background: #383838
+	&__name
+		font-size: 1.125rem
+		line-height: 1em
+		font-weight: bold
+		font-family: 'montserrat-bold', sans-serif
+		&_mt
+			margin-top: 25px
+	&__data
+		display: block
+		margin-bottom: 25px
+		font-size: 1.125rem
+		line-height: 1em
+		font-family: 'montserrat-regular', sans-serif
+		&:last-child
+			margin-bottom: 0
+	&__form
+		display: flex
+		flex-wrap: wrap
+		margin-top: 50px
+		width: 100%
+		box-sizing: border-box
+	&__input
+		display: inline-block
+		outline: none
+		background: none
+		border-top: none
+		border-right: none
+		border-left: none
+		color: #fff
+		width: 100%
+		border-bottom: 2px solid #ffffff
+		box-sizing: border-box
+		&::placeholder
+			color: #fff
+			font-size: 1.250rem
+			font-family: 'montserrat-regular', sans-serif
+
+
+.list
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	margin: 25px 0 0 0
+	padding: 0
+	list-style: none
+	box-sizing: border-box
+	&__item
+		margin-bottom: 5px
+	&__link
+		display: block
+		color: #fff
+		font-size: 1.250rem
+		font-family: 'montserrat-semibold', sans-serif
+		&:hover
+			color: #fff
+
+
+.soc
+	display: flex
+	flex-wrap: wrap
+	margin-top: 30px
+	list-style: none
+	float: right
+	width: 100%
+	box-sizing: border-box
+	&__item
+		margin-left: 27px
+		&:first-child
+			margin-left: 0
+	&__link
+		display: block
+		height: 37px
+		width: 37px
+		position: relative
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 37px
+			width: 37px
+			top: 0
+			left: 0
+			background: url("../img/sprites.png")no-repeat
+		&_vk::before
+			background-position: 82.8% 32%
+		&_facebook::before
+			background-position: 82.8% 18.5%
+		&_insta::before
+			background-position: 82.8% 5%
+		&:hover
+			margin-top: -8px
+
+
+
+.message
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	margin: auto
+	background: white
+	max-width: 100%
+	width: 560px
+	text-align: center
+	padding: 40px 20px 27px
+	border: 1px solid #e2e2e2
+	border-top: 3px solid #ff9600
+	transform: translate3d(0, -100%, 0)
+	transition: all .3s ease
+	z-index: 1000000000
+	box-sizing: border-box
+	&__text
+		line-height: 1.5em
+		font-family: 'sans-regular', sans-serif
+
+.message_active
+	transform: translate3d(0, 0, 0)
+
+
+		
+
+
+
+@import "media"
