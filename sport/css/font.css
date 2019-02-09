@@ -1,0 +1,14 @@
+@font-face {
+	font-family: TruenoLt;
+	src: url("../font/TruenoLt.otf") format("truetype");
+}
+
+@font-face {
+	font-family: TruenoUltBlk;
+	src: url("../font/TruenoUltBlk.otf") format("truetype");
+}
+
+@font-face {
+	font-family: TruenoBd;
+	src: url("../font/TruenoBd.otf") format("truetype");
+}
