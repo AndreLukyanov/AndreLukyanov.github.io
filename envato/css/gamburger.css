@@ -1,0 +1,62 @@
+.hamburger{
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  color:#fff;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+  margin-top: 5px;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:0px;
+  right:0;
+  padding:13px 15px 0px 15px;
+  color:#fff;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+  display:none;
+}
+
+.humburger__menu{
+  position: relative;
+  display: none;
+  list-style: none;
+  text-align: center;
+  margin-top: 20px;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: #4A454B;
+  box-sizing: border-box;
+}
+
+.humburger__item{
+  display: block;  
+  line-height: 70px;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.humburger__link{
+  color: #ffffff;
+  text-decoration: none;
+  font-family: RobotoThin;
+  font-size: 1.563em;
+  display: block;
+  padding-top: 40px;
+  cursor: pointer;
+}

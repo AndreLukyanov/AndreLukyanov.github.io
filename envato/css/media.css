@@ -1,0 +1,351 @@
+@media(max-width: 1177px){
+	.gallery__images{
+		width: 50%;
+	}
+
+	.gallery__img{
+		width: 100%;
+	}
+}
+
+@media(max-width: 1100px){
+	.section__block{
+		padding-right: 20px;
+	}
+
+	.logo{
+		margin-left: 10px;
+	}
+
+	.menu{
+		padding-left: 0;
+	}
+}
+
+@media(max-width: 1065px){
+	.intro__subscription{
+		margin-right: 20px;
+	}
+
+	.intro__block{
+		margin-left: 20px;
+	}
+}
+
+@media(max-width: 980px){
+	.data{
+		width: 100%;
+		height: 100%;
+	}
+
+	.timer{
+		font-size: 5.625em;
+	}
+
+	.data__text{
+		display: inline-block;
+	}
+
+	.data__info{
+		width: 45%;
+	}
+
+	.intro__block{
+		max-width: 100%;
+		float: left;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 120px;
+	}
+
+	.intro__subscription{
+		z-index: 0;
+		left: 0;
+		right: 0;
+		margin: -400px auto;
+	}
+
+	.intro__information{
+		display: inline-block;
+		margin-top: 20px;
+	}
+
+	.section__title_pd{
+		padding-left: 20px;
+	}
+
+	.section__text_md{
+		padding-left: 20px;
+	}
+
+	.speaker__item{
+		min-width: 100%;
+		text-align: center;
+	}
+
+	.gallery__images{
+		width: 100%;
+		height: auto;
+		margin-top: -5px;
+	}
+
+	.gallery__img{
+		width: 100%;
+		height: auto;
+	}
+
+	.map-message__view{
+		float: left;
+		display: block;
+		text-align: center;
+	}
+
+	.map-message__submit{
+		float: right;
+		margin-right: 50px;
+		margin-left: 0;
+	}
+
+}
+
+@media(min-width: 957px){
+	.hamburger{
+		display: none;
+	}
+
+	.cross{
+		display: none;
+	}
+
+	.humburger__menu{
+		display: none;
+	}
+
+	.humburger__item{
+		display: none;
+	}
+
+	.humburger__link{
+		display: none;
+	}
+
+}
+
+@media(max-width: 956px){
+	.menu{
+		display: none;
+	}
+
+	.scroll{
+		text-align: left;
+	}
+
+}
+
+@media(max-width: 930px){
+	.accordion__number{
+		font-size: 1.000em;
+	}
+
+	.accordion__text{
+		font-size: 1.000em;
+	}
+}
+
+@media(max-width: 890px){
+	.section__img{
+		display: none;
+	}
+
+	.section__title_pb{
+		padding-left: 33px;
+	}
+
+	.section__text_pb{
+		padding-right: 20px;
+	}
+
+	.section__block{
+		width: 100%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		padding-right: 0;
+		text-align: left;
+	}
+}
+
+@media(max-width: 840px){
+	.map-message__images{
+		display: none;
+	}
+
+	.map-message__address{
+		display: none;
+	}
+
+	.map-message__view{
+		padding-top: 20px;
+		min-width: 100%;
+		margin-left: 0;
+		float: left;
+		margin-right: 0;
+	}
+
+	.map-message__submit{
+		min-width: 100%;
+		margin-right: 0;
+		text-align: center;
+	}
+
+	.up{
+		right: 50px;
+	}
+}
+
+@media(max-width: 760px){
+	.section_time{
+		display: none;
+	}
+}
+
+@media(max-width: 675px){
+	.section__support{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.section__text{
+		padding-right: 20px;
+	}
+}
+
+@media(max-width: 640px){
+	.data{
+		min-height:100px;
+	}
+
+	.timer{
+		font-size: 3.125em;
+	}
+
+	.data__info{
+		font-size: 0.938em;
+	}
+
+	.intro__item{
+		width: 100%;
+		padding-bottom: 20px;
+	}
+
+	.section__title{
+		font-size: 1.875em;
+	}
+
+	.section_fourth{
+		background: #4B4D4F;
+	}
+
+	.section__title_center{
+		margin-top: 50px;
+	}
+
+	.sponsor__block{
+		width: 100%;
+		padding-bottom: 20px;
+	}
+
+	.up{
+		right: 20px;
+	}
+}
+
+@media(max-width: 480px){
+	.logo{
+		background-size: contain;
+		width: 100%;
+		display: block;
+		margin-left: 0;
+	}
+
+	.data{
+		display: none;
+	}
+
+	.intro__subscription{
+		width: 100%;
+	}
+
+	.intro__input{
+		min-width: 100px;
+	}
+
+	.button_md{
+		min-width: 100%;
+		margin-left: 0;
+	}
+
+	.speaker__images_pd{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.section__text{
+		padding-right: 20px;
+	}
+
+	.up{
+		right: 0;
+		left: 0;
+		margin: auto;
+		top: 135px;
+	}
+}
+
+@media(max-width: 423px){
+	.intro__text_center{
+		display: inline-block;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media(max-width: 400px){
+	.intro__input{
+		margin-left: 20px;
+	}
+}
+
+@media(max-width: 380px){
+	.map-message__submit{
+		max-width: 100%;	
+	}
+
+	.button_big{
+		max-width: 100%;
+	}
+}
+
+@media(max-width: 345px){
+	.network__link{
+		display: block;
+	}
+
+	.up{
+		right: 0;
+		top: 460px;
+		left: 0;
+		margin: auto;
+	}
+}
+
+@media(max-width: 320px){
+	.intro__input{
+		padding-left: 10px;
+		margin-left: 22px;
+	}
+
+	.section__title{
+		font-size: 1.563em;
+	}
+}
