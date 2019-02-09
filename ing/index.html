@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Инженерные изыскания</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<header class="header">
+		<div class="header__body">
+			<a href="index.php" class="header__logo">
+				<span class="light logo_right">Инженерные</span>
+				<span class="light logo_right">изыскания</span>
+				<span class="medium yellow medium_uppercase">О.з.ХАЛИМОВ</span>
+			</a>
+
+			<div class="header__info">
+				<p>655009, Россия, Республика Хакасия, г. Абакан, ул. Мартьянова, д. 24</p>
+			</div>
+			<div class="block">
+				<div class="call">
+				
+					<span class="call__phone">8 (3902) <span class="medium">26-00-03</span></span>
+					<span class="call__phone">8 (3902) <span class="medium">26-99-98</span></span>
+				</div>
+				<a href="#form_order" class="button button_white button_right">Заказать звонок</a>
+			</div>
+
+			<div class="header__form">
+				<form action="mail.php" class="form form_order" id="form_order" method="POST">
+					<span class="form__title">Заказать обратный звонок</span>
+					<p class="form__text">Оставьте нам свои данные и наш менеджер обязательно свяжется с вами в ближайшее время</p>
+					<div class="form__block">
+						<input type="text"  name="name" required minlength="3" placeholder="Имя" class="header__input" id="name">
+						<input type="tel" name="phone" required placeholder="Телефон" class="header__input" id="phone1">
+						<button class="submit submit_green" href="#box" id="submit" type="submit" name="send"><span class="yellow">Заказать</span></button>
+					</div>
+				</form>
+			</div>
+			<div class="header__thank">
+				<form  action="mail.php" class="form form_thank" id="box">
+					<span class="form__title">Спасибо!</span>
+					<p class="form__text">что оставили свои данные</p>
+					<div class="form__block">
+						<button class="submit submit_green" type="button"><span class="yellow">Ок</span></button>
+					</div>
+				</form>
+			</div>
+
+			<div class="industry industry_mt">
+				<div class="industry__item industry__item_ml">
+					<img src="img/header/industry/item1.png" alt="item1" class="industry__img">
+					<a href="#!" class="industry__link">Геологические изыскания.</a>
+				</div>
+				<div class="industry__item industry__item_mt2">
+					<img src="img/header/industry/item2.png" alt="item2" class="industry__img">
+					<a href="#!" class="industry__link">Геодезические изыскания.</a>
+				</div>
+				<div class="industry__item industry__item_mt3">
+					<img src="img/header/industry/item3.png" alt="item3" class="industry__img industry__img_ml">
+					<a href="#!" class="industry__link">Геотехнические изыскания</a>
+				</div>
+				<div class="industry__item industry__item_mt4">
+					<img src="img/header/industry/item4.png" alt="item4" class="industry__img">
+					<a href="#!" class="industry__link">Экологические изыскания.</a>
+				</div>
+				<div class="industry__item industry__item_mt5">
+					<img src="img/header/industry/item5.png" alt="item5" class="industry__img industry__img_mt">
+					<a href="#!" class="industry__link">О нас</a>
+				</div>
+				<div class="industry__item industry__item_mt6">
+					<img src="img/header/industry/item6.png" alt="item6" class="industry__img industry__img_mt">
+					<a href="#!" class="industry__link">Контакты</a>
+				</div>
+				<div class="industry__item industry__item_mt7">
+					<img src="img/header/industry/item7.png" alt="item7" class="industry__img">
+					<a href="#!" class="industry__link">Научная деятельность.</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="section section_one">
+		<div class="section__body">
+			<div class="about about_mt">
+				<div class="about__block">
+					<img src="img/section_one/figures/square.jpg" alt="square" class="about__img">
+					<h2 class="about__title">О нас</h2>
+				</div>
+				<p class="about__text">В 1988 году инженер  Халимов О.З. сделал первый шаг – открыл кооператив «Нулевой цикл», задачей которого стояло обследование, проектирование, инженерно-геологические изыскания, и усиление фундаментов деформируемых зданий. Успешно проработав два года кооператив был закрыт в связи с подготовкой и защитой Халимовым О.З. кандидатской диссертации на тему «Метод физико-химической противопучинной стабилизации грунтов в условиях близкого уровня подземных вод» и назначением его на должность заведующего кафедрой «Промышленное и гражданское строительство» Хакасского технического института. </p>
+				<a href="#!" class="about__link">
+					Прочитать полностью
+					<img src="img/section_one/about/triangle.png" alt="triangle" class="about__tri">
+				</a>
+			</div>
+
+			<div class="directions directions_mt">
+				<div class="directions__block">
+					<img src="img/section_one/figures/triangle.png" alt="triangle" class="directions__img">
+					<h2 class="directions__title">Основные направления</h2>
+				</div>
+
+				<div class="directions__box">
+					<div class="directions__item">
+						<img src="img/section_one/directions/item1.png" alt="item1" class="directions__images">
+						<span class="directions__name directions__name_pl">Экологические</span>
+						<span class="directions__name directions__name_pl"> изыскания</span>
+						<p class="directions__text directions__text_pt">Инженерно-экологические изыскания выполняют для оценки современного состояния и прогноза возможных изменений окружающей среды под влиянием техногенной нагрузки для экологического обоснования строительства и иной хозяйственной деятельности для обеспечения благоприятных условий жизни населения, обеспечения безопасности зданий, сооружений, территории и континентального шельфа и предотвращения.</p>
+						<div class="line"></div>
+						<a href="#!" class="button button_green button_mt"><span class="yellow">Узнать подробнее</span></a>
+					</div>
+					<div class="directions__item">
+						<img src="img/section_one/directions/item2.png" alt="item2" class="directions__images">
+						<span class="directions__name directions__name_pl">Геодезические</span>
+						<span class="directions__name directions__name_pl"> изыскания</span>
+						<p class="directions__text directions__text_pt">Инженерно-геодезические изыскания должны обеспечивать получение<br> топографо-геодезических материалов и данных, инженерно-топографических планов, составленных в цифровом и (или) в графическом (на бумажном носителе) виде, и сведений, необходимых для подготовки и обоснования документов территориального планирования, планировки территорий и подготовки проектной документации.</p>
+						<div class="line"></div>
+						<a href="#!" class="button button_green button_mt"><span class="yellow">Узнать подробнее</span></a>
+					</div>
+					<div class="directions__item">
+						<img src="img/section_one/directions/item3.png" alt="item3" class="directions__images">
+						<span class="directions__name directions__name_pl">Геологические и</span>
+						<span class="directions__name directions__name_pl">геотехнические</span>
+						<span class="directions__name directions__name_pl">изыскания</span>
+						<p class="directions__text directions__text_ptop">Инженерно-геологические и инженерно-геотехнические изыскания должны обеспечивать комплексное изучение инженерно-геологических условий района (площадки, участка, трассы) проектируемого строительства, включая рельеф, геологическое строение, геоморфологические и гидрогеологические условия, состав, состояние и свойства грунтов, геологические и инженерно-геологические процессы, изменение</p>
+						<div class="line"></div>
+						<a href="#!" class="button button_green button_mt"><span class="yellow">Узнать подробнее</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="contact contact_mt">
+				<div class="contact__block">
+					<img src="img/section_one/figures/rectangle.png" alt="rectangle" class="contact__img">
+					<h2 class="contact__title">Связаться с нами</h2>
+				</div>
+
+				<div class="contact__box">
+					<div class="contact__col contact__col_left">
+						<div class="contact__item">
+							<img src="img/footer/location.png" alt="location" class="contact__icon contact__icon_pr">
+							<span class="contact__name">Адрес:</span>
+							<p class="contact__text">655017, Россия, Республика Хакасия, г. Абакан, ул. Вяткина, д. 21, оф. 303</p>
+						</div>
+						<div class="contact__item">
+							<img src="img/footer/phone.png" alt="phone" class="contact__icon contact__icon_pr">
+							<span class="contact__name">Телефон:</span>
+							<span class="contact__info contact__info_pl">8 (3902) 26-00-03</span>
+							<span class="contact__info contact__info_pl">8 (3902) 26-99-98</span>
+						</div>
+						<div class="contact__item">
+							<img src="img/footer/mail.png" alt="mail" class="contact__icon contact__icon_pd">
+							<span class="contact__name">Электронная почта:</span>
+							<a href="mailto:Halimovoz@mail.ru" class="contact__email">Halimovoz@mail.ru</a>
+						</div>
+						<div class="contact__item">
+							<img src="img/footer/clock.png" alt="clock" class="contact__icon contact__icon_pd">
+							<span class="contact__name">Время работы:</span>
+							<span class="contact__info contact__info_pd">Пн-Пт: с 9:00 до 18:00</span>
+						</div>
+					</div>
+					<div class="contact__col contact__col_right">
+						<iframe class="contact__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aade235cb4ea9796850c0f55b4d9242a715c9456690309598a8962467f054cf41&amp;source=constructor" width="804" height="316" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__body">
+			<a href="index.php" class="footer__logo">
+				<span class="light logo_right">Инженерные</span>
+				<span class="light logo_right">изыскания</span>
+				<span class="medium yellow medium_uppercase">О.з.ХАЛИМОВ</span>
+			</a>
+			<p class="footer__txt">Абакан 2017 г. <a href="#!" class="footer__link yellow yellow_blue">Sib-u.ru.</a> Создание сайтов</p>
+			<a href="#footer__form" class="button button_green button_right button_mt"><span class="yellow">Заказать звонок</span></a>
+
+			<div class="footer__form">
+				<form action="mail.php" class="form footer__box" id="footer__form" method="POST">
+					<span class="form__title">Заказать обратный звонок</span>
+					<p class="form__text">Оставьте нам свои данные и наш менеджер обязательно свяжется с вами в ближайшее время</p>
+					<div class="form__block">
+						<input type="text"  name="name" required minlength="3" placeholder="Имя" class="footer__input" id="name">
+						<input type="tel" name="phone" required placeholder="Телефон" class="footer__input" id="phone2">
+						<button class="submit submit_green submit_footer" id="submit" type="submit" name="send" href="#box"><span class="yellow">Заказать</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popup.min.js"></script>
+	<script src="js/popup_open.js"></script>
+	<script src="js/not_loading.js"></script>
+	<script src="js/jquery.maskedinput.js"></script>
+	<script src="js/phone.js"></script>
+	
+
+	
+</body>
+</html>
