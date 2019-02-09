@@ -1,0 +1,1296 @@
+@import "fonts"
+@import "libs"
+@import "smart-grid"
+
+.mfp-fade.mfp-bg 
+	opacity: 0
+	transition: all 0.3s ease-out
+
+.mfp-fade.mfp-bg.mfp-ready 
+	opacity: 0.8
+
+.mfp-fade.mfp-bg.mfp-removing 
+	opacity: 0
+
+.mfp-fade.mfp-wrap .mfp-content 
+	opacity: 0
+	transition: all 0.3s ease-out
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+	opacity: 1
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+	opacity: 0
+	transform: scale(.9)
+
+.slick-loading .slick-list
+	background: #fff url('../img/ajax-loader.gif') center center no-repeat
+
+@font-face
+	font-family: 'slick'
+	font-weight: normal
+	font-style: normal
+	src: url('../fonts/slick.eot')
+	src: url('../fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'), url('../fonts/slick.ttf') format('truetype'), url('../fonts/slick.svg#slick') format('svg')
+
+
+a
+	transition: all .3s
+
+div
+	box-sizing: border-box
+
+
+.header
+	display: flex
+	position: relative
+	flex-wrap: wrap
+	width: 100%
+	background: url(../img/dot.svg),linear-gradient(140deg,rgba(24,46,74,.85),rgba(55, 91, 159, .65)),url(../img/header_bg2.jpg)no-repeat
+	background-size: 3px,cover,cover
+	background-position: center
+	height: 70vh
+	min-height: 500px
+	box-sizing: border-box
+		
+.nav
+	display: inline-block
+	width: 100%
+	height: 70px
+	position: relative
+	z-index: 100
+	box-sizing: border-box
+	&__row
+		@include row-flex()
+		justify-content: center
+		margin: 0
+	&__col
+		@include size(6)
+		@include col()
+		@include size-xs(12)
+
+.nav__row.fixed
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	width: 100%
+	z-index: 100
+	margin-top: 0
+	min-height: 77px
+	background: #333
+	transition: all .3s
+
+
+.logo
+	margin: 10px 0 0 0
+	display: block
+	color: #fff
+	text-decoration: none
+	max-width: 240px
+	@include xs(margin, 20px 0 0 0)
+	&__name
+		display: block
+		font-size: 1.875rem
+		font-family: 'roboto-medium', sans-serif
+		@include xs(font-size, 1.250rem)
+	&__web
+		display: block
+		margin-top: 5px
+		text-transform: uppercase
+		font-size: 0.625rem
+		letter-spacing: 2px
+		font-family: 'roboto-light', sans-serif
+
+.hamburger
+	display: none
+	position: absolute
+	top: 10px
+	right: 0
+	z-index: 101
+	@include lg(display, block)
+
+.hamburger-inner
+	background: #26c19a
+	&::before
+		background: #26c19a
+	&::after
+		background: #26c19a
+
+.visible
+	transform: translate3d(100%, 0, 0)
+
+.menu__animatable .navigation
+	transition: all 130ms ease-in
+
+.visible.menu__animatable .navigation
+	transition: all 330ms ease-out
+
+.navigation
+	display: flex
+	justify-content: flex-end
+	margin: 30px 0 0 0
+	transition: transform .3s ease
+	@include lg(background, #485E81)
+	@include lg(position, fixed)
+	@include lg(top, 0)
+	@include lg(left, -100%)
+	@include lg(margin, 0)
+	@include lg(width, 100%)
+	@include lg(height, 100vh)
+	@include lg(align-items, flex-start)
+	@include lg(justify-content, center)
+	&__list
+		display: flex
+		margin: 0
+		padding: 0
+		list-style: none
+		align-items: center
+		box-sizing: border-box
+		@include lg(position, absolute)
+		@include lg(top, 50%)
+		@include lg(left, 0)
+		@include lg(right, 0)
+		@include lg(margin, 0 auto)
+		@include lg(transform, translate3d(0, -50%, 0))
+		@include lg(flex-direction, column)
+	&__item
+		padding: 0 15px 0 15px
+		@include lg(margin, 20px 0 0 0)
+	&__link
+		color: #fff
+		text-decoration: none
+		font-family: 'roboto-light', sans-serif
+		@include lg(font-size, 1.188rem)
+		&:hover
+			color: #26c19a
+
+
+
+.hero
+	display: inline-block
+	position: absolute
+	left: 0
+	width: 100%
+	color: #fff
+	top: 50%
+	transform: translate3d(0, -50%, 0)
+	&__body
+		@include wrapper()
+	&__block
+		display: block
+		text-align: center
+		margin: auto
+		width: 100%
+		padding: 20px 10px 20px 10px
+		box-sizing: border-box
+	&__title
+		display: inline-block
+		margin: 0
+		padding: 20px
+		font-size: 2.500rem
+		text-transform: uppercase
+		font-family: 'roboto-medium', sans-serif
+		letter-spacing: 3px
+		@include sm(font-size, 1.563em)
+		@include sm(padding, 20px 0 20px 0)
+		@include xs(font-size, 1.375rem)
+	&__about
+		display: block
+		margin: 0 0 30px 0
+		padding: 0 200px 0 200px
+		line-height: 1.5em
+		font-size: 1.188rem
+		letter-spacing: 3px
+		font-family: 'roboto-light', sans-serif
+		@include lg(padding, 0 150px 0 150px )
+		@include md(padding, 0 80px 0 80px )
+		@include sm(font-size, 1.000rem)
+		@include sm(padding, 0)
+		@include xs(font-size, 0.875rem)
+		@include xs(line-height, 1.2em)
+
+.animated
+	opacity: 0
+	transform: translate3D(0, 40px, 0) scale(1)
+	&_visible
+		transform: translate3D(0, 0, 0) scale(1)
+		opacity: 1
+		transition: transform 0.5s ease-out 0.2s, opacity 0.5s ease-out 0.2s
+
+$class-slug: animated !default
+
+@for $i from 1 through 9
+	.#{$class-slug}_#{$i}
+		transition-delay: 300ms + ($i * 100)
+
+
+.button
+	display: inline-block
+	cursor: pointer
+	outline: none
+	border: none
+	text-align: center
+	text-decoration: none
+	&_hero
+		color: #fff
+		min-width: 300px
+		border-radius: 5px
+		font-size: 1.125rem
+		line-height: 50px
+		font-family: 'roboto-medium', sans-serif
+		background: #26C19A
+		transition: all .3s
+		@include xs(min-width, 200px)
+		&:hover
+			background: #21A685
+	&_form
+		min-width: 400px
+		margin: 0 auto
+		color: #fff
+		background: #26C19A
+		border-radius: 5px
+		font-size: 1.125rem
+		border: none
+		line-height: 55px
+		font-family: 'roboto-medium', sans-serif
+		transition: all .3s
+		@include xs(min-width, 100%)
+		@include xs(font-size, 1.000rem)
+		&:hover
+			background: #21A685
+	&_price
+		position: absolute
+		left: 0
+		bottom: 0
+		color: #fff
+		text-transform: uppercase
+		width: 100%
+		border-bottom-left-radius: 10px
+		border-bottom-right-radius: 10px
+		background: #26c19a
+		line-height: 50px
+		font-size: 1.125rem
+		font-family: 'roboto-medium', sans-serif
+		transition: all .3s
+		&:hover
+			background: #21A685
+		&::after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 50%
+			right: 30px
+			height: 30px
+			width: 30px
+			background: url("../img/pointer.svg")no-repeat
+			background-size: cover
+			transition: all .3s
+			transform: translate3d(0, -50%, 0)
+		&:hover::after
+			background: url("../img/pointer_hover.svg")no-repeat
+			background-size: cover
+	&_application
+		margin: 0 auto
+		text-transform: uppercase
+		background: #26c19a
+		font-size: 0.875rem
+		border-radius: 30px
+		line-height: 40px
+		min-width: 200px
+		border: none
+		color: #fff
+		font-family: 'roboto-medium', sans-serif
+		animation: contact-button-shake 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+		transition: all .3s	
+		&:hover
+			background: #21A685
+	&_consultation
+		margin: 20px 20px 0 0
+		line-height: 30px
+		min-width: 130px
+		color: #fff
+		border-radius: 5px
+		text-transform: uppercase
+		font-family: 'roboto-medium', sans-serif
+		background: #26c19a
+
+
+@keyframes contact-button-shake 
+	0%, 50%, 100% 
+	transform: translateX(0)
+	5%, 15%, 25%, 35% 
+		transform: translateX(-3px)
+	10%, 20%, 30%  
+		transform: translateX(3px)
+	40% 
+		transform: translateX(2px)
+	45% 
+		transform: translateX(-2px)
+
+.main 
+	display: flex
+	flex-wrap: wrap
+	position: relative
+	width: 100%
+	box-sizing: border-box
+
+.section
+	position: relative
+	&_first
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		padding-bottom: 40px
+		box-sizing: border-box
+	&__body
+		@include wrapper()
+		width: 100%
+		position: relative
+	&__head
+		width: 100%
+		box-sizing: border-box
+	&__title
+		display: block
+		text-align: center
+		margin: 40px 0 20px 0
+		font-size: 2.500em
+		font-weight: 100
+		font-family: 'roboto-medium', sans-serif
+		@include sm(font-size, 1.875rem)
+		@include xs(font-size, 1.250rem)
+		&_white
+			color: #fff
+		&_black
+			color: #333
+	&__info
+		display: block
+		text-align: center
+		margin: 0 auto
+		max-width: 600px
+		font-family: 'roboto-light', sans-serif
+		line-height: 1.5em
+		box-sizing: border-box
+		@include xs(padding, 0 20px 0 20px)
+		@include xs(font-size, 0.875rem)
+	&_second
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		padding-bottom: 40px
+		background: #F0F0F0
+		box-sizing: border-box
+		z-index: 1
+	&_third
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		padding-bottom: 40px
+		background: #F0F0F0
+		box-sizing: border-box
+	&_fourth
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		padding-bottom: 40px
+		box-sizing: border-box
+	&_fifth
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		padding-bottom: 40px
+		box-sizing: border-box
+	&_sixth
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		padding-bottom: 40px
+		background: #F0F0F0
+		box-sizing: border-box
+
+.price
+	display: flex
+	width: 100%
+	margin-top: 50px
+	align-items: flex-start
+	flex-wrap: wrap
+	text-align: center
+	color: #333
+	&__item
+		@include col()
+		@include size(3)
+		flex-wrap: wrap
+		border-radius: 10px
+		margin-bottom: 40px
+		position: relative
+		background: #f1f5f8
+		@include size-lg(4)
+		@include size-md(6)
+		@include size-xs(12)
+	&__name
+		display: flex
+		justify-content: center
+		margin: 20px 0 20px 0
+		text-transform: uppercase
+		font-size: 1rem
+		font-family: 'roboto-medium', sans-serif
+	&__amount
+		display: block
+		position: relative
+		height: 160px
+		width: 160px
+		margin: 20px auto 30px
+		border: 2px solid #26c19a
+		border-radius: 50%
+		justify-content: center
+		padding: 10px
+		background: #fff
+	&__circle
+		display: flex
+		justify-content: center
+		font-size: 1.000rem
+		line-height: 1.5em
+		font-family: 'roboto-light', sans-serif
+		&_mt
+			margin-top: 50px
+	&__big
+		font-size: 2.125rem
+		font-family: 'roboto-medium', sans-serif
+		margin-top: -6px
+		padding: 0 3px 0 3px
+	&__box
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		text-align: left
+		margin-top: 20px
+		padding: 0 0 50px 0
+		font-size: 0.875rem
+		font-family: 'roboto-light', sans-serif
+	&__services
+		position: relative
+		margin: 0
+		padding: 20px 0 20px 40px
+		font-size: 1.000rem
+		border-bottom: 8px dotted #fff
+		@include xs(font-size, 0.875rem)
+		&_line
+			border-top: 8px dotted #fff
+		&:last-child
+			border-bottom: none
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 23px
+			left: 15px
+			height: 12px
+			width: 12px
+			background: url("../img/checked.svg")no-repeat
+			background-size: cover
+
+.work
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	margin-top: 50px
+	&__item
+		@include size(6)
+		@include col()
+		padding: 10px
+		background: #eee
+		margin-bottom: 40px
+		position: relative
+		box-shadow: 0 3px 59px rgba(0,0,0,.5)
+		@include size-sm(6)
+		@include size-xs(12)
+		&:hover .work__box
+			opacity: 1
+		&:hover::before
+			opacity: 1
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			opacity: 0
+			transition: all .3s
+			background: rgba(38, 193, 154, .5)
+	&__img
+		display: block
+		width: auto
+		height: auto
+		max-width: 100%
+		@include xs(margin, 0 auto)		
+	&__box
+		display: flex
+		flex-wrap: wrap
+		align-content: flex-start
+		width: 90%
+		height: 90%
+		position: absolute
+		padding: 20px
+		top: 10px
+		left: 0
+		right: 0
+		margin: auto
+		color: #fff
+		background: rgba(0, 0, 0, .8)
+		opacity: 0
+		box-sizing: border-box
+		transition: all .3s
+	&__txt
+		margin: 0
+		font-family: 'roboto-light', sans-serif
+		&_sm
+			font-size: 0.875rem
+			padding-top: 10px
+	&__line
+		height: 2px
+		width: 100%
+		margin-top: 10px
+		background: #fff
+	&__link
+		display: inline-block
+		position: absolute
+		right: 20px
+		bottom: 20px
+		color: #26c19a
+		font-family: 'roboto-medium', sans-serif
+		transition: all .3s
+		&:hover
+			color: #FFDC69
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			right: -10px
+			bottom: -2px
+			height: 20px
+			width: 2px
+			background: #fff
+
+
+.services
+	display: flex
+	width: 100%
+	flex-wrap: wrap
+	margin-top: 50px
+	color: #333
+	box-sizing: border-box
+	&__item
+		@include size(4)
+		@include col()
+		margin-bottom: 40px
+		@include size-md(5)
+		@include shift-md(0.5)
+		@include size-sm(6)
+		@include shift-sm(0)
+		@include sm(text-align, center)
+		@include size-xs(12)
+	&__name
+		display: flex
+		position: relative
+		margin-top: 60px
+		padding-left: 60px
+		text-transform: uppercase
+		font-size: 1.125rem
+		font-family: 'roboto-medium', sans-serif
+		@include lg(font-size, 1.000rem)
+		@include sm(padding-left, 0)
+		@include sm(justify-content, center)
+		&::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: -20px
+			left: 0
+			height: 40px
+			width: 40px
+			@include sm(top, -60px)
+			@include sm(right, 0)
+			@include sm(margin, auto)
+		&_computer::before
+			background: url("../img/screen.svg")no-repeat
+			background-size: cover
+		&_line::after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 30px
+			left: 0
+			height: 2px
+			width: 40px
+			background: #26c19a
+			@include sm(top, -10px)
+			@include sm(right, 0)
+			@include sm(margin, auto)
+		&_pen::before
+			background: url("../img/pen.svg")no-repeat
+			background-size: cover
+		&_chart::before
+			background: url("../img/line.svg")no-repeat
+			background-size: cover
+		&_design::before
+			background: url("../img/bulb.svg")no-repeat
+			background-size: cover
+	&__text
+		line-height: 1.5em
+		padding: 10px 10px 0 0
+		font-family: 'roboto-light', sans-serif
+		@include xs(font-size, 0.875rem)
+
+
+.reviews
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	margin-top: 50px
+	width: 100%
+	&__item
+		display: flex
+		flex-direction: column
+		outline: none
+		width: 100%
+		justify-content: center
+	&__img
+		display: block
+		margin: 20px auto 0
+		max-width: 100%
+		width: auto
+		height: auto
+		border-radius: 50%
+		box-shadow: 1px 2px 6px 0 rgba(0,0,0,.8)
+	&__text
+		display: block
+		text-align: center
+		max-width: 800px
+		margin: 0 auto
+		padding: 20px 150px 0 150px
+		line-height: 1.5em
+		font-family: 'roboto-light', sans-serif
+		@include sm(max-width, 600px)
+		@include sm(padding, 20px)
+		@include xs(font-size, 0.875rem)
+	&__name
+		margin: 20px 0 0 0
+		display: flex
+		justify-content: center
+		padding: 0 0 20px 0
+		font-family: 'roboto-medium', sans-serif
+		@include xs(margin, 0)
+
+.reviews .slick-dots li button
+	height: 15px
+	width: 15px
+	background: #A0A0A0
+	border-radius: 50%
+
+.reviews .slick-dots li button:hover
+	background: #4988a8
+	background: linear-gradient(180deg,#2bcaa2 0,#4988a8)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2bcaa2",endColorstr="#4988a8",GradientType=0)
+
+.reviews .slick-dots li.slick-active button
+	background: #4988a8
+	background: linear-gradient(180deg,#2bcaa2 0,#4988a8)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2bcaa2",endColorstr="#4988a8",GradientType=0)
+
+
+.reviews .slick-prev
+	height: 50px
+	width: 50px
+	background: url("../img/prev.svg")no-repeat 
+	background-size: cover
+	border-radius: 50%
+	z-index: 10
+	@include sm(top, 30%)
+
+.reviews .slick-next
+	height: 50px
+	width: 50px
+	background: url("../img/next.svg")no-repeat
+	background-size: cover
+	border-radius: 50%
+	z-index: 10
+	@include sm(top, 30%)
+
+
+.bonuses
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	margin-top: 50px
+	padding-bottom: 50px
+	color: #333
+	&__block
+		display: flex
+		flex-wrap: wrap
+		width: 50%
+		@include md(width, 100%)
+		&_center
+			margin-top: 40px
+			justify-content: center
+	&__text
+		padding-left: 15px
+		line-height: 1.5em
+		font-family: 'roboto-light', sans-serif
+		@include md(text-align, center)
+		@include md(padding, 0 20px 0 20px)
+		@include xs(font-size, 0.875rem)
+	&__item
+		display: flex
+		max-width: 220px
+		@include col()
+		flex-wrap: wrap
+		border-radius: 10px
+		box-shadow: 1px 2px 6px 0 rgba(0,0,0,.2)
+		@include xs(min-width, 200px)
+		@include xs(margin-bottom, 40px)
+		&_offsets
+			margin-left: 70px
+			@include lg(margin-left, 20px)
+	&__top
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		width: 100%
+		padding: 20px
+		border-top-left-radius: 10px
+		border-top-right-radius: 10px
+		color: #fff
+		background: #4988a8
+		background: linear-gradient(180deg,#2bcaa2 0,#4988a8)
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2bcaa2",endColorstr="#4988a8",GradientType=0)
+	&__name
+		text-align: center
+		font-size: 1.125rem
+		font-family: 'roboto-medium', sans-serif
+	&__interpreter
+		text-align: center
+		font-size: 2.500rem
+		margin-top: 20px
+		font-family: 'roboto-medium', sans-serif
+	&__bottom
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		padding: 20px 20px 40px 20px
+		border-bottom-left-radius: 10px
+		border-bottom-right-radius: 10px
+		justify-content: center
+		background: #FDFDFD
+	&__txt
+		text-align: center
+		padding: 0 20px 0 20px
+		margin: 0
+		line-height: 1.5em
+		&_light
+			font-size: 0.875rem
+			font-family: 'roboto-light', sans-serif
+		&_bold
+			text-transform: uppercase
+			font-family: 'roboto-medium', sans-serif
+	&__line
+		width: 100%
+		position: relative
+		height: 1px
+		width: 100%
+		background: url("../img/line.png")
+		background-size: contain
+		box-sizing: border-box
+		&:before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: -20px
+			left: -6px
+			height: 40px
+			width: 40px
+			background: url("../img/left.png")no-repeat 
+			background-size: contain
+		&:after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: -20px
+			right: -20px
+			height: 40px
+			width: 40px
+			background: url("../img/right.png")no-repeat #fff
+			background-size: contain
+	&__promo
+		display: flex
+		flex-wrap: wrap
+		padding: 40px	20px 20px 20px
+		justify-content: center
+		width: 100%
+
+
+.application
+	display: flex
+	max-width: 900px
+	margin: auto
+	text-align: center
+	flex-direction: column
+	margin-top: 50px
+	text-align: center
+	color: #333
+	padding-bottom: 40px
+	box-sizing: border-box
+	@include lg(padding, 0 20px 40px 20px)
+	&__box
+		display: inline-block
+		text-align: center
+		position: relative
+		width: 100%
+		margin-bottom: 50px
+	&__label
+		display: inline-block
+		position: absolute
+		top: 20px
+		left: 15px
+		color: #333
+		z-index: 1
+		font-size: 0.875rem
+		cursor: text
+		font-family: 'roboto-light', sans-serif
+		transition: all .2s ease	
+	&__input
+		display: inline-block
+		position: relative
+		height: 55px
+		line-height: 55px
+		border-top: none
+		border-right: none
+		border-left: none
+		border-bottom: 2px solid #cecece
+		background: none
+		width: 100%
+		outline: none
+		padding-left: 15px
+		font-family: 'roboto-medium', sans-serif
+		box-sizing: border-box
+		transition: all .3s
+		&:hover
+			border-bottom: 2px solid #2BD5AA
+	&__line
+		display: inline-block
+		position: absolute
+		text-align: center
+		height: 2px
+		width: 0
+		left: 0
+		right: 0
+		margin: auto
+		bottom: 0
+		z-index: 1
+		background-color: #cecece	
+		transition: .3s width ease-in-out
+	&__textarea
+		display: flex
+		position: relative
+		outline: none
+		resize: none
+		min-height: 55px
+		border-left: none
+		border-top: none
+		border-right: none
+		border-bottom: 2px solid #cecece
+		background: none
+		width: 100%
+		padding: 20px 0 0 15px
+		font-family: 'roboto-medium', sans-serif
+		box-sizing: border-box
+		&:hover
+			border-bottom: 2px solid #2BD5AA
+
+.application__box input.active + label
+	font-size: 0.750em
+	color: #21A685
+	font-family: 'roboto-medium', sans-serif
+
+.application__box input:focus + label
+	font-size: 0.750em
+	color: #21A685
+	font-family: 'roboto-medium', sans-serif
+
+.application__box input:focus + label+.application__line
+	width: 100%
+	background-color: #21A685
+
+.application__box input:focus + label, input.active + label
+	transform: translateY(-45px)
+	transition: all .3s
+
+.application__box textarea.active + label
+	font-size: 0.750em
+	color: #21A685
+	font-family: 'roboto-medium', sans-serif
+
+.application__box textarea:focus + label
+	font-size: 0.750em
+	color: #21A685
+	font-family: 'roboto-medium', sans-serif
+
+.application__box textarea:focus + label+.application__line
+	width: 100%
+	background-color: #21A685
+
+.application__box textarea:focus + label, textarea.active + label
+	transform: translateY(-45px)
+	transition: all .3s
+
+.consultation
+	display: flex
+	flex-wrap: wrap
+	align-content: flex-start
+	position: fixed
+	min-height: 400px
+	max-width: 300px
+	right: 10px
+	bottom: 0
+	border-top-right-radius: 52px
+	border-top-left-radius: 5px
+	cursor: pointer
+	z-index: 50
+	background: #fff
+	box-shadow: 0 12px 25px 8px rgba(0,0,0,0.17)
+	transform: translate3d(0,90%,0)
+	transition: all .3s
+	&__close
+		display: none
+		position: absolute
+		cursor: pointer
+		height: 10px
+		width: 10px
+		top: 0
+		left: -30px
+		background: url("../img/close.svg")no-repeat
+		background-size: cover
+		transition: all .3s
+		&::after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: -6px
+			left: -5.5px
+			height: 20px
+			width: 20px
+			border-radius: 50%
+			border: 1px solid #26c19a
+	&__form
+ 		display: flex
+ 		flex-wrap: wrap
+ 		width: 100%
+ 		justify-content: flex-end
+ 		box-sizing: border-box
+	&__caption
+ 		display: block
+ 		padding: 15px 0 0 45px
+ 		height: 30px
+ 		width: 100%
+ 		color: #fff 
+ 		position: relative
+ 		font-family: 'roboto-medium', sans-serif
+ 		background: #26c19a
+ 		border-top-right-radius: 50px
+ 		border-top-left-radius: 5px
+ 		&::before
+ 			content: ''
+ 			display: inline-block
+ 			position: absolute
+ 			height: 23px
+ 			width: 23px
+ 			top: 12px
+ 			left: 11px
+ 			background: url("../img/envelope.svg")no-repeat
+ 			background-size: cover
+	&__text
+		padding: 0 20px 0 20px
+		margin: 20px 0 0 0
+		color: #333
+		cursor: text
+		font-family: 'roboto-light', sans-serif
+	&__textarea
+		resize: none
+		padding: 10px 0 0 15px
+		margin: 20px 20px 0 20px
+		height: 120px
+		border-radius: 5px
+		outline: none
+		border: 1px solid #BFCDD3
+		transition: all .3s
+		width: 100%
+		font-size: 0.875rem
+		font-family: 'roboto-light', sans-serif
+		box-sizing: border-box
+		&::placeholder
+			color: #333
+			font-size: 0.875rem
+			font-family: 'roboto-light', sans-serif
+		&:focus
+			border: 1px solid #0078D7
+	&__input
+		margin: 10px 20px 0 20px
+		padding: 0 0 0 15px
+		width: 100%
+		line-height: 30px
+		border-radius: 5px
+		outline: none
+		border: 1px solid #BFCDD3
+		transition: all .3s
+		font-size: 0.875rem
+		font-family: 'roboto-light', sans-serif
+		box-sizing: border-box
+		&::placeholder
+			color: #333
+			font-size: 0.875rem
+			font-family: 'roboto-light', sans-serif
+		&:focus
+			border: 1px solid #0078D7
+
+.close_none
+	transition: all .3s
+	transform: translate3d(0, 0,0)
+
+.close_block
+	display: block
+
+.hide
+ 	display: none
+
+.form
+	display: flex
+	flex-direction: column
+	min-height: 900px
+	max-width: 640px
+	color: #333
+	position: relative
+	top: 0
+	left: 0
+	right: 0
+	margin: 0 auto
+	background: #fff
+	border-radius: 3px
+	@include xs(width, 100%)
+	&__title
+		display: block
+		margin-top: 40px
+		text-align: center
+		font-size: 1.25rem
+		font-family: 'roboto-medium', sans-serif
+	&__text
+		display: block
+		margin: 0 auto
+		padding: 30px 0 20px 0
+		max-width: 500px
+		line-height: 1.5em
+		text-align: center
+		font-family: 'roboto-light', sans-serif
+		@include xs(font-size, 0.875rem)
+		@include xs(padding, 30px 20px 20px 20px)
+	&__block
+		display: flex
+		flex-direction: column
+		justify-content: center
+		max-width: 540px
+		margin: 0 auto
+		@include xs(max-width, 100%)
+		@include xs(padding, 0 20px 0 20px)
+	&__label
+		display: flex
+		color: #333
+		font-size: 0.875rem
+		font-family: 'roboto-light', sans-serif
+	&__input
+		display: block
+		margin: 5px auto 30px
+		line-height: 50px
+		width: 100%
+		height: 50px
+		outline: none
+		padding-left: 15px
+		border: 1px solid #D3D1D1
+		border-radius: 5px
+		font-size: 0.875rem
+		font-family: 'roboto-medium', sans-serif
+		box-sizing: border-box
+		transition: all .3s
+		&::placeholder
+			color: #C3C3C3
+			font-size: 0.875rem	
+			font-family: 'roboto-light', sans-serif
+		&:hover
+			border: 1px solid #23DBB9
+		&:focus
+			border: 1px solid #1FC2A4
+	&__textarea
+		display: block
+		margin: 5px auto 55px
+		width: 100%
+		outline: none
+		padding: 20px 0 0 15px
+		resize: none
+		border: 1px solid #D3D1D1
+		border-radius: 5px
+		font-size: 0.875rem
+		font-family: 'roboto-medium', sans-serif
+		box-sizing: border-box
+		transition: all .3s
+		&::placeholder
+			color: #C3C3C3
+			font-size: 0.875rem
+			font-family: 'roboto-light', sans-serif
+		&:hover
+			border: 1px solid #23DBB9
+		&:focus
+			border: 1px solid #1FC2A4
+	&__treatment
+		display: block
+		margin: 0 auto
+		padding: 20px 130px 20px 130px
+		line-height: 1.5em
+		font-size: 0.875rem
+		text-align: center
+		font-family: 'roboto-light', sans-serif
+		@include xs(padding, 20px 0 20px 0)
+		@include xs(max-width, 300px)
+	&__link
+		color: #333
+
+
+.footer
+	display: inline-block
+	width: 100%
+	position: relative
+	color: #fff
+	background: #333
+	z-index: 51
+	box-sizing: border-box
+	&__body
+		@include wrapper()
+	&__title
+		font-size: 70px
+		margin: 30px 0 30px 10px
+		font-family: 'roboto-medium', sans-serif
+	&__top
+		display: flex
+		flex-wrap: wrap
+		padding: 20px 0 20px 0
+		width: 100%
+		border-bottom: 1px solid #fff
+		align-items: flex-start
+	&__item
+		display: flex
+		flex-direction: column
+		align-content: flex-start
+		@include size(3)
+		@include col()
+		font-size: 0.875em
+		font-family: 'roboto-light', sans-serif
+		@include size-md(5)
+		@include md(margin-bottom, 30px)
+		@include size-xs(12)
+		@include xs(text-align, center)
+		&_pl
+			@include shift-md-left(1)
+			@include shift-xs-left(0)
+	&__name
+		display: flex
+		color: #fff
+		font-size: 1.250rem
+		margin: 0 0 20px 0
+		text-transform: uppercase
+		font-weight: 100
+		font-family: 'roboto-medium', sans-serif
+		@include xs(justify-content, center)
+	&__text
+		display: block
+		margin: 0
+		line-height: 1.5rem
+	&__link
+		display: block
+		text-decoration: none
+		margin: 10px 0 10px 0
+		color: #fff
+		transition: all .3s
+		&:hover
+			color: #23DBB9
+			text-decoration: underline 
+	&__phone
+		display: inline-block
+		position: relative
+		margin: 10px 0 20px 0
+		padding: 0 0 0 30px
+		box-sizing: border-box
+		@include xs(padding, 0)
+		@include xs(margin, 20px 0 40px 0)
+		&:before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			height: 15px
+			width: 15px
+			background: url("../img/call.svg")no-repeat
+			background-size: cover
+			@include xs(right, 0)
+			@include xs(margin, 0 auto)
+			@include xs(top, -20px)
+	&__mail
+		display: block
+		position: relative
+		color: #fff
+		padding-left: 30px
+		text-decoration: none
+		transition: all .3s
+		@include xs(padding, 0)
+		&:before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 1px
+			left: 0
+			height: 15px
+			width: 15px
+			background: url("../img/mail.svg")no-repeat
+			background-size: cover
+			@include xs(right, 0)
+			@include xs(margin, 0 auto)
+			@include xs(top, -20px)
+		&:hover
+			color: #23DBB9
+			text-decoration: underline
+	&__bottom
+		display: flex
+		font-family: 'roboto-light', sans-serif
+		justify-content: center
+
+.message
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	margin: auto
+	background: white
+	max-width: 100%
+	width: 560px
+	text-align: center
+	padding: 40px 20px 27px
+	border: 1px solid #e2e2e2
+	border-top: 3px solid #26c19a
+	transform: translate3d(0, -100%, 0)
+	transition: all .3s ease
+	z-index: 1000000000
+	box-sizing: border-box
+	&__text
+		line-height: 1.5em
+		font-family: 'sans-regular', sans-serif
+
+.message_active
+	transform: translate3d(0, 0, 0)
+
