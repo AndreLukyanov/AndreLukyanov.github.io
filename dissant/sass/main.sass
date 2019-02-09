@@ -1,0 +1,1743 @@
+@import "fonts"
+@import "libs"
+@import "smart-grid"
+
+html
+	margin-right: 0 !important
+
+.fp-tooltip
+	background: #fff
+	height: 27px
+	padding: 0 20px 0 20px
+	line-height: 27px
+	font-family: 'montserrat-rugular', sans-serif
+
+.header
+	display: inline-flex
+	flex-wrap: wrap
+	position: fixed
+	z-index: 100
+	background: url("../img/header_bg.png")no-repeat top
+	min-height: 120px
+	background-size: cover
+	width: 100%
+	box-sizing: border-box
+	&::after
+		content: 'DISSANT'
+		display: none
+		position: absolute
+		top: 30px
+		left: 5px
+		color: #fff
+		font-size: 1.500rem
+		z-index: 10000
+		font-family: 'montserrat-thin', sans-serif
+		@include xs(display, inline-block)
+
+
+.popup__toggle
+	outline: none
+	bottom: 35px
+	left: 20px
+	position: fixed
+	z-index: 10001
+
+.popup__close
+	display: none
+
+.img-circle
+	background-color: rgba(150, 150, 150, 0.64)
+	box-sizing: content-box
+
+.circlephone
+	box-sizing: content-box
+	border: 2px solid #FC0000
+	width: 86px
+	height: 86px
+	bottom: -9px
+	left: -12px
+	position: absolute
+	border-radius: 100%
+	opacity: .5
+	animation: circle-anim 2.4s infinite ease-in-out !important
+	transition: all 0.5s
+
+.circle-fill
+	box-sizing: content-box
+	background-color: rgba(150, 150, 150, 0.64)
+	width: 66px
+	height: 66px
+	bottom: 1px
+	left: -2px
+	position: absolute
+	border-radius: 100%
+	border: 2px solid transparent
+	animation: circle-fill-anim 2.3s infinite ease-in-out
+	transition: all 0.5s
+
+.img-circle
+	box-sizing: content-box
+	width: 52px
+	height: 52px
+	bottom: 8px
+	left: 5px
+	position: absolute
+	border-radius: 100%
+	border: 2px solid #FF0000
+	opacity: .7
+	transition: all .3s
+
+.img-circleblock
+	box-sizing: content-box
+	width: 72px
+	height: 72px
+	margin: -10px
+	background: url("../img/min.png")no-repeat
+	background-position: center center
+	background-repeat: no-repeat
+	animation-name: tossing
+	animation-duration: 1.5s
+	animation-iteration-count: infinite
+
+.img-circle:hover
+	opacity: 1
+
+
+.popup
+	display: none
+	&__form
+		display: flex
+		flex-wrap: wrap
+		max-width: 350px
+		margin: 0 auto
+		position: relative
+		background: #202020
+		border-radius: 20px
+		padding: 0 24px 19px 24px
+		box-sizing: border-box
+	&__title
+		color: #fff
+		font-size: 1.250rem
+		display: block
+		padding: 56px 20px 0 20px
+		text-align: center
+		margin: 0 auto
+		font-family: 'montserrat-rugularr', sans-serif
+	&__box
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		margin: 30px 0 20px 0
+		padding: 10px 0 10px 0
+		border-top: 1px solid #FF0000
+		border-bottom: 1px solid #FF0000
+		box-sizing: border-box
+	&__input
+		width: 100%
+		line-height: 38px
+		height: 38px
+		margin: 10px 0 10px 0
+		outline: none
+		font-family: 'montserrat-rugularr', sans-serif
+		box-sizing: border-box
+		&::placeholder
+			color: #000000
+			font-size: 0.688rem
+			text-align: center
+			font-family: 'montserrat-rugularr', sans-serif
+			
+
+
+
+.dissant
+	display: none
+	position: absolute
+	top: 30%
+	left: 0
+	right: 0
+	margin: 0 auto
+	text-align: center
+	color: #fff
+	font-size: 2.500rem
+	text-transform: uppercase
+	font-family: 'montserrat-thin', sans-serif
+	transform: translate3d(0, -30%,0)
+	@include sm(display, block)
+
+	
+.opacity
+	opacity: 0
+
+.section_hidden
+	display: none
+
+.hamburger
+	display: none
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 50
+	@include sm(display, inline-block)
+
+.hamburger_white
+	background: #fff
+	&::after
+		background: #fff
+
+
+.visible
+	transform: translate3d(100%,0,0)
+
+.menu__animatable .nav__menu 
+	transition: all 130ms ease-in
+
+.visible.menu__animatable .nav__menu 
+	transition: all 330ms ease-out
+
+.nav
+	display: flex
+	width: 100%
+	box-sizing: border-box
+	&__body
+		@include wrapper()
+		width: 100%
+
+.navigation
+	display: flex
+	flex-wrap: wrap
+	margin: 12px 0 0 0
+	justify-content: flex-end
+	box-sizing: border-box
+	@include sm(width, 100%)
+	@include sm(height, 100vh)
+	@include sm(min-height, 100vh)
+	@include sm(left, -100%)
+	@include sm(background, #202020)
+	@include sm(margin, 0)
+	@include sm(position, fixed)
+	@include sm(justify-content, center)
+	@include sm(transition, transform .3s ease)
+	&__list
+		display: flex
+		margin: 0
+		padding: 0
+		list-style: none
+		@include sm(flex-direction, column)
+		@include sm(position, absolute)
+		@include sm(top, 50%)
+		@include sm(left, 50%)
+		@include sm(justify-content, center)
+		@include sm(transform, translate3d(-50%, -50%, 0))
+	&__item
+		display: flex
+		@include sm(width, 100%)
+		@include sm(justify-content, center)
+		@include sm(text-align, center)
+	&__link
+		text-decoration: none
+		padding: 0 15px 0 15px
+		color: #000000
+		font-size: 1.250rem
+		font-family: 'montserrat-rugular', sans-serif
+		transition: all .3s
+		@include sm(color, #fff)
+		@include sm(margin-bottom, 20px)
+		@include xs(font-size, 1.000rem)
+		&_hidden
+			display: none
+			@include sm(display, block)
+		&:hover
+			color: #fff
+			background: #000000
+
+.social
+	display: none
+	position: absolute
+	top: 70%
+	left: 50%
+	text-align: center
+	width: 100%
+	box-sizing: border-box
+	@include sm(transform, translate3d(-50%, -70%, 0))
+	@include sm(display, block)
+	&__link
+		display: inline-block
+		height: 40px
+		width: 40px
+		background-position: 2% 2%
+		&_wats
+			background: url("../img/social.png")no-repeat
+			background-position: 2% 2%
+		&_telegram
+			background: url("../img/social.png")no-repeat
+			background-position: 2% 100%
+		&_insta
+			background: url("../img/social.png")no-repeat
+			background-position: 100% 2%
+
+.wrapper
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	color: #fff
+	box-sizing: border-box
+
+.dev
+	position: relative
+	&::after
+		content: 'developing'
+		display: inline-block
+		position: absolute
+		color: #fff
+		left: 20px
+		bottom: 15px
+		text-transform: none
+		font-size: 1.563rem
+		letter-spacing: 0
+		font-weight: 700
+
+.int
+	position: relative
+	&::before
+		content: 'of'
+		display: inline-block
+		position: absolute
+		color: #fff
+		top: 60px
+		left: 0
+		text-transform: none
+		font-size: 1.563rem
+		letter-spacing: 0
+		transform: rotate(-90deg)
+		font-weight: 700
+	&::after
+		content: 'intaractive'
+		display: inline-block
+		position: absolute
+		color: #fff
+		top: 115px
+		right: -25px
+		text-transform: none
+		font-size: 1.563rem
+		letter-spacing: 0
+		transform: rotate(-90deg)
+		font-weight: 700
+
+.sit
+	position: relative
+	&::before
+		content: 'sites'
+		display: inline-block
+		position: absolute
+		color: #fff
+		left: -30px
+		right: 0
+		bottom: 80px
+		margin: 0 auto
+		text-transform: none
+		font-size: 1.563rem
+		letter-spacing: 0
+		font-weight: 700
+
+.end
+	position: relative
+	&::before
+		content: '&'
+		display: inline-block
+		position: absolute
+		color: #fff
+		left: -20px
+		right: 0
+		bottom: 125px
+		margin: 0 auto
+		text-transform: none
+		font-size: 1.563rem
+		letter-spacing: 0
+		font-weight: 700
+	&::after
+		content: 'applications'
+		display: inline-block
+		position: absolute
+		color: #fff
+		left: -20px
+		right: 0
+		bottom: 20px
+		margin: 0 auto
+		text-transform: none
+		font-size: 1.563rem
+		letter-spacing: 0
+		font-weight: 700
+
+.nat
+	position: relative
+	&::before
+		content: 'native'
+		display: inline-block
+		position: absolute
+		color: #fff
+		top: 75px
+		right: 38px
+		text-transform: none
+		font-size: 1.563rem
+		letter-spacing: 0
+		transform: rotate(-90deg)
+		font-weight: 700
+	&::after
+		content: 'by'
+		display: inline-block
+		position: absolute
+		color: #fff
+		top: 125px
+		left: 50px
+		text-transform: none
+		font-size: 1.563rem
+		letter-spacing: 0
+		font-weight: 700
+
+
+
+.tec
+	position: relative
+	&::after
+		content: 'technologies'
+		display: inline-block
+		position: absolute
+		color: #fff
+		top: 20px
+		left: -20px
+		text-transform: none
+		font-size: 1.563rem
+		letter-spacing: 0
+		font-weight: 700
+
+.line
+	display: inline-block
+	position: absolute
+	box-sizing: border-box
+	&_red
+		top: 0
+		left: 0
+		height: 100vh
+		min-width: 90%
+		background: url("../img/line_red.png")no-repeat
+		background-size: contain
+		@include sm(display, none)
+	&_left
+		top: 80%
+		left: 0
+		height: 150px
+		min-width: 45%
+		background: url("../img/header-line_left.png")no-repeat
+		background-size: contain
+		transform: translate3d(0, -80%, 0)
+		@include sm(display, none)
+	&_right
+		top: 100%
+		right: 0
+		height: 500px
+		min-width: 45%
+		background: url("../img/header-line_right.png")no-repeat
+		background-size: cover
+		transform: translate3d(0, -100%, 0)
+		@include sm(display, none)
+	&_second
+		top: 85%
+		left: 0
+		height: 150px
+		width: 550px
+		background: url("../img/section-two_line.png")no-repeat
+		background-size: cover
+		transform: translate3d(0, -85%, 0)
+		@include sm(display, none)
+	&_four
+		top: 100%
+		left: 0
+		height: 90px
+		min-width: 50%
+		background: url("../img/section-four_lineL.png")no-repeat
+		background-size: contain
+		transform: translate3d(0, -100%, 0)
+		@include xs(display, none)
+	&_five
+		top: 100%
+		right: 0
+		height: 250px
+		min-width: 60%
+		background: url("../img/section-four_lineR.png")no-repeat
+		background-size: contain
+		transform: translate3d(0, -100%, 0)
+		@include xs(display, none)
+	&_let
+		left: 96px
+		bottom: 0
+		height: 176px
+		width: 3px
+		z-index: -10
+		background: #F9030C
+	&_rit
+		top: 86px
+		right: 100px
+		height: 236px
+		width: 3px
+		background: #F9030C
+	&_advantages
+		height: 100px
+		width: 95%
+		left: 0
+		top: 40%
+		z-index: 10
+		background: url("../img/advantages_bg.png")no-repeat center
+		background-size: cover
+		@include sm(display, none)
+	&_hedmed
+		display: none
+		top: 90%
+		left: -40px
+		height: 400px
+		min-width: 80%
+		background: url("../img/hed_med.png")no-repeat
+		background-size: contain
+		transform: translate3d(0, -90%,0)
+		@include xs(display, block)
+	&_onemed
+		display: none
+		top: 5%
+		right: 0
+		height: 400px
+		min-width: 300px
+		background: url("../img/one_med.png")no-repeat
+		background-size: contain
+		transform: translate3d(0, -5%,0)
+		@include xs(display, block)
+	&_twomed
+		display: none
+		top: 5%
+		right: 0
+		height: 400px
+		min-width: 300px
+		background: url("../img/two_med.png")no-repeat
+		background-size: contain
+		transform: translate3d(0, -5%,0)
+		@include xs(display, block)
+	&_threemed
+		display: none
+		left: 0
+		bottom: 24%
+		height: 350px
+		min-width: 170px
+		background: url("../img/three_med.png")no-repeat
+		background-size: contain
+		@include xs(display, block)
+	&_fourmed
+		display: none
+		top: -7%
+		left: 0
+		height: 550px
+		min-width: 100%
+		background: url("../img/four_med.png")no-repeat
+		background-size: contain
+		transform: translate3d(0, -7%,0)
+		@include xs(display, block)
+
+
+		
+
+
+.section
+	display: flex
+	flex-wrap: wrap
+	align-items: align-content
+	position: relative
+	width: 100%
+	height: 100vh
+	min-height: 500px
+	background: #000000!important
+	box-sizing: border-box
+	&_first
+		text-align: center
+	&__body
+		max-width: 1260px
+		margin: 0 auto
+		position: relative
+		height: 100%
+		width: 100%
+	&__title
+		display: flex
+		justify-content: center
+		position: absolute
+		left: 0
+		right: 0
+		margin: 0 auto
+		z-index: 50
+		&_big
+			top: 20%
+			font-weight: 100
+			letter-spacing: 20px
+			color: #3E3E3E
+			font-size: 14.375rem
+			text-transform: uppercase
+			font-family: 'montserrat-thin', sans-serif
+			transform: translate3d(0, -20%, 0)
+		&_medium
+			top: 14%
+			font-size: 3.000rem
+			font-weight: 100
+			font-family: 'montserrat-rugularr', sans-serif
+			transform: translate3d(0, -14%, 0)
+		&_one
+			top: 22%
+			transform: translate3d(0, -22%, 0)
+	&_second
+		background: url("../img/section_second.jpg")no-repeat bottom right #000000 !important
+		background-size: contain
+	&_sixth
+		background: url("../img/section_sixth.png")no-repeat center #000 !important
+		background-size: cover !important
+
+.block
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	position: absolute
+	top: 70%
+	left: 0
+	right: 0
+	margin: 0 auto
+	max-width: 850px
+	margin: 0 auto
+	transform: translate3d(0, -70%, 0)
+	z-index: 50
+	box-sizing: border-box
+	&__caption
+		margin: 0
+		padding: 0 100px 0 100px
+		font-size: 2.500rem
+		font-family: 'montserrat-light', sans-serif
+
+.button
+	display: inline-block
+	color: #fff
+	background: #FD0000
+	text-decoration: none
+	outline: none
+	border: none
+	cursor: pointer
+	text-align: center
+	transition: all .3s
+	&:hover
+		background: #CA0000
+	&:active
+		background: #CA0000
+	&_block
+		margin-top: 15px
+		font-size: 1.250rem
+		line-height: 64px
+		min-width: 472px
+		font-family: 'montserrat-rugularr', sans-serif
+	&_contact
+		line-height: 58px
+		width: 100%
+		letter-spacing: 1px
+		font-family: 'montserrat-sb', sans-serif
+		@include sm(max-width, 300px)
+		@include sm(font-family, 'montserrat-rugularr')
+		@include sm(max-width, 223px)
+		@include sm(line-height, 32px)
+		@include xs(font-size, 0.750rem)
+	&_task
+		font-size: 1.250rem
+		line-height: 64px
+		min-width: 274px
+		text-transform: uppercase
+		position: absolute
+		right: 150px
+		bottom: -20px
+		font-family: 'montserrat-sb', sans-serif
+		@include md(min-width, 174px)
+		@include md(line-height, 44px)
+		@include md(font-size, 1.000rem)
+		@include sm(bottom, 110px)
+		@include sm(min-width, 174px)
+		@include sm(font-family, 'montserrat-rugularr')
+	&_footer
+		position: absolute
+		height: 54px
+		max-width: 318px
+		left: 0
+		right: 0
+		margin: 0 auto
+		bottom: 0
+		background: #1C1C1C
+		@include md(display, none)
+		&:hover
+			background: #1C1C1C
+		&:active
+			background: #1C1C1C
+	&_write
+		display: none
+		position: fixed
+		left: 0
+		bottom: 0
+		font-size: 1.250rem
+		line-height: 35px
+		width: 100%
+		font-family: 'montserrat-rugularr', sans-serif
+		background: #202020
+		@include xs(display, block)
+	&_close
+		line-height: 38px
+		width: 100%
+		font-size: 0.750rem
+		font-family: 'montserrat-rugularr', sans-serif
+
+.info
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	flex-direction: column 
+	position: absolute
+	top: 50%
+	left: 0
+	padding: 0 0 0 70px
+	box-sizing: border-box
+	transform: translate3d(0, -50%, 0)
+	@include xs(padding, 0)
+	@include xs(width, 100%)
+	@include xs(top, 40%)
+	@include xs(transform, translate3d(0, -40%, 0))
+	&__txt
+		margin: 0 0 15px 0
+		font-size: 1.500rem
+		font-family: 'montserrat-semi', sans-serif
+
+.row
+	@include row-flex()
+	width: 100%
+	position: relative
+
+.advantages
+	display: inline-flex
+	flex-wrap: wrap
+	justify-content: center
+	position: relative
+	position: absolute
+	top: 20%
+	left: 0
+	height: 50%
+	width: 100%
+	box-sizing: border-box
+	transform: translate3d(0, -20%, 0)
+	@include lg(top, 10%)
+	@include lg(transform, translate3d(0, -10%, 0))
+	@include sm(top, 20%)
+	@include sm(transform, translate3d(0, -20%, 0))
+	&__item
+		text-align: center
+		@include col()
+		@include size(4)
+		@include size-sm(12)
+		@include sm(margin-bottom, 40px)
+	&__title
+		margin: 0
+		font-size: 1.500rem
+		font-family: 'montserrat-sb', sans-serif
+	&__text
+		padding: 0 50px 0 50px
+		margin: 20px 0 0 0
+		line-height: 1.5em
+		font-family: 'source-spr', sans-serif
+		box-sizing: border-box
+
+.plan
+	display: inline-flex
+	flex-wrap: wrap
+	justify-content: center
+	position: relative
+	position: absolute
+	top: 80%
+	left: 0
+	width: 100%
+	box-sizing: border-box
+	transform: translate3d(0, -80%, 0)
+	&_hidden
+		@include sm(display, none)
+	&__item
+		@include col()
+		@include size(4)
+		margin-bottom: 50px
+		text-align: center
+	&__text
+		position: relative
+		padding: 110px 30px 0 30px
+		margin: 0
+		font-size: 1.063rem
+		font-family: 'montserrat-bold', sans-serif
+		&_first::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			margin: 0 auto
+			height: 100px
+			width: 100px
+			background: url("../img/sprites.png")no-repeat
+			background-position: 6% 8% 
+		&_second::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			margin: 0 auto
+			height: 100px
+			width: 100px
+			background: url("../img/sprites.png")no-repeat
+			background-position: 38% 8% 
+		&_third::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			margin: 0 auto
+			height: 100px
+			width: 100px
+			background: url("../img/sprites.png")no-repeat
+			background-position: 6% 62% 
+		&_fourth::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			margin: 0 auto
+			height: 100px
+			width: 100px
+			background: url("../img/sprites.png")no-repeat
+			background-position: 40% 62% 
+		&_fifth::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			margin: 0 auto
+			height: 100px
+			width: 100px
+			background: url("../img/sprites.png")no-repeat
+			background-position: 74% 8% 
+		&_sixth::before
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			margin: 0 auto
+			height: 100px
+			width: 100px
+			background: url("../img/sprites.png")no-repeat
+			background-position: 74% 64% 
+
+.services
+	display: inline-flex
+	flex-wrap: wrap
+	justify-content: center
+	position: relative
+	position: absolute
+	top: 20%
+	left: 0
+	width: 100%
+	z-index: 20
+	box-sizing: border-box
+	transform: translate3d(0, -20%, 0)
+	@include xs(top, 10%)
+	@include xs(transform, translate3d(0, -10%, 0))
+	&__item
+		@include col()
+		@include size(4)
+		@include size-sm(6)
+		@include size-xs(12)
+		@include sm(margin-bottom, 50px)
+		@include sm(padding, 0 20px 0 20px)
+		@include xs(padding, 0 40px 0 40px)
+		@include xs(margin-bottom, 20px)
+		position: relative
+		text-align: center
+		&_first
+			@include xs(text-align, left)
+		&_second
+			@include xs(text-align, right)
+		&_three
+			@include xs(text-align, left)
+			@include xs(margin-top, 20px)
+		&_mgt
+			margin-top: 50px
+		&_mt
+			margin-top: 140px
+			@include xs(margin-top, 30px)
+	&__caption
+		margin: 0
+		font-size: 1.500rem
+		text-transform: uppercase
+		font-family: 'montserrat-sb', sans-serif
+	&__text
+		margin: 80px 0 0 0
+		font-size: 1.250rem
+		line-height: 1.5em
+		font-family: 'source-spb', sans-serif
+	&__line
+		display: inline-block
+		position: absolute
+		height: 3px
+		top: 70px
+		left: 0
+		right: 0
+		margin: 0 auto
+		background: #fff
+		@include xs(margin, 0)
+		&_media
+			max-width: 182px
+			@include sm(max-width, 148px)
+			@include xs(left, 40px)
+		&_smoll
+			max-width: 163px
+			@include sm(min-width, 135px)
+			@include xs(left, auto)
+			@include xs(right, 40px)
+			@include xs(display, flex)
+			@include xs(justify-content, flex-end)
+		&_big
+			max-width: 398px
+			@include sm(max-width, 180px)
+			@include xs(min-width, 180px)
+			@include xs(left, 40px)
+
+
+
+.task
+	display: inline-flex
+	flex-wrap: wrap
+	position: absolute
+	top: 40%
+	left: 0
+	right: 0
+	max-width: 1180px
+	padding-left: 100px
+	margin: 0 auto
+	padding-bottom: 50px
+	box-sizing: border-box
+	transform: translate3d(0, -40%, 0)
+	@include xs(padding-left, 0)
+	&::before
+		content: ''
+		display: inline-block
+		position: absolute
+		height: 15px
+		width: 100%
+		top: 78px
+		left: 0
+		background: url("../img/section-fifth_lineT.png")no-repeat
+		background-size: cover
+		@include lg(width, 95%)
+		@include md(top, 70px)
+		@include sm(top, 60px)
+		@include sm(background-size, 90%)
+		@include sm(width, 100%)
+		@include sm(left, 70px)
+		@include xs(width, 105%)
+		@include xs(left, 30px)
+		@include xs(height, 6px)
+	&::after
+		content: ''
+		display: inline-block
+		position: absolute
+		height: 15px
+		width: 100%
+		top: 310px
+		left: -100px
+		background: url("../img/section-fifth_lineM.png")no-repeat
+		background-size: cover
+	&__item
+		@include col()
+		text-align: center
+		text-align: center
+		position: relative
+		margin-bottom: 50px
+		font-family: 'montserrat-sb', sans-serif
+		z-index: 40
+		@include md(padding-bottom, 84px)
+		@include sm(margin-bottom, 36px)
+		&_top
+			width: calc(33.33% - 30px)
+			@include md(width, calc(50% - 30px))
+			@include size-sm(6)
+			@include size-xs(6)
+		&_bottom
+			@include size(6)
+			@include size-md(6)
+			@include size-xs(6)
+		&_second
+		&_three
+			@include md(order, 1)
+		&_four
+			@include md(order, 2)
+	&__number
+		position: relative
+		font-size: 3.125rem
+		@include md(font-size, 2.500rem)
+		@include sm(font-size, 1.875rem)
+		&::after
+			content: ''
+			display: inline-block
+			position: absolute
+			height: 26px
+			width: 26px
+			left: 0
+			right: 0
+			bottom: -40px
+			margin: 0 auto
+			border-radius: 50%
+			background: #F9030C
+	&__text
+		margin: 60px 0 0 0
+		padding: 0 80px 0 80px
+		font-size: 1.250rem
+		z-index: 20px
+		@include md(font-family, 'montserrat-light')
+		@include md(font-size, 1.000rem)
+		@include sm(font-size, 0.688rem)
+
+.row_line::before
+	content: ''
+	display: inline-block
+	position: absolute
+	height: 15px
+	width: 100%
+	bottom: -50px
+	left: 0
+	background: url("../img/button_beffore.png")no-repeat
+	background-size: cover
+	@include md(bottom, 98px)
+	@include sm(height, 8px)
+	@include sm(bottom, 86px)
+	@include sm(width, 90%)
+	@include sm(right, 60px)
+	@include sm(left, auto)
+	@include xs(left, 40px)
+	@include xs(width, 84%)
+	@include xs(height, 6px)
+
+
+.contact
+	display: flex
+	flex-wrap: wrap
+	position: absolute
+	top: 50%
+	left: 0
+	right: 0
+	margin: 0 auto
+	max-width: 754px
+	width: 100%
+	box-sizing: border-box
+	transform: translate3d(0, -50%, 0)
+	&__form
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		text-align: center
+		width: 100%
+		box-sizing: border-box
+		@include sm(padding, 0 100px 0 100px)
+		@include xs(padding, 0 50px 0 50px)
+	&__box
+		display: flex
+		flex-wrap: wrap
+		position: relative
+		width: 100%
+		box-sizing: border-box
+	&__label
+		display: inline-block
+		position: absolute
+		top: 15px
+		left: 15px
+		cursor: text
+		color: #fff
+		font-size: 1.125rem
+		font-family: 'source-sansproregular', sans-serif
+		transition: all .2s ease
+		@include xs(font-size, 0.875rem)
+	&__input
+		width: 100%
+		padding-left: 15px
+		margin-bottom: 50px
+		color: #fff	
+		border-top: none
+		border-left: none
+		border-right: none
+		border-bottom: 1px solid #F4F5F9
+		height: 50px
+		line-height: 50px
+		outline: none
+		font-size: 1.125rem
+		font-family: 'source-sansproregular', sans-serif
+		background: none
+		box-sizing: border-box
+		@include xs(margin-bottom, 20px)
+	&__textarea
+		width: 100%
+		padding-left: 15px
+		margin-bottom: 50px
+		color: #fff
+		border-top: none
+		border-left: none
+		border-right: none
+		outline: none
+		font-size: 1.125rem
+		font-family: 'source-sansproregular', sans-serif
+		height: 90px
+		background: none
+		resize: none
+		box-sizing: border-box
+		@include xs(margin-bottom, 20px)
+	&__link
+		margin-top: 30px
+		padding: 24px 0 24px 0
+		min-width: 385px
+		font-size: 1.500rem
+		color: #F4F5F9
+		letter-spacing: 1px
+		text-decoration: none
+		font-family: 'source-spb', sans-serif
+		background: rgba(0, 0, 0, .53)
+		@include sm(font-size, 1.125rem)
+		@include sm(margin-top, 4px)
+		@include sm(background, none)
+		@include xs(font-size, 0.875rem)
+
+
+.contact__box input:focus + label, input.active + label
+	transform: translateX(-70px)
+	transition: all .3s
+	opacity: 0
+
+.contact__box textarea:focus + label, textarea.active + label
+	transform: translateX(-170px)
+	transition: all .3s
+	opacity: 0
+
+
+.footer
+	position: fixed
+	left: 0
+	bottom: 0
+	display: inline-flex
+	flex-wrap: wrap
+	min-height: 310px
+	width: 100%
+	background: url("../img/footer.jpg")no-repeat center
+	background-size: cover
+	transform: translate3d(0, 100%, 0)
+	transition: all .3s ease
+	box-sizing: border-box
+	z-index: 10000
+	&__body
+		max-width: 1260px
+		margin: 0 auto
+		width: 100%
+		position: relative
+	&__logo
+		margin-top: 10px
+		font-size: 4.063rem
+		text-decoration: none
+		color: #000000
+		font-family: 'montserrat-thin', sans-serif
+	&__copy
+		margin: 10px 0 0 40px
+		font-size: 1.125rem
+		font-family: 'montserrat-sb', sans-serif
+	&__box
+		display: flex
+		flex-wrap: wrap
+		margin-top: -40px
+		justify-content: center
+		box-sizing: border-box
+	&__link
+		display: inline-block
+		height: 50px
+		width: 50px
+		margin: 0 30px 0 30px
+		transition: all .3s
+		&:hover
+			margin-top: -10px
+		&_google
+			background: url("../img/sprites.png")no-repeat
+			background-position: 98% 4%
+		&_tweeter
+			background: url("../img/sprites.png")no-repeat
+			background-position: 97% 29%
+		&_link
+			background: url("../img/sprites.png")no-repeat
+			background-position: 97% 53%
+	&__policy
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		margin-top: 15px
+		justify-content: center
+		box-sizing: border-box
+	&__txt
+		margin: 0 10px 0 10px
+		padding-bottom: 5px
+		font-size: 1.125rem
+		position: relative
+		font-family: 'montserrat-sb', sans-serif
+		text-decoration: none
+		color: #000
+		border-bottom: 2px solid #F9030C
+		transition: all .3s
+		&:hover
+			border-bottom: 2px solid #CA0000
+		&_line::after
+			content: ''
+			display: inline-block
+			position: absolute
+			top: 0
+			right: -10px
+			height: 19px
+			width: 2px
+			background: #000
+	&__block
+		display: inline-block
+		position: absolute
+		top: 20px
+		right: 0
+		height: 40px
+		width: 40px
+		cursor: pointer
+		box-sizing: border-box
+
+.closes
+	display: block
+	margin: 16px 0 0 5px
+	height: 4px
+	background: #1C1C1C
+	&_left
+		transform: rotate(130deg)
+		width: 25px
+	&_right
+		margin-top: -4px
+		transform: rotate(-130deg)
+		width: 25px
+
+
+
+.footer_active	
+	transform: translate3d(0, 0, 0)
+
+.message
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	margin: auto
+	background: white
+	max-width: 100%
+	width: 560px
+	text-align: center
+	padding: 40px 20px 27px
+	border: 1px solid #e2e2e2
+	border-top: 3px solid #FD0000
+	transform: translate3d(0, -100%, 0)
+	transition: all .3s ease
+	z-index: 1000000000
+	box-sizing: border-box
+	&__text
+		line-height: 1.5em
+		font-family: 'sans-regular', sans-serif
+
+.message_active
+	transform: translate3d(0, 0, 0)
+
+
+@keyframes tossing 
+	0% 
+		transform: rotate(-8deg)
+	50% 
+		transform: rotate(8deg)
+	100% 
+		transform: rotate(-8deg)
+
+@keyframes circle-anim 
+	0% 
+		transform: rotate(0deg) scale(0.5) skew(1deg)
+		opacity: .1
+	30% 
+		transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .5
+	100% 
+		transform: rotate(0deg) scale(1) skew(1deg)
+		opacity: .1
+
+
+@keyframes circle-fill-anim 
+	0% 
+		transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+	50% 
+		transform: rotate(0deg) scale(1) skew(1deg)
+		opacity: .2
+	100% 
+		transform: rotate(0deg) scale(0.7) skew(1deg)
+		opacity: .2
+
+
+@media(max-width: 1260px)
+	.section__title_big
+		font-size: 11.250rem
+	.dev::after
+		font-size: 1.250rem
+	.int::after
+		top: 90px
+		right: -20px
+		font-size: 1.250rem
+	.int::before
+		top: 50px
+		font-size: 1.250rem
+	.sit::before
+		top: 120px
+		font-size: 1.250rem
+	.end::before
+		top: 85px
+		font-size: 1.250rem
+	.end::after
+		font-size: 1.250rem
+	.nat::before
+		top: 58px
+		right: 30px
+		font-size: 1.250rem
+	.nat::after
+		left: 40px
+		top: 100px
+		font-size: 1.250rem
+	.tec::after
+		font-size: 1.250rem
+	.advantages__text
+		padding: 0 20px 0 20px
+	.task::after
+		top: 290px
+	.line_let
+		height: 172px
+	.line_rit
+		height: 210px
+	.task__text
+		padding: 0 30px 0 30px
+
+@media(max-width: 1100px)
+	.task__text
+		font-size: 1.000rem
+	.task::after
+		top: 276px
+	.line_let
+		height: 166px
+	.line_rit
+		height: 204px
+
+@media(max-width: 960px)
+	.section__title_big
+		font-size: 9.375em
+	.dev::after
+		font-size: 0.875rem
+	.int::after
+		top: 80px
+		right: -5px
+		font-size: 0.875rem
+	.int::before
+		top: 40px
+		font-size: 0.875rem
+	.sit::before
+		top: 100px
+		font-size: 0.875rem
+	.end::before
+		top: 70px
+		font-size: 0.875rem
+	.end::after
+		font-size: 0.875rem
+	.nat::before
+		top: 46px
+		right: 32px
+		font-size: 0.875rem
+	.nat::after
+		left: 34px
+		top: 80px
+		font-size: 0.875rem
+	.tec::after
+		top: 15px
+		left: -10px
+		font-size: 0.875rem
+	.block__caption
+		padding: 0 150px 0 150px
+		font-size: 1.875rem
+	.button_block
+		min-width: 320px
+	.section__title_medium
+		font-size: 1.875rem
+	.info__txt
+		font-size: 1.125rem
+	.advantages__title
+		font-size: 1.250rem
+	.advantages__text
+		font-size: 0.875rem
+	.plan__text
+		font-size: 0.875rem
+	.services__caption
+		font-size: 1.250rem
+	.services__line
+		top: 50px
+	.services__line_big
+		top: 70px
+	.services__text
+		margin-top: 40px
+		font-size: 0.875rem
+		font-family: 'montserrat-light', sans-serif 
+	.task::after
+		top: 244px
+	.line_let
+		bottom: 160px
+		height: 172px
+	.line_rit
+		top: 76px
+		right: 100px
+		height: 174px
+	.button_task
+		bottom: 140px
+	.task__text
+		position: absolute
+		top: 100px
+		left: 0
+		right: 0
+		margin: 0 auto
+
+@media(min-width: 781px)
+	.visible
+		transform: translate3d(0,0,0)
+
+@media(max-width: 780px)
+	.task
+		margin-left: 0
+	.line_let
+		bottom: 136px
+		left: 100px
+		height: 156px
+	.line_rit
+		top: 64px
+		right: 74px
+		height: 148px
+	.section__title_big
+		font-size: 6.875rem
+		letter-spacing: 0
+	.dev::after
+		top: 105px
+		left: 10px
+		font-size: 0.750rem
+	.int::after
+		top: 60px
+		right: -20px
+		font-size: 0.750rem
+	.int::before
+		top: 30px
+		font-size: 0.750rem
+	.sit::before
+		left: 0
+		top: 74px
+		font-size: 0.750rem
+	.end::before
+		left: 2px
+		top: 50px
+		font-size: 0.750rem
+	.end::after
+		left: 0
+		right: 0
+		bottom: 10px
+		margin: 0 auto
+		font-size: 0.750rem
+	.nat::before
+		top: 36px
+		right: 8px
+		font-size: 0.750rem
+	.nat::after
+		left: 24px
+		top: 60px
+		font-size: 0.750rem
+	.tec::after
+		top: 10px
+		left: -10px
+		font-size: 0.750rem
+	.block__caption
+		font-size: 1.250rem
+	.advantages__title
+		font-size: 1.500rem
+		position: relative
+	.advantages__text
+		padding: 0 100px 0 100px
+	.advantages__title_line::before
+		content: ''
+		display: inline-block
+		position: absolute
+		height: 2px
+		max-width: 120px
+		left: 0
+		right: 0
+		bottom: -5px
+		margin: auto
+		background: #fff
+	.advantages__title_lit::before
+		content: ''
+		display: inline-block
+		position: absolute
+		height: 2px
+		max-width: 250px
+		left: 0
+		right: 0
+		bottom: -5px
+		margin: auto
+		background: #fff
+	.task__text
+		padding: 0
+	.task::after
+		top: 204px
+		left: -3px
+		width: 91%
+	.button_task
+		bottom: 120px
+
+@media(max-height: 770px)
+	.plan
+		top: 100%
+		margin-top: 50px
+		transform: translate3d(0, -100%, 0)
+	.contact
+		top: 70%
+		transform: translate3d(0, -70%, 0)
+
+@media(max-height: 700px)
+	.line_four
+		min-width: 40%
+	.line_five
+		min-width: 40%
+	.section__title_medium
+		font-size: 1.875rem
+	.contact__input
+		margin-bottom: 20px
+	.contact__textarea
+		margin-bottom: 20px
+	.info__txt
+		font-size: 1.000rem
+	.advantages__item
+		margin-bottom: 20px
+	.services__item
+		margin: 20px 0 20px 0
+
+
+
+@media(max-width: 650px)
+	.line_let
+		left: 86px
+	.line_rit
+		right: 62px
+	.button_task
+		min-width: 131px
+		font-size: 0.688rem
+		line-height: 35px
+		bottom: 124px
+		right: 100px
+
+
+
+@media(max-width: 560px)
+	.section__title_big
+		font-size: 5.625rem
+		letter-spacing: -8px
+	.section__title_medium
+		font-size: 1.125rem
+	.services__caption
+		font-size: 1.250rem
+		font-weight: 100
+		font-family: 'montserrat-rugularr'!important
+	.services__text
+		margin-top: 20px
+	.services__line
+		top: 28px
+		height: 1px
+	.services__line_big
+		top: 36%
+	.info
+		margin-top: 50px
+	.info__txt
+		font-size: 0.688rem
+		text-align: center
+		margin-bottom: 30px
+		font-family: 'montserrat-light', sans-serif
+	.dev::after
+		top: 84px
+		left: 10px
+		font-size: 0.563rem
+	.int
+		margin-left: 5px
+	.int::after
+		top: 50px
+		right: -12px
+		font-size: 0.563rem
+	.int::before
+		left: -34px
+		top: 50px
+		font-size: 0.563rem
+		transform: rotate(0)
+	.sit
+		margin-right: -30px
+	.sit::before
+		left: 0
+		top: 60px
+		font-size: 0.563rem
+	.end
+		margin-left: -14px
+	.end::before
+		left: 5px
+		top: 40px
+		font-size: 0.563rem
+	.end::after
+		left: 5px
+		font-size: 0.563rem
+	.nat
+		margin-left: -16px
+	.nat::before
+		top: 36px
+		right: -2px
+		font-size: 0.563rem
+	.nat::after
+		left: 20px
+		top: 50px
+		font-size: 0.563rem
+	.tec
+		margin-left: -14px
+	.tec::after
+		top: 8px
+		left: -10px
+		font-size: 0.563rem
+	.block__caption
+		padding: 0 60px 0 60px
+		font-size: 1.000rem
+	.button_block
+		line-height: 36px
+		font-size: 0.750rem
+		min-width: 215px
+	#fp-nav ul li a span,
+	.fp-slidesNav ul li a span
+		height: 4px
+		width: 4px
+	#fp-nav ul li a.active span,
+	.fp-slidesNav ul li a.active span,
+	#fp-nav ul li:hover a.active span,
+	.fp-slidesNav ul li:hover a.active span
+		height: 6px
+		width: 6px
+		margin-left: -3px
+	#fp-nav.right
+		right: 0
+	.advantages__text
+		padding: 0 10px 0 10px
+	.line_let
+		left: 34px
+	.line_rit
+		right: 50px
+		height: 154px
+	.task__text
+		font-size: 0.688rem
+		padding: 0 20px 0 20px
+	.button_task
+		right: 40px
+	.task::after
+		left: -20px
+		width: 94.5%
+
+
+@media(max-width: 380px)
+	.dissant
+		font-size: 1.500rem
+	.navigation__link
+		font-size: 0.750rem
+	.social__link
+		height: 24px
+		width: 24px
+		margin: 0 10px 0 10px
+	.social__link_wats
+		background-position: 16% 18%
+	.social__link_telegram
+		background-position: 16% 90%
+	.social__link_insta
+		background-position: 86% 16%
+	.services__caption
+		text-align: center
+	.services__line
+		left: 0
+		right: 0
+		margin: 0 auto
+	.services__text
+		font-size: 0.688rem
+		text-align: center
+	.services__line_big
+		top: 50px
+	.section_second
+		background: url("../img/mob_sect.png")no-repeat bottom center #000000 !important
+	.button_write
+		font-size: 0.750rem
+	.hamburger
+		padding: 10px 10px 0 0
+	.hamburger-inner
+		right: 0
+		width: 18px
+	.hamburger-inner::before
+		width: 18px
+	.hamburger-inner::after
+		width: 18px
+	.advantages__title
+		font-size: 1.250rem
+		font-weight: 100
+		font-family: 'montserrat-rugularr', sans-serif
+	.advantages__text
+		font-size: 0.688rem
+		padding: 0 40px 0 40px
+		font-family: 'montserrat-light', sans-serif
+	.advantages__title_line::before
+		max-width: 100px
+	.advantages__title_lit::before
+		max-width: 200px
+	.line_rit
+		right: 40px
+
+
+@media(max-width: 320px)
+	.line_rit
+		right: 38px
+	.line_fourmed
+		top: 0
+
+
+
+	
+
+
+
+
+
+
+		
+		
+
+			
