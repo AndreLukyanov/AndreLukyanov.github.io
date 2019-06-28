@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+	<meta name="msapplication-TileColor" content="#0f603a">
+	<meta name="theme-color" content="#0f603a">
+	<title>ГЕОДЕЗИЧЕСКИЕ РАБОТЫ.РФ</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+</head>
+<body>
+
+	
+
+	<header class="header">
+		<div class="nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-3 col-sm-3 col-md-3 col-lg-6 col">
+						<a href="/" class="logo">Геодезические <br>работы<span class="gray">.рф</span></a>
+					</div>
+					<div class="col-9 col-md-9 col-md-9 col-lg-6 col">
+						<div class="header__block">
+							<a href="tel:+7 (915) 073-48-30" class="phone">+7 (915) 073-48-30</a>
+							<a href="#popup" class="bell open">Заказать звонок</a>
+							<div class="hamburger hamburger--slider">
+						<div class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</div>
+					</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col">
+					<ul class="list">
+						<li class="list__item"><a href="#first" class="list__link">Услуги</a></li>
+						<li class="list__item"><a href="#second" class="list__link">Объекты</a></li>
+						<li class="list__item"><a href="#three" class="list__link">Преимущества</a></li>
+						<li class="list__item"><a href="#four" class="list__link">Отзывы</a></li>
+						<li class="list__item"><a href="#sixth" class="list__link">Схема работы</a></li>
+						<li class="list__item list__item_mr"><a href="#contact" class="list__link">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="hero">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="hero__title">ГЕОДЕЗИЧЕСКИЕ РАБОТЫ ПО Москве и МО</h1>
+						<p class="hero__info">в течение 10 дней со 100% гарантией</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="discount">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col">
+						<div class="discount__container">
+							<div class="discount__block">
+							<p class="discount__text discount__text_mt discount__text_black bold">Специальное предложение</p>
+							<p class="discount__text discount__text_orange bold discount__text_big">Скидка 10% <span class="discount__text_small discount__text_small-mt">на все геодезические работы</span></p>
+							<p class="discount__text discount__text_mtop discount__text_black light discount__text_small">Акция закончится через:</p>
+							<div class="counter countdown" id="countdown">
+								<div class="row">
+									<div class="counter__items counter__items_days bold days"></div>
+									<div class="counter__items counter__items_hours bold hours"></div>
+									<div class="counter__items counter__items_min bold minutes"></div>
+									<div class="counter__items counter__items_sec bold seconds"></div>
+								</div>
+							</div>
+						</div>
+						<form action="mail.php" class="form" method="POST" id="form1">
+							<p class="form__text form__text_mt bold form__text_big">ОСТАВЬТЕ ЗАЯВКУ</p>
+							<p class="form__text light">на бесплатный расчет стоимости <br> Вашего заказа</p>
+							<input type="text" class="form__input" placeholder="Ваше имя" minlength="3" name="name1" required>
+							<input type="phone" class="form__input" placeholder="Контактный телефон" name="phone1" required>
+							<button class="button button_form" type="submit" name="submit">Получить расчет</button>
+							<p class="form__text light form__text_small">Мы свяжемся с Вами в течение 15 минут</p>
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="number">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3 number__item number__item_first">
+						<span class="number__data bold">7</span>
+						<p class="number__text light">лет на рынке данных услуг</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4 col-lg-4 offset-lg-1 number__item number__item_second">
+						<span class="number__data number__data_ml bold">10</span>
+						<p class="number__text light number__text_pt number__text_ml">крупнейших фирм заказчиков нашего региона</p>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3 offset-lg-1 number__item number__item_three">
+						<span class="number__data number__data_mll bold">98</span>
+						<p class="number__text light number__text_ml">Выполненных объектов</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup">
+			<div class="popup__window" id="popup">
+				<form action="mail.php" class="form" method="POST" id="form3">
+					<p class="form__text form__text_mt bold form__text_big">ОСТАВЬТЕ ЗАЯВКУ</p>
+					<p class="form__text light">на бесплатный расчет стоимости <br> Вашего заказа</p>
+					<input type="text" class="form__input" placeholder="Ваше имя" minlength="3" name="name3" required>
+					<input type="phone" class="form__input" placeholder="Контактный телефон" name="phone3" required>
+					<button class="button button_form" type="submit" name="submit3">Получить расчет</button>
+					<p class="form__text light form__text_small">Мы свяжемся с Вами в течение 15 минут</p>
+				</form>
+			</div>
+		</div>
+	</header>
+
+	
+	<main>
+		 <section class="section section_first" id="first">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="services">
+							<h2 class="title title_mt bold title_black title_mtt">Наши услуги</h2>
+							<p class="services__text services__text_nb light services__text_center">Все работы производятся со строгим соответствием договоренности и соблюдением норм в максимально сжатые сроки</p>
+							<div class="row">
+								<div class="col-12 col-sm-12 col-md-12 col-lg-3 services__item">
+									<img src="img/services/item1.png" alt="" class="services__images">
+								</div>
+								<div class="col-12 col-sm-12 col-md-12 col-lg-9 services__item services__item_pt">
+									<p class="services__text bold">Исполнительная съемка</p>
+									<span class="services__price services__price_absolute light">от 20 000 Р</span>
+									<p class="services__text light">Исполнительная геодезическая съемка в строительстве – это составление плана или чертежа, который отражает фактическое расположение на земельном участке, где ведутся работы, зданий, коммуникаций, сооружений и других построек. При этом осуществляется привязка их места нахождения к точной системе координат по высоте и в плане.</p>
+									<a href="#popup" class="services__button bold gold">Подробнее</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-6 col-md-4 col-lg-3 services__item services__item_mg">
+									<div class="services__block">
+										<img src="img/services/item2.png" alt="" class="services__images">
+										<a href="#popup" class="services__button services__button_absolute bold gold">Подробнее</a>
+									</div>
+									<p class="services__text pl services__text_mb bold">Геодезический контроль за деформациями</p>
+									<span class="services__price light pl">от 500 руб за точку</span>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-3 services__item services__item_mg">
+									<div class="services__block">
+										<img src="img/services/item3.png" alt="" class="services__images">
+										<a href="#popup" class="services__button services__button_absolute bold gold">Подробнее</a>
+									</div>
+									<p class="services__text services__text_mb bold pl">Фасадные работы</p>
+									<span class="services__price light pl">от 15 руб за м2</span>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-3 services__item services__item_mg">
+									<div class="services__block">
+										<img src="img/services/item4.png" alt="" class="services__images">
+										<a href="#popup" class="services__button services__button_absolute bold gold">Подробнее</a>
+									</div>
+									<p class="services__text services__text_mb bold pl">Посадка здания</p>
+									<span class="services__price light pl">10 000 Р</span>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-3 services__item services__item_mg">
+									<div class="services__block">
+										<img src="img/services/item5.png" alt="" class="services__images">
+										<a href="#popup" class="services__button services__button_absolute bold gold">Подробнее</a>
+									</div>
+									<p class="services__text services__text_mb bold pl">Вынос границ участка</p>
+									<span class="services__price services__price_sm light pl">до 10 точек - 1800 руб за точку</span>
+									<span class="services__price services__price_sm light pl">от 10 до 30 точек - 1300 руб за точку</span>
+									<span class="services__price services__price_sm light pl">от 30 точек - 1000 руб руб за точку</span>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-3 services__item services__item_mg">
+									<div class="services__block">
+										<img src="img/services/item6.png" alt="" class="services__images">
+										<a href="#popup" class="services__button services__button_absolute bold gold">Подробнее</a>
+									</div>
+									<p class="services__text services__text_mb bold pl">Обмерные работы</p>
+									<span class="services__price light pl">цена - по договоренности</span>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-3 services__item services__item_mg">
+									<div class="services__block">
+										<img src="img/services/item7.png" alt="" class="services__images">
+										<a href="#popup" class="services__button services__button_absolute bold gold">Подробнее</a>
+									</div>
+									<p class="services__text services__text_mb bold pl">Съемка карьера и подсчет объемов</p>
+									<span class="services__price light pl">от 20 000 Р</span>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-3 services__item services__item_mg">
+									<div class="services__block">
+										<img src="img/services/item8.png" alt="" class="services__images">
+										<a href="#popup" class="services__button services__button_absolute bold gold">Подробнее</a>
+									</div>
+									<p class="services__text services__text_mb bold pl">Разбивочные работы</p>
+									<span class="services__price light pl">от 15 000 Р</span>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-3 services__item services__item_mg">
+									<div class="services__block">
+										<img src="img/services/item9.png" alt="" class="services__images">
+										<a href="#popup" class="services__button services__button_absolute bold gold">Подробнее</a>
+									</div>
+									<p class="services__text services__text_mb bold pl">Вынос осей сооружений</p>
+									<span class="services__price light pl">от 10 000 Р</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section_second" id="second">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col">
+						<div class="objects">
+							<h2 class="title title_mt bold title_white">Выполненные объекты</h2>
+							<p class="objects__about bold light">В качестве доказательства успешной работы по выполнению геодезических работ, исполнительной
+								съемке и сдаче объектов по нашей документации можем перечислить следующие работы:
+							</p>
+							<div class="row row_mr">
+								<div class="col-12 col-sm-6 col-md-7 col-lg-7 objects__item">
+									<img src="img/objects/item1.jpg" alt="" class="objects__images">
+									<p class="objects__text bold white">Полное геодезическое сопровождения строительства делового центра <br> «ПАРК ХУАМИН» <span class="small light">Москва, ул. Вильгельма Пика, 14</span></p>
+									<div class="row">
+										<div class="col-12 col-sm-6 col-md-6 col-lg-6 objects__item">
+											<img src="img/objects/item3.jpg" alt="" class="objects__images">
+											<p class="objects__text bold white">Монтаж фасада и установка витражей «ЖК Матч поинт»</p>
+											<span class="objects__gold small light">Москва, ул. Василисы Кожиной 13</span>
+										</div>
+										<div class="col-12 col-sm-6 col-md-6 col-lg-6 objects__item">
+											<img src="img/objects/item4.jpg" alt="" class="objects__images">
+											<p class="objects__text bold white">Съемка фасадов <br> «ЖК Облака»</p>
+											<span class="objects__gold small light">Люберцы, ул. Инициативная 7</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-5 col-lg-5 objects__item">
+									<img src="img/objects/item2.jpg" alt="" class="objects__images">
+									<p class="objects__text bold white">Возведение арены амфитеатра</p>
+									<span class="objects__gold small light">Москва, Краснопресненская набережная 16</span>
+									<div class="row">
+										<div class="col-12 objects__item">
+											<img src="img/objects/item5.jpg" alt="" class="objects__images objects__images_height">
+											<p class="objects__text bold white">Съемка фасадов «ЖК Домашний»</p>
+											<span class="objects__gold small light">Москва ул. Донецкая 30</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-4 col-md-4 col-lg-4 objects__item">
+									<div class="objects__block">
+										<img src="img/objects/item6.jpg" alt="" class="objects__images">
+										<p class="objects__text bold white">Съемка фасадов <br>«ЖК ЗИЛАРТ»</p>
+										<span class="objects__gold small light">Москва, просп. Лихачева</span>
+									</div>
+								</div>
+								<div class="col-12 col-sm-8 col-md-8 col-lg-8 objects__item  objects__amp">
+									<img src="img/objects/item7.jpg" alt="" class="objects__images">
+									<p class="objects__text bold white">Полное маркшейдерское сопровождение <br>строительства станций метро: <span class="small light">Сокольническая линия - «Тропарева», «Румянцево», «Саларьево». Люблинско-дмитровская линия - «Окружная», «Верхние лихоборы», «Селигерская». Большая кольцевая линия - «Деловой центр», «Шелепиха», «Хорошевская», «ЦСКА», «Петровский парк»</span></p>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section_three" id="three">
+			<div class="container">
+				<div class="row">
+					<div class="advantages">
+						<h2 class="title title_mt bold title_black">Преимущества</h2>
+						<p class="advantages__about light">Опыт позволяет нам оказывать услуги качественнее, чем у конкурентов</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 advantages__item">
+						<div class="post">
+							<span class="post__caption bold">У них:</span>
+							<p class="post__text post__text_none light grey">Затягивание сроков (до 1 месяца)</p>
+							<p class="post__text post__text_none light grey">Отсутствие собственного оборудования</p>
+							<p class="post__text post__text_none light grey">Отсутствие опыта, в итоге проблемы 
+								при сдаче документации в гос.органы
+							</p>
+							<p class="post__text post__text_none light grey">Завышенные цены на услуги, при этом 
+								не соответствующее качество работ
+							</p>
+							<p class="post__text post__text_none light grey">Все услуги платные, начиная с расчета
+								стоимости объекта
+							</p>
+						</div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 offset-md-0 offset-lg-4 col-lg-4 col advantages__item">
+						<div class="post">
+							<span class="post__caption bold">У нас:</span>
+							<p class="post__text post__text_check light">Выполнение работ в течении 10 дней</p>
+							<p class="post__text post__text_check light">Собственное оборудование и специалисты</p>
+							<p class="post__text post__text_check light">Стоимость услуг меньше на 10%, чем у 
+		большинства компаний
+							</p>
+							<p class="post__text post__text_check light">Выполнено 98 объектов
+							</p>
+							<p class="post__text post__text_check light">Бесплатный расчет стоимости работ
+		на объекте
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section_four" id="four">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="customers">
+							<h2 class="title title_mb title_mt bold title_black">Наши клиенты</h2>
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-sm-4 col-md-4 col-lg-2 customers__item">
+										<img src="img/customers/item1.png" alt="" class="customers__img">
+									</div>
+									<div class="col-12 col-sm-4 col-md-4 col-lg-2 customers__item">
+										<img src="img/customers/item2.png" alt="" class="customers__img customers__img_mt">
+									</div>
+									<div class="col-12 col-sm-4 col-md-4 col-lg-2 customers__item">
+										<img src="img/customers/item3.png" alt="" class="customers__img customers__img_mt">
+									</div>
+									<div class="col-12 col-sm-4 col-md-4 col-lg-2 customers__item">
+										<img src="img/customers/item4.png" alt="" class="customers__img">
+									</div>
+									<div class="col-12 col-sm-4 col-md-4 col-lg-2 customers__item">
+										<img src="img/customers/item5.png" alt="" class="customers__img customers__img_mt">
+									</div>
+									<div class="col-12 col-sm-4 col-md-4 col-lg-2 customers__item">
+										<img src="img/customers/item6.png" alt="" class="customers__img customers__img_mt">
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section_fifth">
+			<div class="container">
+				<div class="row">
+					<div class="sentence">
+						<h2 class="sentence__title bold">Мы предлагаем лучшие условия и дорожим каждым клиентом</h2>
+						<div class="discount discount_mt">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col">
+						<div class="discount__container">
+							<div class="discount__block discount__block_mt">
+							<p class="discount__text discount__text_mtt discount__text_black bold">Специальное предложение</p>
+							<p class="discount__text discount__text_orange bold discount__text_big">Скидка 10% <span class="discount__text_small discount__text_small-mt">на все геодезические работы</span></p>
+							<p class="discount__text discount__text_mtop discount__text_black light discount__text_small">Акция закончится через:</p>
+							<div class="counter countdown" id="countdown">
+								<div class="row">
+									<div class="counter__items counter__items_days bold days"></div>
+									<div class="counter__items counter__items_hours bold hours"></div>
+									<div class="counter__items counter__items_min bold minutes"></div>
+									<div class="counter__items counter__items_sec bold seconds"></div>
+								</div>
+							</div>
+						</div>
+						<form action="mail.php" class="form" id="form2" method="POST">
+							<p class="form__text form__text_mt bold form__text_big">ОСТАВЬТЕ ЗАЯВКУ</p>
+							<p class="form__text light">на бесплатный расчет стоимости <br> Вашего заказа</p>
+							<input type="text" class="form__input" placeholder="Ваше имя" required minlength="3" name="name2">
+							<input type="text" class="form__input" placeholder="Контактный телефон" required name="phone2">
+							<button class="button button_form" type="submit" name="submit">Получить расчет</button>
+							<p class="form__text light form__text_small">Мы свяжемся с Вами в течение 15 минут</p>
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section_sixth" id="sixth">
+			<div class="container">
+				<div class="row">
+					<div class="work">
+						<h2 class="title title_center bold title_black">Как мы работаем</h2>
+						<div class="row row_mg">
+							
+						
+						<div class="work__item">
+							<div class="work__block work__block_first work__block_next">
+								<img src="img/work/item1.png" alt="" class="work__img">
+							</div>
+							<p class="work__text light">Вы оставляете заявку на сайте или звоните нам по телефону: 
+								<span class="work__phone bold">+7 (915) 073-48-30</span>
+							</p>
+							<a href="" class="work__button bold gold">Оставить заявку</a>
+						</div>
+						<div class="work__item">
+							<div class="work__block work__block_next work__block_next2 work__block_second">
+								<img src="img/work/item2.png" alt="" class="work__img">
+							</div>
+							<p class="work__text light">Мы связываемся с Вами и проводим консультацию, подтверждаем заказ</p>
+						</div>
+						<div class="work__item">
+							<div class="work__block work__block_next work__block_next2 work__block_three">
+								<img src="img/work/item3.png" alt="" class="work__img">
+							</div>
+							<p class="work__text light">Заключение договора на выполнение работ</p>
+						</div>
+						<div class="work__item">
+							<div class="work__block work__block_next work__block_next2 work__block_four">
+								<img src="img/work/item4.png" alt="" class="work__img">
+							</div>
+							<p class="work__text light">Выполнение <br> работы</p>
+						</div>
+						<div class="work__item">
+							<div class="work__block work__block_fifth">
+								<img src="img/work/item5.png" alt="" class="work__img">
+							</div>
+							<p class="work__text light">Оплата работы</p>
+						</div>
+						<div class="work__item work__item_long">
+							<div class="work__block work__block_sixth">
+								<img src="img/chk.png" alt="" class="work__img work__img_mb">
+							</div>
+							<p class="work__text bold">Получение материалов</p>
+						</div>
+						<img src="img/work/work_bg.png" alt="" class="work__images">
+					</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section_seven">
+			<div class="map">
+				<iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A96b3ec6e1718c020e46354145e45939a76f52a192acf5c91609c946239d48515&amp;source=constructor" frameborder="0"></iframe>
+			</div>
+		</section>
+			</main> 
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="contact" id="contact">
+						<h2 class="title bold title_black">Контакты</h2>
+						<div class="contact__item">
+							<div class="row">
+								<div class="contact__block">
+									<div class="contact__col"><p class="contact__text contact__text_local light">г. Москва, проспект Мира, 161А</p></div>
+									<div class="contact__col"><a href="tel:+7 (915) 073-48-30" class="contact__phone bold">+7 (915) 073-48-30</a></div>
+									<div class="contact__col"><a href="mailto:evgeny.rostanec@gmail.com" class="mail light">evgeny.rostanec@gmail.com</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row row_sb row_pt">
+				<h2 class="footer__title bold">Остались вопросы? Задайте их менеджеру</h2>
+				<a href="#popup" class="footer__button bold open-two">задать вопрос</a>
+			</div>
+			
+				
+		</div>
+		<div class="message">
+			<p class="message__text">Спасибо. Мы свяжемся с вами в ближайшее время!</p>
+		</div>
+		<span class="boll"></span>
+	</footer> 
+
+
+	<script src="js/scripts.min.js"></script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+			m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+		ym(54202690, "init", {
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true,
+			webvisor:true
+		});
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/54202690" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+	<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=0e965284a3c37537f2ccb37462f880ba" charset="UTF-8" async></script>
+</body>
+</html>
