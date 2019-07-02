@@ -17,7 +17,7 @@ var jQueryhamburger = jQuery(".hamburger");
         jQuery(".hamburger").removeClass("is-active");
       });
 
-var goalDay = '2019/07/01 00:00:00'
+var goalDay = '2020/07/01 00:00:00'
 
    var timerId = 0;
    timerId = setInterval(function() {
