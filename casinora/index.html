@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+	<meta name="msapplication-TileColor" content="#0f603a">
+	<meta name="theme-color" content="#0f603a">
+	<title></title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+
+	<main class="main">
+		<div class="container">
+			<div class="casinora">
+				<h1 class="casinora__title">Выиграй бесплатно подарок в</h1>
+				<a href="/" class="casinora__logo"></a>
+
+				<div class="block">
+					<img src="img/money2.png" alt="" class="money money_pos">
+					<img src="img/money1.png" alt="" class="money money_pos2">
+					<div class="line"></div>
+					<!-- <img src="img/block.png" alt="" class="block__img"> -->
+					<div class="contenedor wheel">
+						<div class="wheel__fortune" id="Rueda">
+						</div>
+					</div>
+					<div class="block__col">
+						<button class="block__button">Вращать</button>
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
+	</main>
+
+	<div class="popup" id="popup">
+		<div class="popup__block">
+			<p class="popup__text popup__text_uc">Поздравляем, вы выиграли</p>
+			<h2 class="popup__caption">30 Бесплатных вращений</h2>
+			<p class="popup__text">Чтобы получит приз пройдите регистрацию в Casino Ra</p>
+			<a href="" class="popup__button">забрать приз</a>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+		crossorigin="anonymous"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		function Rotar(angle) {
+			var $elem = $('#Rueda');
+			$({ deg: 0 }).animate({ deg: angle }, {
+				duration: 4000,
+				easing: 'easeInOutQuad',
+				step: function (now) {
+					$elem.css({
+						transform: 'rotate(' + now + 'deg)'
+					});
+				}
+			});
+		}
+
+		function comienza() {
+			$('.contenedor');
+			$('#Rueda').css("transform", "rotate(0deg)");
+			var resultados = [
+				'$50'
+			],
+				randomNo = Math.floor(1548);
+			var vueltas = randomNo / 360;
+			var decimal = vueltas % 1;
+			var grados = Math.floor(360 * decimal);
+			var arrPos = Math.floor(grados / (360 / resultados.length));
+			if (arrPos == 18) arrPos = 0;
+
+			Rotar(randomNo);
+		}
+
+
+
+		function popup() {
+			var popup = document.getElementById("popup");
+			setInterval(function(){
+				popup.classList.add("open");
+			}, 5000);
+		}
+
+		$('.block__button').on('click', function () {
+			comienza();
+			popup();
+		});
+	</script>
+	<!-- <script src="js/scripts.min.js"></script> -->
+</body>
+
+</html>
