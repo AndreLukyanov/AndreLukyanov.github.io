@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+	<meta name="msapplication-TileColor" content="#0f603a">
+	<meta name="theme-color" content="#0f603a">
+	<title></title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+	<main>
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="block">
+							<p class="block__text">нажмите кнопку до окончания таймера</p>
+							<div class="timer" id="timer">
+								<span class="timer__col">00</span><span class="timer__colon">:</span>
+								<span class="timer__col">00</span><span class="timer__colon">:</span>
+								<span class="timer__col second" id="second">00</span>
+							</div>
+							<button class="button button_open">нажать</button>
+						</div>
+						<div class="popup" id="popup">
+							<div class="popup__block">
+								<p class="popup__text">Вы нажали кнопку</p>
+								<button class="button button_close">Закрыть</button>
+								<span class="popup__close"></span>
+							</div>
+						</div>
+						<div class="end" id="end">
+							<div class="end__block">
+								<p class="end__text">время вышло, вы не успели, начать заново?</p>
+								<button class="button button_update" id="button_update">Обновить</button>
+								<span class="end__close"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>
