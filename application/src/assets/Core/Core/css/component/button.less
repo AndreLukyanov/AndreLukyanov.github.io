@@ -1,0 +1,43 @@
+@import "../../props";
+
+.button {
+	outline: none;
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+	transition: all .3s;
+
+	&--radius {
+		border-radius: 23px;
+	}
+
+	&--absolute {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	&:hover {
+		.gradient();
+		color: @white;
+	}
+
+	// ------------------------
+	// SIZE
+	// ------------------------
+
+	&--md {
+		min-width: 100px;
+		height: 30px;
+	}
+
+}
+
+// ------------------------
+// JS-btn
+// ------------------------
+
+.closeBtn {
+	.gradient();
+	color: @white;
+}
