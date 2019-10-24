@@ -12,17 +12,12 @@
               <router-link :to="'/news'" class="nav__link">Новости</router-link>
               <router-link :to="'/idea'" class="nav__link">Идеи</router-link>
               <router-link :to="'/orders'" class="nav__link">Опросы</router-link>
+              <router-link :to="'/calculator'" class="nav__link">Калькулятор</router-link>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    
-    <!-- <main class="main">
-      <div class="container">
-        <news-widgets></news-widgets>
-      </div>
-    </main> -->
 
     <main class="container">
       <event-calendar />

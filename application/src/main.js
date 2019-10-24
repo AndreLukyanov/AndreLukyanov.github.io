@@ -4,13 +4,15 @@ import App from './App.vue'
 import News from './assets/News/News.vue'
 import Idea from './assets/Idea/Idea.vue'
 import Orders from './assets/Orders/Orders.vue'
+import Calculator from './assets/Сalculator/Сalculator.vue'
 
 Vue.use(VueRouter);
 
 const routes = [
   { path: '/news', component: News },
   { path: '/idea', component: Idea },
-  { path: '/orders', component: Orders }
+  { path: '/orders', component: Orders },
+  { path: '/calculator', component: Calculator }
 ];
 
 const router = new VueRouter({
