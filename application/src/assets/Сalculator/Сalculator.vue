@@ -14,7 +14,7 @@
 					<button class="calculator__button" @click="clear">C</button>
 				</div>
 				<div class="calculator__enter">
-					{{result}}
+					<input v-model="result"/>
 				</div>
 			</div>
 		</div>
@@ -28,39 +28,59 @@ export default {
 		return {
 			number1: '',
 			number2: '',
-			result: ''
+			result: '',
+			value: ''
 		}
 	},
 	methods:  {
 		plus() {
-			if(!isNaN(this.result)) {
-				this.result = 'Поля для ввода чисел пусты!';
+			if( isNaN(this.number1) ) {
+				this.result = 'В поле для ввода должно быть число!';
+			}
+			else if( isNaN(this.number2) ) {
+				this.result = 'В поле для ввода должно быть число!';
 			}
 			else {
 				this.result = parseInt(this.number1) + parseInt(this.number2);
 			}
 		},
 		minus() {
-			if(!isNaN(this.result)) {
-				this.result = 'Поля для ввода чисел пусты!';
+			if( isNaN(this.number1) ) {
+				this.result = 'В поле для ввода должно быть число!';
 			}
-			else if(isNaN(this.result)) {
+			else if( isNaN(this.number2) ) {
+				this.result = 'В поле для ввода должно быть число!';
+			}
+			else {
 				this.result = parseInt(this.number1) - parseInt(this.number2);
 			}
 		},
 		multiplication() {
+			if( isNaN(this.number1) ) {
+				this.result = 'В поле для ввода должно быть число!';
+			}
+			else if( isNaN(this.number2) ) {
+				this.result = 'В поле для ввода должно быть число!';
+			}
 			this.result = parseInt(this.number1) * parseInt(this.number2);
 		},
 		division() {
+			if( isNaN(this.number1) ) {
+				this.result = 'В поле для ввода должно быть число!';
+			}
+			else if( isNaN(this.number2) ) {
+				this.result = 'В поле для ввода должно быть число!';
+			}
 			this.result = parseInt(this.number1) / parseInt(this.number2);
 		},
 		remains() {
 			this.result = parseInt(this.number1) % parseInt(this.number2);
 		},
-		clear() {
-			this.rusult = '';
-			this.number1 = this.result;
-			this.number2 = this.result;
+		clear(value) {
+			this.number1 = '';
+			this.number2 = '';
+			this.$emit("value", this.result);
+			this.result = '';
 		}
 	}
 }
