@@ -28,8 +28,7 @@ export default {
 		return {
 			number1: '',
 			number2: '',
-			result: '',
-			value: ''
+			result: ''
 		}
 	},
 	methods:  {
