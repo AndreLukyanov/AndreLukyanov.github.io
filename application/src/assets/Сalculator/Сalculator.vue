@@ -1,16 +1,22 @@
 <template>
 	<div clas="calculator">
-		<input class="calculator__input" v-model="number" v-on:keyup.enter="addNumber"/>
-		<input class="calculator__input"/>
-		<div class="calculator__body" v-for="l in numberList">
-			<button type="button" class="calculator__button" @click="delete(n)">C</button>
-			<button class="calculator__button">x</button>
-			<button class="calculator__button">/</button>
-			<button class="calculator__button">*</button>
-			<button class="calculator__button">-</button>
-			<button class="calculator__button">+</button>
-			<button class="calculator__button">=</button> 
-			{{l}}
+		<div class="container">
+			<div class="calculator__container">
+				<input class="calculator__input" v-model="number1"/>
+				<input class="calculator__input" v-model="number2"/>
+				<div class="calculator__body">
+					<button class="calculator__button" @click="plus">+</button>
+					<button class="calculator__button" @click="minus">-</button>
+					<button class="calculator__button" @click="multiplication">*</button>
+					<button class="calculator__button" @click="division">/</button>
+					<button class="calculator__button" @click="remains">%</button>
+					<button class="calculator__button">=</button> 
+					<button class="calculator__button" @click="clear">C</button>
+				</div>
+				<div class="calculator__enter">
+					{{result}}
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -20,18 +26,41 @@
 export default {
 	data() {
 		return {
-			number: '',
-			numberList: []
+			number1: '',
+			number2: '',
+			result: ''
 		}
 	},
 	methods:  {
-		addNumber() {
-			let num = this.number
-			this.numberList.push(n)
+		plus() {
+			if(!isNaN(this.result)) {
+				this.result = 'Поля для ввода чисел пусты!';
+			}
+			else {
+				this.result = parseInt(this.number1) + parseInt(this.number2);
+			}
 		},
-		delete(n) {
-			let clear = this.numberList.indexOf(n)
-			this.numberList.splice(index, 1)
+		minus() {
+			if(!isNaN(this.result)) {
+				this.result = 'Поля для ввода чисел пусты!';
+			}
+			else if(isNaN(this.result)) {
+				this.result = parseInt(this.number1) - parseInt(this.number2);
+			}
+		},
+		multiplication() {
+			this.result = parseInt(this.number1) * parseInt(this.number2);
+		},
+		division() {
+			this.result = parseInt(this.number1) / parseInt(this.number2);
+		},
+		remains() {
+			this.result = parseInt(this.number1) % parseInt(this.number2);
+		},
+		clear() {
+			this.rusult = '';
+			this.number1 = this.result;
+			this.number2 = this.result;
 		}
 	}
 }
@@ -42,19 +71,41 @@ export default {
 @import "../core/core/props";
 
 .calculator {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 20px;
-	min-width: 300px;
+	display: block;
+
+	&__container {
+		width: 380px;
+		margin-top: 20px;
+		border: 3px solid @GrayBg;
+		padding: 20px 10px;
+		box-sizing: border-box;
+	}
 
 	&__input {
 		margin-bottom: 20px;
-		display: inline-flex;
-		
 	}
 
 	&__body {
 		width: 100%;
+		margin: 0 auto;
+		width: 150px;
+	}
+
+	&__button {
+		height: 30px;
+		width: 30px;
+		cursor: pointer;
+		margin: 5px 0;
+	}
+
+	&__enter {
+		border: 2px solid green;
+		height: 30px;
+		margin-top: 10px;
+		padding-left: 15px;
+		line-height: 25px;
+		width: 100%;
+		box-sizing: border-box;
 	}
 }
 
