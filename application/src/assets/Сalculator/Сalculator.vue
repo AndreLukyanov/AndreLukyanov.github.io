@@ -2,19 +2,11 @@
 	<div clas="calculator">
 		<div class="container">
 			<div class="calculator__container">
-				<input class="calculator__input" v-model="number1"/>
-				<input class="calculator__input" v-model="number2"/>
+				<input class="calculator__input" v-model="result"/>
 				<div class="calculator__body">
-					<button class="calculator__button" @click="plus">+</button>
-					<button class="calculator__button" @click="minus">-</button>
-					<button class="calculator__button" @click="multiplication">*</button>
-					<button class="calculator__button" @click="division">/</button>
-					<button class="calculator__button" @click="remains">%</button>
-					<button class="calculator__button">=</button> 
-					<button class="calculator__button" @click="clear">C</button>
-				</div>
-				<div class="calculator__enter">
-					<input v-model="result"/>
+					<button type="button" class="calculator__button" @click="operat(op)" v-for="op in operation" :key="o"> {{op}} </button>
+					<button type="button" class="calculator__button" @click="calc">=</button> 
+					<button type="button" class="calculator__button" @click="clear">C</button>
 				</div>
 			</div>
 		</div>
@@ -26,59 +18,24 @@
 export default {
 	data() {
 		return {
-			number1: '',
-			number2: '',
-			result: ''
+			result: '',
+			operation: [
+				'+',
+				'-',
+				'*',
+				'/'
+			]
 		}
 	},
 	methods:  {
-		plus() {
-			if( isNaN(this.number1) ) {
-				this.result = 'В поле для ввода должно быть число!';
-			}
-			else if( isNaN(this.number2) ) {
-				this.result = 'В поле для ввода должно быть число!';
-			}
-			else {
-				this.result = parseInt(this.number1) + parseInt(this.number2);
-			}
+		operat(symbol) {
+			this.result = this.result.toString();
+			this.result = this.result + symbol;
 		},
-		minus() {
-			if( isNaN(this.number1) ) {
-				this.result = 'В поле для ввода должно быть число!';
-			}
-			else if( isNaN(this.number2) ) {
-				this.result = 'В поле для ввода должно быть число!';
-			}
-			else {
-				this.result = parseInt(this.number1) - parseInt(this.number2);
-			}
+		calc() {
+			this.result = eval(this.result);
 		},
-		multiplication() {
-			if( isNaN(this.number1) ) {
-				this.result = 'В поле для ввода должно быть число!';
-			}
-			else if( isNaN(this.number2) ) {
-				this.result = 'В поле для ввода должно быть число!';
-			}
-			this.result = parseInt(this.number1) * parseInt(this.number2);
-		},
-		division() {
-			if( isNaN(this.number1) ) {
-				this.result = 'В поле для ввода должно быть число!';
-			}
-			else if( isNaN(this.number2) ) {
-				this.result = 'В поле для ввода должно быть число!';
-			}
-			this.result = parseInt(this.number1) / parseInt(this.number2);
-		},
-		remains() {
-			this.result = parseInt(this.number1) % parseInt(this.number2);
-		},
-		clear(value) {
-			this.number1 = '';
-			this.number2 = '';
-			this.$emit("value", this.result);
+		clear() {
 			this.result = '';
 		}
 	}
@@ -93,36 +50,51 @@ export default {
 	display: block;
 
 	&__container {
-		width: 380px;
+		width: 100%;
 		margin-top: 20px;
-		border: 3px solid @GrayBg;
 		padding: 20px 10px;
 		box-sizing: border-box;
+		.gradient-green;
 	}
 
 	&__input {
 		margin-bottom: 20px;
+		width: calc(100% / 12 * 12 - 30px);
+		margin: 0 14px;
+		height: 50px;
+		padding-left: 15px;
+		line-height: 50px;
+		.placeholder-green();
+		box-sizing: border-box;
+		outline: none;
 	}
 
 	&__body {
 		width: 100%;
-		margin: 0 auto;
-		width: 150px;
+		margin: 30px auto;
+		width: 350px;
+		display: flex;
+		flex-wrap: wrap;
+		
 	}
 
 	&__button {
-		height: 30px;
-		width: 30px;
+		height: 100px;
+		width: 100px;
 		cursor: pointer;
-		margin: 5px 0;
+		display: inline-block;
+		border: none;
+		margin: 5px 5px;
+		outline: none;
+		border-radius: 4px;
+
+		&:hover {
+			background: @white;
+		}
 	}
 
 	&__enter {
-		border: 2px solid green;
-		height: 30px;
 		margin-top: 10px;
-		padding-left: 15px;
-		line-height: 25px;
 		width: 100%;
 		box-sizing: border-box;
 	}

@@ -1,5 +1,5 @@
 <template>
-	<div class="event-calendar">
+	<!--<div class="event-calendar">
 		<div class="event-calendar__header">
 			<div class="event-calendar__year">{{year}}</div>
 			<div class="event-calendar__month" >{{getMonth}}</div>
@@ -18,7 +18,7 @@
 		<div class="event-calendar__body">
 
 		</div>
-	</div>
+	</div>-->
 </template>
 
 <script>

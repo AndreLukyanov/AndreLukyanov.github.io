@@ -2,18 +2,43 @@
 @colorBlue: #0388fc;
 @GrayBg: #eeeeee;
 @white: #ffffff;
+@green: green;
 
 .boxsizing() {
 	box-sizing: border-box;
 }
 
+// ------------------------
+// Gradient
+// ------------------------
+
 .gradient() {
 	background: linear-gradient(45deg, rgba(89,106,255,1) 0%, rgba(89,106,255,1) 1%, rgba(128,41,107,1) 100%);
 }
 
-// font
+.gradient-green() {
+	background: linear-gradient(45deg, rgba(48,255,131,1) 0%, rgba(0,128,128,1) 100%);
+}
 
-// @font-face {
-// 	font-family: 'HelveticaBlack';
-// 	src: url('../fonts/HelveticaBlack.ttf') format('truetype');
-// }
+// ------------------------
+// Placeholder
+// ------------------------
+
+.placeholder-green() {
+	color: @green;
+
+	&::-webkit-input-placeholder {
+		color: @green;
+	}
+	&:-moz-placeholder {
+		color: @green;
+	}
+	&::-moz-placeholder {
+		color: @green;
+	}
+	&:-ms-input-placeholder {
+		color: @green;
+	}
+}
+
+
