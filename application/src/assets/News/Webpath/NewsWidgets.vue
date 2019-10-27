@@ -1,17 +1,41 @@
 <template>
-	<div class="news-widgets"> 
-			<h1 class="news-widgets__title">{{title}}</h1>
+	<div class="container">
+		<div class="news-widgets"> 
+				<div class="news-widgets__slider">
+					<div class="news-widgets__nav">
+						<button type="button" v-on:click.prevent="activeImage === 1">left</button>
+						<button type="button" v-on:click.prevent="activeImage === 2">right</button>
+					</div>
+					<div class="news-widgets__body" v-for="(i, index) in images">
+						<img 
+							:src="i"
+							:class="{active: activeImage === 1 }" 
+							class="news-widgets__images"
+							/>
+					</div>
+				</div>
+		</div>
 	</div>
 </template>
 
 <script>
+import imageOne from '../../core/core/img/flower.jpg';
+import imageTwo from '../../core/core/img/employee.png';
+
 export default {
 
   data() {
     return {
-			title: 'Создаю компоненты на Vue.js'
+			images: [
+				imageOne,
+				imageTwo
+			],
+			activeImage: undefined
     }
-  }
+  },
+	methods: {
+		
+	}
 
 }
 </script>
@@ -23,16 +47,48 @@ export default {
 	.news-widgets {
 		display: flex;
 		flex-wrap: wrap;
-		min-height: 300px;
 		width: 100%;
-		background: linear-gradient(45deg, rgba(23,0,73,1) 0%, rgb(89,28,52) 100%);
 
-		&__title {
-			padding-top: 100px;
-			text-align: center;
+		&__slider {
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
 			width: 100%;
-			color: @white;
-			font-family: 'HelveticaBlack'
+			align-items: center;
 		}
+
+		&__nav {
+			position: absolute;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			z-index: 1;
+		}
+
+		&__body {
+			min-width: 700px;
+			box-sizing: border-box;
+			display: flex;
+			position: relative;
+			height: 450px;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+
+		&__images {
+			display: block;
+			width: 100%;
+			height: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+		}
+
+
 	}
+
+	.active {
+				opacity: 1;
+			}
 </style>

@@ -17,6 +17,7 @@
           </ul>
         </nav>
       </div>
+
     </header>
 
     <main class="container">
@@ -28,6 +29,7 @@
         
       </div>
     </footer>
+    
 
     <router-view></router-view>
     

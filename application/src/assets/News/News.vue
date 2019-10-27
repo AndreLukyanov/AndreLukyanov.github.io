@@ -3,30 +3,20 @@
 		<div class="container">
 			<h1>{{title}}</h1> 
 		</div>
-		<div>
-			<!-- <span v-for="(obj, id) in object.work2" :key="id">{{obj}}</span> -->
-		</div>
+		<news-slider />
 	</div>
 </template>
 
 <script>
+import NewsSlider from './Webpath/NewsWidgets.vue';
+
 export default {
+	components: {
+		NewsSlider
+	},
 	data() {
 		return {
-			title: 'Новости',
-			object: {
-				work1: {
-					id: 0,
-					name: 'Nikolai'
-				},
-				work2: {
-					id: 0,
-					name: 'Max'
-				},
-				professii: {
-
-				}
-			}
+			title: 'Новости'
 		}
 	}
 }
