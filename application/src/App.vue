@@ -13,6 +13,7 @@
               <router-link :to="'/idea'" class="nav__link">Идеи</router-link>
               <router-link :to="'/orders'" class="nav__link">Опросы</router-link>
               <router-link :to="'/calculator'" class="nav__link">Калькулятор</router-link>
+              <router-link :to="'/javaScript'" class="nav__link">JavaScript</router-link>
             </li>
           </ul>
         </nav>

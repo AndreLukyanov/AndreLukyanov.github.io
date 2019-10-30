@@ -5,6 +5,7 @@ import News from './assets/News/News.vue'
 import Idea from './assets/Idea/Idea.vue'
 import Orders from './assets/Orders/Orders.vue'
 import Calculator from './assets/Сalculator/Сalculator.vue'
+import JavaScript from './assets/JavaScript/JavaScript.vue'
 
 Vue.use(VueRouter);
 
@@ -12,7 +13,8 @@ const routes = [
   { path: '/news', component: News },
   { path: '/idea', component: Idea },
   { path: '/orders', component: Orders },
-  { path: '/calculator', component: Calculator }
+  { path: '/calculator', component: Calculator },
+  { path: '/javaScript', component: JavaScript }
 ];
 
 const router = new VueRouter({
