@@ -81,7 +81,7 @@ export default {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	.boxsizing();
+	.box-sizing();
 
 	&__title {
 		width: 100%;
@@ -99,14 +99,14 @@ export default {
 	&__item {
 		border-radius: 23px;
 		.gradient();
-		.boxsizing();
+		.box-sizing();
 		margin: 0 10px 20px 10px;
 		width: calc(100% / 12 * 4 - 20px);
 	}
 
 	&__container {
 		padding: 20px;
-		.boxsizing();
+		.box-sizing();
 	}
 }
 

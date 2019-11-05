@@ -21,9 +21,6 @@
 
     </header>
 
-    <main class="container">
-      <event-calendar />
-    </main>
 
     <footer class="footer">
       <div class="container">
