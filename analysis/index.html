@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:title" content="">
+	<meta property="og:type" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+	<meta name="msapplication-TileColor" content="#0f603a">
+	<meta name="theme-color" content="#0f603a">
+	<title>JS</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<h1>Таблица</h1>
+
+
+	<table class="entry-table" id="entry-table"></table>
+
+	<script id="entry-template" type="text/x-handlebars-template">
+		<thead class="entry-table__header">
+			<tr class="entry-table__row">
+				<th class="entry-table__caption">Имя</th>
+				<th class="entry-table__caption">Фамилия</th>
+				<th class="entry-table__caption">Должность</th>
+				<th class="entry-table__caption">Возраст</th>
+			</tr>
+		</thead>
+		<tbody>
+				{{#each emps}}
+			<tr>
+				<td>{{firstName}}</td>
+				<td>{{lastName}}</td>
+				<td>{{position}}</td>
+				<td>{{age}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+		
+	</script>
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script src="js/handlebars-v4.4.3.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>

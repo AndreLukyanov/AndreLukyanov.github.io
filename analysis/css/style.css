@@ -1,0 +1,21 @@
+body {
+	margin: 0;
+	 padding: 0;
+}
+
+table {
+	width: 100%;
+	border: 1px solid #333;
+}
+
+table tbody tr td{
+	border: 1px solid #333;
+}
+
+table tbody tr td {
+	text-align: center;
+}
+
+.entry-table__caption {
+	font-size: 22px;
+}
