@@ -25,9 +25,7 @@
 	<h1>Таблица</h1>
 
 
-	<table class="entry-table" id="entry-table"></table>
-
-	<script id="entry-template" type="text/x-handlebars-template">
+	<table>
 		<thead class="entry-table__header">
 			<tr class="entry-table__row">
 				<th class="entry-table__caption">Имя</th>
@@ -36,7 +34,16 @@
 				<th class="entry-table__caption">Возраст</th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody class="entry-table" id="entry-table"></tbody>
+	</table>
+
+	<div class="pages">
+		<span class="pages__item">1</span>
+		<span class="pages__item">2</span>
+		<span class="pages__item">3</span>
+	</div>
+
+	<script id="entry-template" type="text/x-handlebars-template">
 				{{#each emps}}
 			<tr>
 				<td>{{firstName}}</td>
@@ -45,14 +52,13 @@
 				<td>{{age}}</td>
 			</tr>
 			{{/each}}
-		</tbody>
-		
 	</script>
 
 
 	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous"></script>
 	<script src="js/handlebars-v4.4.3.js"></script>
+	<script src="js/data.js"></script>
 	<script src="js/script.js"></script>
 
 </body>

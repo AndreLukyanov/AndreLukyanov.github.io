@@ -10,6 +10,7 @@ table {
 
 table tbody tr td{
 	border: 1px solid #333;
+	height: 30px;
 }
 
 table tbody tr td {
@@ -18,4 +19,22 @@ table tbody tr td {
 
 .entry-table__caption {
 	font-size: 22px;
+}
+
+.pages {
+	display: block;
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.pages__item {
+	font-size: 18px;
+	font-weight: 900;
+	border: 1px solid #333;
+	display: inline-block;
+	margin: 0 5px;
+	padding: 5px;
+	cursor: pointer;
 }
