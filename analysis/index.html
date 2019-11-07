@@ -38,13 +38,13 @@
 	</table>
 
 	<div class="pages">
-		<span class="pages__item">1</span>
-		<span class="pages__item">2</span>
-		<span class="pages__item">3</span>
+		<span class="pages__item" onclick="firstClick()" id="first-pages">1</span>
+		<span class="pages__item" onclick="secondClick()" id="second-pages">2</span>
+		<span class="pages__item" onclick="threeClick()"id="three-pages">3</span>
 	</div>
 
 	<script id="entry-template" type="text/x-handlebars-template">
-				{{#each emps}}
+				{{#each this}}
 			<tr>
 				<td>{{firstName}}</td>
 				<td>{{lastName}}</td>
