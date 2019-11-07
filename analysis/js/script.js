@@ -26,8 +26,6 @@ $('.entry-table').html(template(employees.slice(0,10)));
 
 
 
-
-
 function firstClick() {
 	$('.entry-table').html(template(employees.slice(0,10)));
 }
@@ -39,4 +37,6 @@ function secondClick() {
 function threeClick() {
 	$('.entry-table').html(template(employees.slice(20,30)));
 }
+
+
 
