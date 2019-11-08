@@ -28,19 +28,19 @@
 	<table id="table">
 		<thead class="entry-table__header">
 			<tr class="entry-table__row">
-				<th class="entry-table__caption"><button type="button" onclick="sortirivka()">Имя</button></th>
+				<th class="entry-table__caption" onclick="sorting()">Имя</th>
 				<th class="entry-table__caption">Фамилия</th>
 				<th class="entry-table__caption">Должность</th>
-				<th class="entry-table__caption">Возраст</th>
+				<th class="entry-table__caption" onclick="age()">Возраст</th>
 			</tr>
 		</thead>
 		<tbody class="entry-table" id="entry-table"></tbody>
 	</table>
 
 	<div class="pages">
-		<span class="pages__item" onclick="firstClick()" id="first-pages">1</span>
-		<span class="pages__item" onclick="secondClick()" id="second-pages">2</span>
-		<span class="pages__item" onclick="threeClick()"id="three-pages">3</span>
+		<span class="pages__item" onclick="click(1)" id="first-pages">1</span>
+		<span class="pages__item" onclick="click(2)" id="second-pages">2</span>
+		<span class="pages__item" onclick="click(3)" id="three-pages">3</span>
 	</div>
 
 	<script id="entry-template" type="text/x-handlebars-template">
@@ -55,13 +55,13 @@
 	</script>
 
 
-	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	<script src="js/handlebars-v4.4.3.js"></script>
 	<script src="js/data.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/sort.js"></script>
-
+	
 </body>
 
 </html>

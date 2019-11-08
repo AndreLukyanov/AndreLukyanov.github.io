@@ -4,25 +4,18 @@ var template = Handlebars.compile(source);
 $('.entry-table').html(template(employees.slice(0,10)));
 
 
-// var servises = (function (pages) {
+var service = (function() {
+	const size = 10;
 
-// 	var size = 10;
+	function getData(page) {
+		return employees.splice(page * size, (page + 1) * size);
+	}
+	return{getData}
+})();
 
-// 	function getData() {
-// 		return {
-// 			function() {
-// 				employees.slice(pages * size + (pages + 1));
-// 				console.log(employees);
-// 			}
-// 		}
-// 	}
-// 	return {
-// 		method: function () {
-// 			getData();
-// 		}
-// 	};
-// })();
-// servises.method();
+function click(page) {
+	$('.entry-table').html(template(service.getData(page)));
+}
 
 
 

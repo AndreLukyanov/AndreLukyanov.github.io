@@ -19,6 +19,11 @@ table tbody tr td {
 
 .entry-table__caption {
 	font-size: 22px;
+	cursor: pointer;
+}
+
+.entry-table__caption:hover {
+	color: red;
 }
 
 .pages {
