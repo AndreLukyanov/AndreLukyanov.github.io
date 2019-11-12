@@ -4,8 +4,6 @@ var sss = template(employees);
 
 var table=document.getElementById("entry-table");
 
-
-
 // var html  = template(employees);
 // document.getElementById("entry-table").innerHTML=html;
 
