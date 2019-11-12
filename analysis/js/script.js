@@ -1,26 +1,35 @@
 var source = $('#entry-template').html();
 var template = Handlebars.compile(source);
+var sss = template(employees);
 
-$('.entry-table').html(template(employees.slice(0,10)));
+var table=document.getElementById("entry-table");
 
 
-// var service = (function() {
-// 	const size = 10;
 
-// 	function getData(page) {
-// 		return employees.splice(page * size, (page - 1) * size);
-// 	}
-// 	return {getData}
-// }());
+// var html  = template(employees);
+// document.getElementById("entry-table").innerHTML=html;
 
-// service = employees;
+var service = (function() {
+	const size = 10;
 
-// $('.entry-table').html(template(service.slice(0,10)));
+	function getData(page) {
+		return employees.slice(page * size, (page + 1) * size);
+	}
 
-// function click(page) {
-// 	$('.entry-table').html(template(service.getData(page)));
-// 	console.log(service);
-// }
+	function getPage(page, pageSize) {
+		return employees.slice(page * pageSize, (page + 1) * pageSize);
+	}
+
+	return {getData, getPage}
+}());
+
+//  $('.entry-table').html(template(service.getData(0)));
+table.innerHTML = template(service.getData(0));
+
+function loadPage(page) {
+	$('.entry-table').html(template(service.getData(page)));
+	console.log(service);
+}
 
 
 
