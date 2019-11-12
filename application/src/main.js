@@ -7,6 +7,7 @@ import Idea from './assets/Idea/Idea.vue'
 import Orders from './assets/Orders/Orders.vue'
 import Calculator from './assets/Сalculator/Сalculator.vue'
 import JavaScript from './assets/JavaScript/JavaScript.vue'
+import Tablet from './assets/Tablet/Tablet.vue'
 
 Vue.use(VueRouter);
 
@@ -16,7 +17,8 @@ const routes = [
   { path: '/idea', component: Idea },
   { path: '/orders', component: Orders },
   { path: '/calculator', component: Calculator },
-  { path: '/javaScript', component: JavaScript }
+  { path: '/javaScript', component: JavaScript },
+  { path: '/tablet', component: Tablet }
 ];
 
 const router = new VueRouter({

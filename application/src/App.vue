@@ -14,6 +14,7 @@
               <router-link :to="'/orders'" class="nav__link">Опросы</router-link>
               <router-link :to="'/calculator'" class="nav__link">Калькулятор</router-link>
               <router-link :to="'/javaScript'" class="nav__link">JavaScript</router-link>
+              <router-link :to="'/tablet'" class="nav__link">Таблица</router-link>
             </li>
           </ul>
         </nav>
