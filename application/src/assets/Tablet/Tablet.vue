@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="tablet">
-			<table class="tablet__container">
+			<table class="tablet__container" id="table">
 				<thead class="tablet__header">
 					<tr class="tablet__header-row">
 						<th class="tablet__caption" @click="sortFirstName">Имя</th>
@@ -11,7 +11,7 @@
 					</tr>
 				</thead>
 				<tbody class="tablet__body">
-						<tr class="tablet__body-row" v-for="e in employees.slice(0,10)" :key="e.id">
+						<tr class="tablet__body-row" v-for="e in loadPage" :key="e.id">
 							<td class="tablet__value">{{e.firstName}}</td>
 							<td class="tablet__value">{{e.lastName}}</td>
 							<td class="tablet__value">{{e.position}}</td>
@@ -20,10 +20,14 @@
 				</tbody>
 			</table>
 
+      <div class="tablet__button">
+        <button type="button" class="button button--radius" @click="land">Загрузить</button>
+      </div>
+
 			<div class="pages">
-				<span class="pages__item" @click="loadPage">1</span>
-				<span class="pages__item" >2</span>
-				<span class="pages__item" >3</span>
+				<span class="pages__item">1</span>
+				<span class="pages__item">2</span>
+				<span class="pages__item">3</span>
 			</div>
 		</div>
 	</div>
@@ -35,6 +39,8 @@ export default {
   data() {
     return {
       hi: "Привет",
+      pageSize: 5,
+      page: 1,
       employees: [
         {
           id: 1,
@@ -261,18 +267,32 @@ export default {
         if (a.lastName < z.lastName) return -1;
         if (a.lastName > z.lastName) return 1;
       });
-		},
-		position() {
-			this.employees.sort((a, z) => {
+    },
+    position() {
+      this.employees.sort((a, z) => {
         if (a.position < z.position) return -1;
         if (a.position > z.position) return 1;
       });
-		},
-		age() {
-			this.employees.sort((a,z) => a.age - z.age);
-		},
+    },
+    age() {
+      this.employees.sort((a, z) => a.age - z.age);
+    }
+  },
+
+  computed: {
     loadPage() {
-      alert(this.hi);
+      return this.employees.slice(0, 10);
+    },
+    // loadData: {
+    //   getData(page) {
+    //     return employees.slice(this.page * thissize, (this.page + 1) * this.size);
+    //   },
+    //   getPage(page, pageSize) {
+    //     return employees.slice(this.page * this.pageSize, (this.page + 1) * this.pageSize);
+    //   }
+    // },
+    land() {
+     return this.employees.slice(this.page * this.pageSize, (this.page + 1) * this.pageSize);
     }
   }
 };
@@ -307,6 +327,12 @@ export default {
   &__value {
     border: 1px solid @dark;
     padding: 10px;
+  }
+
+  &__button {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
   }
 
   .pages {
