@@ -276,23 +276,34 @@ export default {
     },
     age() {
       this.employees.sort((a, z) => a.age - z.age);
+    },
+    getData(page) {
+      return employees.slice(
+        this.page * this.pageSize,
+        (this.page + 1) * this.pageSize
+      );
+    },
+    getPage(page, pageSize) {
+      return employees.slice(
+        this.page * this.pageSize,
+        (this.page + 1) * this.pageSize
+      );
+    },
+    server() {
+      return { getData, getPage };
+    },
+    land() {
+      return this.employees.slice(
+        this.page * this.pageSize,
+        (this.page + 1) * this.pageSize
+      );
+      return pageSize++;
     }
   },
 
   computed: {
     loadPage() {
       return this.employees.slice(0, 10);
-    },
-    // loadData: {
-    //   getData(page) {
-    //     return employees.slice(this.page * thissize, (this.page + 1) * this.size);
-    //   },
-    //   getPage(page, pageSize) {
-    //     return employees.slice(this.page * this.pageSize, (this.page + 1) * this.pageSize);
-    //   }
-    // },
-    land() {
-     return this.employees.slice(this.page * this.pageSize, (this.page + 1) * this.pageSize);
     }
   }
 };
