@@ -18,7 +18,7 @@
             {{info.USD.description}} {{info.USD.rate_float | currencydecimal}}
           </div>
 
-          <div>{{time.updated}}</div>
+          <div>{{time.updated | dataFilter}}</div>
       </div>
 		</div>
 	</div>
@@ -27,6 +27,7 @@
 
 <script>
 import axios from "axios";
+import moment from 'moment';
 
 export default {
 	data() {
@@ -44,6 +45,9 @@ export default {
       // toFixed -->
       // Метод преобразует число путем добавления или удаления
       // желаемого количества знаков после запятой
+    }, 
+    dataFilter(date) {
+      return moment(date).lang("ru").format("DD MMMM YYYY, HH:mm")
     }
 	},
 	
