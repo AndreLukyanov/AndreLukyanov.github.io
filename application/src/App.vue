@@ -14,7 +14,8 @@
               <router-link :to="'/orders'" class="nav__link">Опросы</router-link>
               <router-link :to="'/calculator'" class="nav__link">Калькулятор</router-link>
               <router-link :to="'/javaScript'" class="nav__link">JavaScript</router-link>
-              <router-link :to="'/tablet'" class="nav__link">Таблица</router-link>
+              <router-link :to="'/tablitsa'" class="nav__link">Таблица</router-link>
+              <router-link :to="'/bitcoin'" class="nav__link">Биткоин</router-link>
             </li>
           </ul>
         </nav>
@@ -36,20 +37,13 @@
 </template>
 
 <script>
-import NewsWidgets from './assets/news/webpath/newswidgets.vue';
-import EventCalendar from './assets/eventcalendar/eventcalendar.vue';
 
 export default {
 
-  components: {
-    NewsWidgets: NewsWidgets,
-    EventCalendar
-  },
-
   data() {
     return {
-      buttonName: 'Открыть'
-    }
+     
+    };
   }
 
 }
