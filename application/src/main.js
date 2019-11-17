@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import axios from 'axios';
 import VueAxios from 'vue-axios'
+import moment from 'moment'
 import App from './App.vue'
 import Home from './assets/Home/Home.vue'
 import News from './assets/News/News.vue'
@@ -12,8 +13,7 @@ import JavaScript from './assets/JavaScript/JavaScript.vue'
 import Tablitsa from './assets/Tablitsa/Tablitsa.vue'
 import Bitcoin from './assets/Bitcoin/Bitcoin.vue'
 
-Vue.use(VueRouter);
-Vue.use(VueAxios, axios);
+Vue.use(VueRouter, VueAxios, axios, moment);
 
 const routes = [
   {path: '/', component: Home},
