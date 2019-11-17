@@ -1,0 +1,72 @@
+<template>
+	<div class="container">
+		<div class="bitcoin">
+			<div v-if="errored">
+        <p>Извините, произошла ошибка</p>
+      </div>
+
+      <div class="bitcoin" v-else>
+        <div v-if="loading">Загрузка...</div>
+        
+          <div class="bitcoin__currency bitcoin__currency--eur">
+            {{info.EUR.description}} {{info.EUR.rate_float | currencydecimal }}
+          </div>
+          <div class="bitcoin__currency bitcoin__currency--gbp">
+            {{info.GBP.description}} {{info.GBP.rate_float | currencydecimal}}
+          </div>
+          <div class="bitcoin__currency bitcoin__currency--usd">
+            {{info.USD.description}} {{info.USD.rate_float | currencydecimal}}
+          </div>
+
+          <div>{{time.updated}}</div>
+      </div>
+		</div>
+	</div>
+	
+</template>
+
+<script>
+import axios from "axios";
+
+export default {
+	data() {
+		return {
+      info: null,
+      time: null,
+      errored: false,
+      loading: false
+		};
+	},
+
+	filters: {
+    currencydecimal(value) {
+      return value.toFixed(2);
+      // toFixed -->
+      // Метод преобразует число путем добавления или удаления
+      // желаемого количества знаков после запятой
+    }
+	},
+	
+	mounted() {
+    axios
+      .get("https://api.coindesk.com/v1/bpi/currentprice.json")
+      .then(response => {
+        this.info = response.data.bpi;
+        this.time = response.data.time;
+      })
+      .catch(error => {
+        // Обработка ошибок
+        console.log(error);
+        this.errored = true;
+      })
+      .finally(() => (this.loading = false));
+    // ИНдикатор загрузки, чтобы сообщать пользователю,
+    // что не можем получить данные
+  }
+};
+</script>
+
+<style lang="less">
+</style>
+
+
