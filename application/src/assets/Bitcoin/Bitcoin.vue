@@ -20,6 +20,7 @@
 
           <div>{{time.updated | dataFilter}}</div>
       </div>
+      https://developer.github.com/apps/quickstart-guides/using-the-github-api-in-your-app/
 		</div>
 	</div>
 	
