@@ -20,6 +20,13 @@
 
           <div>{{time.updated | dataFilter}}</div>
       </div>
+
+      <bitcoin-item :bitcoinCode="info"/>
+      <div class="bitcoin__footer">
+        <bitcoin-form @input-value="inputValue"/>
+        <bitcoin-board />
+      </div>
+      
 		</div>
 	</div>
 	
@@ -27,31 +34,42 @@
 
 <script>
 import axios from "axios";
-import moment from 'moment';
+import moment from "moment";
+import BitcoinItem from "./Components/BitcoinItem.vue";
+import BitcoinForm from "./BitcoinForm.vue";
+import BitcoinBoard from "./BitcoinBoard.vue";
 
 export default {
-	data() {
-		return {
+  components: {
+    BitcoinItem,
+    BitcoinForm,
+    BitcoinBoard
+  },
+  data() {
+    return {
       info: null,
       time: null,
       errored: false,
-      loading: false
-		};
-	},
+      loading: false,
+      inputValue: ''
+    };
+  },
 
-	filters: {
+  filters: {
     currencydecimal(value) {
       return value.toFixed(2);
       // toFixed -->
       // Метод преобразует число путем добавления или удаления
       // желаемого количества знаков после запятой
-    }, 
+    },
     dataFilter(date) {
-      return moment(date).lang("ru").format("DD MMMM YYYY, HH:mm")
+      return moment(date)
+        .lang("ru")
+        .format("DD MMMM YYYY, HH:mm");
     }
-	},
-	
-	mounted() {
+  },
+
+  mounted() {
     axios
       .get("https://api.coindesk.com/v1/bpi/currentprice.json")
       .then(response => {
@@ -71,6 +89,17 @@ export default {
 </script>
 
 <style lang="less">
+
+.bitcoin {
+
+  &__footer {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 30px;
+  }
+}
 </style>
 
 
