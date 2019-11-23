@@ -56,3 +56,36 @@ table tbody tr td {
 	cursor: pointer;
 	outline: none;
 }
+
+.lodash {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+
+.lodash__body {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.lodash__method {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.lodash__methods-name {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.lodash__description {
+	padding: 5px 0;
+}
+
+.lodash__console {
+	padding: 0 0 5px 0;
+}

@@ -20,9 +20,7 @@
 
           <div>{{time.updated | dataFilter}}</div>
       </div>
-<<<<<<< HEAD
       https://developer.github.com/apps/quickstart-guides/using-the-github-api-in-your-app/
-=======
 
       <bitcoin-item :bitcoinCode="info"/>
       <div class="bitcoin__footer">
@@ -30,7 +28,6 @@
         <bitcoin-board />
       </div>
       
->>>>>>> a3205410f64cac187ea1f61eec1b0883564126ce
 		</div>
 	</div>
 	
