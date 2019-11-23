@@ -34,32 +34,64 @@ difference();
 // ------------------------------------------------------//
 
 
-// 3 indexOf начиная с индекса from, и возвращает индекс, на котором был найден искомый элемент, в противном случае -1//
+// 3 find - Если функция возвращает true, поиск прерывается и возвращается //
 
-let arrFirst = [1, 0, false, true, false, true, 0];
+var user = [
+    {
+        user: 'barney',
+        active: false
+    },
+    {
+        user: 'fred',
+        active: false
+    },
+    {
+        user: 'pebbles',
+        active: true
+    },
+    {
+        user: 'four',
+        active: true
+    }
+]
 
-function indexOf(array) {
-    const arrFirstIndex = array.indexOf(0);
-    document.getElementById("lodash-three").innerHTML = arrFirstIndex;
+function find(indexTrue) {
+    const index = indexTrue.find(items => items.active == true)
+    document.getElementById('lodash-three').innerHTML = index.user + " " + index.active;
 }
-
-indexOf(arrFirst);
+find(user)
 
 // ------------------------------------------------------//
 // -------------------------END----------------------------//
 // ------------------------------------------------------//
 
 
-// 4 lastIndexOf - начиная с индекса from, и возвращает индекс, на котором был найден искомый элемент, в противном случае -1. Ищет справа налево.//
+// 4 findIndex - Возвращает индекс, на котором был найден элемент, а не сам элемент, и -1 //
 
-let arrIndex = [1, 0, false, true, false, true, 0];
+var user = [
+    {
+        user: 'barney',
+        active: false
+    },
+    {
+        user: 'fred',
+        active: false
+    },
+    {
+        user: 'pebbles',
+        active: true
+    },
+    {
+        user: 'four',
+        active: true
+    }
+]
 
-function lastIndexOf(array) {
-    const lastIndex = array.lastIndexOf(0);
-    document.getElementById("lodash-four").innerHTML = lastIndex;
+function findIndex(indexTrue) {
+    const index = indexTrue.findIndex(items => items.active == true)
+    document.getElementById('lodash-four').innerHTML = index;
 }
-
-lastIndexOf(arrIndex);
+findIndex(user)
 
 // ------------------------------------------------------//
 // -------------------------END----------------------------//
@@ -81,6 +113,7 @@ first(arrFifth);
 // -------------------------END----------------------------//
 // ------------------------------------------------------//
 
+
 // 6 flat - Упрощение вложенных массивов. Возвращает новый массив, в котором все элементы вложенных подмассивов были рекурсивно "подняты" на указанный уровень depth //
 
 let arrSixth = [1, [2, [3, [4]], 5]];
@@ -93,60 +126,43 @@ function flatten(array) {
 
 flatten(arrSixth);
 
+// ------------------------------------------------------//
+// -------------------------END----------------------------//
+// ------------------------------------------------------//
 
 
+// 7 indexOf начиная с индекса from, и возвращает индекс, на котором был найден искомый элемент, в противном случае -1//
 
+let arrFirst = [1, 0, false, true, false, true, 0];
 
+function indexOf(array) {
+    const arrFirstIndex = array.indexOf(0);
+    document.getElementById("lodash-seventh").innerHTML = arrFirstIndex;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   findIndex - Если функция возвращает true, поиск прерывается и возвращается //
-
-// var user = [
-//     {
-//         user: 'barney',
-//         active: false
-//     },
-//     {
-//         user: 'fred',
-//         active: false
-//     },
-//     {
-//         user: 'pebbles',
-//         active: true
-//     },
-//     {
-//         user: 'four',
-//         active: true
-//     }
-// ]
-
-// function findIndex(indexTrue) {
-//     const index = indexTrue.findIndex(items => items.active == true)
-//     document.getElementById('').innerHTML = index;
-// }
-// findIndex(user)
+indexOf(arrFirst);
 
 // ------------------------------------------------------//
 // -------------------------END----------------------------//
 // ------------------------------------------------------//
+
+
+// 8 lastIndexOf - начиная с индекса from, и возвращает индекс, на котором был найден искомый элемент, в противном случае -1. Ищет справа налево.//
+
+let arrIndex = [1, 0, false, true, false, true, 0];
+
+function lastIndexOf(array) {
+    const lastIndex = array.lastIndexOf(0);
+    document.getElementById("lodash-eighth").innerHTML = lastIndex;
+}
+
+lastIndexOf(arrIndex);
+
+// ------------------------------------------------------//
+// -------------------------END----------------------------//
+// ------------------------------------------------------//
+
+
 
 
 
