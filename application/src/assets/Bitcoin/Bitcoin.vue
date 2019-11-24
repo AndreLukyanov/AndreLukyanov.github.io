@@ -20,12 +20,16 @@
 
           <div>{{time.updated | dataFilter}}</div>
       </div>
-      https://developer.github.com/apps/quickstart-guides/using-the-github-api-in-your-app/
+      <!-- https://developer.github.com/apps/quickstart-guides/using-the-github-api-in-your-app/ -->
 
       <bitcoin-item :bitcoinCode="info"/>
       <div class="bitcoin__footer">
         <bitcoin-form @input-value="inputValue"/>
         <bitcoin-board />
+      </div>
+
+      <div class="block">
+        <textarea class="block__textarea"></textarea>
       </div>
       
 		</div>
@@ -99,6 +103,17 @@ export default {
     width: 100%;
     box-sizing: border-box;
     margin-top: 30px;
+  }
+}
+
+.block {
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0 0 0;
+  box-sizing: border-box;
+  &__textarea {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 </style>
