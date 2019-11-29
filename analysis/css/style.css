@@ -89,3 +89,48 @@ table tbody tr td {
 .lodash__console {
 	padding: 0 0 5px 0;
 }
+
+.slider {
+	width: 100%;
+	height: 500px;
+	border: 1px solid red;
+	position: relative;
+}
+
+.slider__nav {
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	width: 100%;
+}
+
+.slider__prev {
+	float: left;
+}
+
+.slider__next {
+	float: right;
+}
+
+.slider__item {
+	display: block;
+	height: 500px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.slider__images {
+	width: 100%;
+	height: auto;
+	opacity: 0;
+	transition: all .3s;
+}
+
+
+.slider__images--active {
+	opacity: 1;
+}
