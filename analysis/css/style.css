@@ -93,7 +93,6 @@ table tbody tr td {
 .slider {
 	width: 100%;
 	height: 500px;
-	border: 1px solid red;
 	position: relative;
 }
 
@@ -128,6 +127,9 @@ table tbody tr td {
 	height: auto;
 	opacity: 0;
 	transition: all .3s;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 

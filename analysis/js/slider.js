@@ -1,12 +1,21 @@
-let next = document.getElementById("next");
-let items = document.getElementById("items");
-// let img = document.getElementById("sss");
+let item = document.querySelector("div > img");
 
-document.querySelector(".slider__item >img").src ="img/" + images[0];
-
-next.onclick = function slider() {
-
-    documentimg.classList.add("slider__images--active");
+function addClassFirst() {
+    item.classList.add("slider__images--active");
 }
+addClassFirst();
+
+let items = document.querySelectorAll("div > img");
+function nextImages() {
+    
+    items.forEach((item, i, arr ) => {
+        item.classList.toggle("slider__images--active");
+    });
+  
+}
+
+
+
+
 
 
