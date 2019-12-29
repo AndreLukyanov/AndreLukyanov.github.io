@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import axios from 'axios';
 import VueAxios from 'vue-axios'
 import moment from 'moment'
+import select2 from 'select2'
+import $ from 'jquery'
 import App from './App.vue'
 import Home from './assets/Home/Home.vue'
 import News from './assets/News/News.vue'
@@ -13,7 +15,7 @@ import JavaScript from './assets/JavaScript/JavaScript.vue'
 import Tablitsa from './assets/Tablitsa/Tablitsa.vue'
 import Bitcoin from './assets/Bitcoin/Bitcoin.vue'
 
-Vue.use(VueRouter, VueAxios, axios, moment);
+Vue.use(VueRouter, VueAxios, axios, moment, select2, $);
 
 const routes = [
   {path: '/', component: Home},
@@ -37,3 +39,4 @@ new Vue({
   template: '<App/>',
   render: h => h(App)
 })
+

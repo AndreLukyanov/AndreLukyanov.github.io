@@ -23,6 +23,8 @@
 
     </header>
 
+    <router-view></router-view>
+
 
     <footer class="footer">
       <div class="container">
@@ -30,8 +32,6 @@
       </div>
     </footer>
     
-
-    <router-view></router-view>
     
   </div>
 </template>
