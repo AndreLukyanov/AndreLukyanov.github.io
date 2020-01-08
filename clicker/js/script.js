@@ -216,12 +216,12 @@ function useSkills() {
 							item.classList.add("active");
 						}, 1000);
 					}
-					else if(i == 1 & creepHealthLevel.style.width <= "70%") {
+					else if(i == 1 && creepHealthLevel.style.width <= "70%") {
 						setTimeout(function () {
 							item.classList.add("active");
 						}, 1000);
 					}
-					else if(i == 2 & creepHealthLevel.style.width <= "50%") {
+					else if(i == 2 && creepHealthLevel.style.width <= "50%") {
 						setTimeout(function () {
 							item.classList.add("active");
 						}, 1000);
