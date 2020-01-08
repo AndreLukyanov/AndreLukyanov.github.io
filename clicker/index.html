@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Clicker</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<main>
+		<div class="game">
+			<div class="game__column game__column--left">
+				<div class="character">
+					<div class="character__body">
+						<span class="character__edit" id="edit" onclick="openPopup()">
+							<span class="character__hint">Вы можете изменить героя до начала игры!</span>
+						</span>
+						<span class="character__name"></span>
+						<img src="" alt="" class="character__images">
+						<span class="character__level">
+							<span class="character__number">1</span>
+							<span class="character__scale"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="game__column game__column--center">
+				<button type="button" class="game__start" id="button-start" onclick="gameStart()">Начать игру</button>
+
+				<div class="creeps" id="creeps">
+					<img src="/img/creeps/creeps.png" alt="" class="creeps__images">
+					<div class="speaking">
+						<span class="speaking__creeps speaking__creeps--top">Ррр</span>
+						<span class="speaking__creeps speaking__creeps--center">Сейчас ты получишь!</span>
+						<span class="speaking__creeps speaking__creeps--left">Получи!!!</span>
+					</div>
+					<span class="creeps__body">
+						<div class="creeps__health"></div>
+						<div class="creeps__inner-strip"></div>
+					</span>
+				</div>
+
+				<div class="skill" id="skill">
+					<div class="skill__item skill__item--simple">
+						<div class="skill__cooldown">
+							<span class="skill__countdown"></span>
+						</div>
+						<img src="/img/skills/ursa_overpower_hp1.png" alt="" class="skill__images">
+					</div>
+					<div class="skill__item skill__item--powerful">
+						<div class="skill__cooldown">
+							<span class="skill__countdown"></span>
+						</div>
+						<img src="/img/skills/ursa_enrage_hp1.png" alt="" class="skill__images">
+					</div>
+				</div>
+			</div>
+			<div class="game__column game__column--right">
+				<div class="armor" id="armor">
+					<div class="armor__body">
+						<div class="armor__item">
+							<img src="img/stout-shield.png" alt="" class="armor__images">
+							<div class="armor__price">19</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/ring-of-protection.png" alt="" class="armor__images">
+							<div class="armor__price">19</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/tango.png" alt="" class="armor__images">
+							<div class="armor__price">3</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/healing-salve.png" alt="" class="armor__images">
+							<div class="armor__price">25</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/phase-boots.png" alt="" class="armor__images">
+							<div class="armor__price">200</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/urn-of-shadows.png" alt="" class="armor__images">
+							<div class="armor__price">250</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/euls-scepter-of-divinity.png" alt="" class="armor__images">
+							<div class="armor__price">750</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/rod-of-atos.png" alt="" class="armor__images">
+							<div class="armor__price">900</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/force-staff.png" alt="" class="armor__images">
+							<div class="armor__price">2000</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/hood-of-defiance.png" alt="" class="armor__images">
+							<div class="armor__price">850</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/blink-dagger.png" alt="" class="armor__images">
+							<div class="armor__price">2100</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/vladmirs-offering.png" alt="" class="armor__images">
+							<div class="armor__price">2800</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/blade-mail.png" alt="" class="armor__images">
+							<div class="armor__price">1400</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/black-king-bar.png" alt="" class="armor__images">
+							<div class="armor__price">3000</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/aghanims-scepter.png" alt="" class="armor__images">
+							<div class="armor__price">3000</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/lotus-orb.png" alt="" class="armor__images">
+							<div class="armor__price">4500</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/shivas-guard.png" alt="" class="armor__images">
+							<div class="armor__price">4100</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/spirit-vessel.png" alt="" class="armor__images">
+							<div class="armor__price">2700</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/pipe-of-insight.png" alt="" class="armor__images">
+							<div class="armor__price">2100</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/crimson-guard.png" alt="" class="armor__images">
+							<div class="armor__price">3300</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/radiance.png" alt="" class="armor__images">
+							<div class="armor__price">5100</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/battle-fury.png" alt="" class="armor__images">
+							<div class="armor__price">2300</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/desolator.png" alt="" class="armor__images">
+							<div class="armor__price">900</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/nullifier.png" alt="" class="armor__images">
+							<div class="armor__price">3800</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/butterfly.png" alt="" class="armor__images">
+							<div class="armor__price">6100</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/abyssal-blade.png" alt="" class="armor__images">
+							<div class="armor__price">5500</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/manta-style.png" alt="" class="armor__images">
+							<div class="armor__price">6400</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/monkey-king-bar.png" alt="" class="armor__images">
+							<div class="armor__price">7800</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/satanic.png" alt="" class="armor__images">
+							<div class="armor__price">9000</div>
+						</div>
+						<div class="armor__item">
+							<img src="img/divine-rapier.png" alt="" class="armor__images">
+							<div class="armor__price">30000</div>
+						</div>
+					</div>
+				</div>
+				<div class="interface">
+					<div class="items" id="items">
+						<div class="items__col">
+							<img src="" alt="" class="items__images">
+						</div>
+						<div class="items__col">
+							<img src="" alt="" class="items__images">
+						</div>
+						<div class="items__col">
+							<img src="" alt="" class="items__images">
+						</div>
+						<div class="items__col">
+							<img src="" alt="" class="items__images">
+						</div>
+						<div class="items__col">
+							<img src="" alt="" class="items__images">
+						</div>
+						<div class="items__col">
+							<img src="" alt="" class="items__images">
+						</div>
+					</div>
+					<div class="shop">
+						<div class="shop__col">
+							<div class="coin" id="coin">0</div>
+						</div>
+						<div class="shop__col">
+							<button type="button" id="shop-button" class="shop__button right" onclick="visible()">
+								Лавка
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="choice-character active" id="popup">
+			<div class="choice-character__body">
+				<div class="choice-character__header">
+					<div class="choice-character__title">
+						Быберите героя
+					</div>
+				</div>
+				<div class="choice-character__box">
+					<div class="choice-character__item">
+						<img src="img/character/anti-mage.png" alt="" class="choice-character__images">
+					</div>
+					<div class="choice-character__item">
+						<img src="img/character/tusk-full.png" alt="" class="choice-character__images">
+					</div>
+					<div class="choice-character__item">
+						<img src="img/character/axe-full.png" alt="" class="choice-character__images">
+					</div>
+					<div class="choice-character__item">
+						<img src="img/character/juggernaut-full.png" alt="" class="choice-character__images">
+					</div>
+					<div class="choice-character__item">
+						<img src="img/character/phantom_assassin-full.png" alt="" class="choice-character__images">
+					</div>
+					<div class="choice-character__item">
+						<img src="img/character/ursa-full.png" alt="" class="choice-character__images">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+
+	<script src="js/script.js"></script>
+</body>
+</html>

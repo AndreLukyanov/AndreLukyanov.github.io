@@ -17,8 +17,17 @@ export default {
       .select2({ data: this.options })
       .val(this.value)
       .trigger("change")
+      .on("select2-open", function() {
+        vm.$el.data();
+        vm.$el.position({
+          my: "right center",
+          at: "right center",
+          of: "$el.offsetParent",
+
+        });
+      })
       .on("change", function() {
-        vm.$emit("input", (this.value));
+        vm.$emit("input", this.value);
       });
   },
 
