@@ -133,17 +133,17 @@ addItems();
 
 let coin = document.getElementById("coin");
 
-function coins() {
+function addCoins() {
 
 	for (let i = 0; i <= 30000; i++) {
 		setTimeout(function () {
-			coin.innerHTML = + i;
+			coin.innerHTML = i + i;
 		}, i * 2000);
 	}
 
 }
 
-// coins(); перенес в "Старт игры" для запуска скрипта после нажатия на кнопку начать
+// addCoins(); перенес в "Старт игры" для запуска скрипта после нажатия на кнопку начать
 
 
 // Старт игры //
@@ -155,7 +155,7 @@ let sckillBlock = document.getElementById("skill");
 function gameStart() {
 	editPopup.style.display = "none";
 	buttonStart.style.display = "none";
-	coins();
+	addCoins();
 	setTimeout(function () {
 		sckillBlock.classList.add("active");
 		creeps.classList.add("creeps-active");
@@ -179,15 +179,13 @@ appearanceCreep();
 let skills = Array.from(document.querySelectorAll(".skill .skill__item img"));
 let impactSimple = 10;
 let impactPowerful = 50;
-let kill = 1000;
 let characterLevel = document.querySelector(".character__number");
 let cooldownBlock = document.querySelectorAll(".skill .skill__cooldown");
 let receivedHealth = 100;
 
 let speakingCreep = document.querySelectorAll(".speaking .speaking__creeps");
 
-parseInt(creepHealth.innerHTML);
-parseInt(coin.innerHTML);
+let kill = 1000;
 
 function useSkills() {
 
@@ -241,7 +239,7 @@ function useSkills() {
 					for (let i = 1; i >= 0; i--) {
 						setTimeout(function () {
 							countdown[0].innerHTML = + i;
-						}, i * 1000);
+						}, (1 - i) * 1000);
 					}
 					setTimeout(function () {
 						cooldownBlock[0].classList.remove("active");
@@ -252,7 +250,7 @@ function useSkills() {
 					for (let i = 5; i >= 0; i--) {
 						setTimeout(function () {
 							countdown[1].innerHTML =+ i;
-						},  i * 1000);
+						},  (5 - i) * 1000);
 					}
 					setTimeout(function () {
 						cooldownBlock[1].classList.remove("active");
@@ -269,7 +267,8 @@ function useSkills() {
 				if (creepHealth.innerText <= 0) {
 					creeps.classList.remove("creeps-active");
 					characterLevel.innerHTML = 2;
-					coin.innerHTML = + kill;
+					coin.innerHTML = Number(coin.innerHTML) + kill;
+					
 				}
 			}
 
