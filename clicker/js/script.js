@@ -22,72 +22,146 @@ openPopup();
 
 // Выбор героя //
 
-let hero = document.querySelectorAll(".choice-character__box .choice-character__item img");
+// let hero = document.querySelectorAll(".choice-character__box .choice-character__item img");
 let character = document.querySelector(".character .character__body img");
 let level = document.querySelector(".character .character__body .character__level .character__scale");
 let nameHero = document.querySelector(".character .character__body .character__name");
 
-let antiMage, tusk, axe, juggernaut, phantomAssassin, ursa;
+let heroes = [
+	{
+		id: 0,
+		hp: 587,
+		name: "anti-mage",
+		url: "/img/character/anti-mage.png"
+	},
+	{
+		id: 1,
+		hp: 587,
+		name: "tusk",
+		url: "/img/character/tusk-full.png"
+	},
+	{
+		id: 2,
+		hp: 625,
+		name: "axe",
+		url: "/img/character/axe-full.png"
+	},
+	{
+		id: 3,
+		hp: 530,
+		name: "juggernaut",
+		url: "/img/character/juggernaut-full.png"
+	},
+	{
+		id: 4,
+		hp: 549,
+		name: "phantom-assassin",
+		url: "/img/character/phantom_assassin-full.png"
+	},
+	{
+		id: 5,
+		hp: 606,
+		name: "ursa",
+		url: "/img/character/ursa-full.png"
+	}
+];
 
-antiMage = {
-	hp: 587,
-	name: "anti-mage"
-};
+// Создание div и img
 
-tusk = {
-	hp: 587,
-	name: "tusk"
-};
+function addCharacterInPopup() {
+	for (let i = 1; i <= heroes.length; i++) {
 
-axe = {
-	hp: 625,
-	name: "axe"
-};
+		let characterBoxItem = document.createElement("div");
+		let imagesCharacter = document.createElement("img");
 
-juggernaut = {
-	hp: 530,
-	name: "juggernaut"
-};
+		characterBoxItem.className = "choice-character__item";
+		document.querySelector(".choice-character__box").appendChild(characterBoxItem);
 
-phantomAssassin = {
-	hp: 549,
-	name: "phantom-assassin"
-};
-ursa = {
-	hp: 606,
-	name: "ursa"
-};
+		Array.prototype.forEach.call(document.querySelectorAll(".choice-character__item"), function (e) {
+			e.appendChild(imagesCharacter);
+			imagesCharacter.className = "choice-character__images";
+		});
+	}
+}
+
+addCharacterInPopup();
 
 function addHero() {
-	hero.forEach(function (item, i) {
-		item.onclick = function () {
-			character.src = item.src;
-			popup.classList.remove("active"); // Удаление класса у popup, чтобы закрыть окно
+
+	// блок где лежит изображение //
+	let characterItem = Array.from(document.querySelectorAll(".choice-character__item"));
+
+	// изображения //
+	let characterAvatar = Array.from(document.querySelectorAll(".choice-character__images"));
+
+	heroes.forEach(function (item, i) {
+
+		characterItem.forEach(function (elem, index) {
+			
 			if (i == 0) {
-				level.innerHTML = antiMage.hp;
-				nameHero.innerHTML = antiMage.name;
+				characterAvatar[0].src = item.url;
 			}
 			else if (i == 1) {
-				level.innerHTML = tusk.hp;
-				nameHero.innerHTML = tusk.name;
+				characterAvatar[1].src = item.url;
 			}
 			else if (i == 2) {
-				level.innerHTML = axe.hp;
-				nameHero.innerHTML = axe.name;
+				characterAvatar[2].src = item.url;
 			}
 			else if (i == 3) {
-				level.innerHTML = juggernaut.hp;
-				nameHero.innerHTML = juggernaut.name;
+				characterAvatar[3].src = item.url;
 			}
 			else if (i == 4) {
-				level.innerHTML = phantomAssassin.hp;
-				nameHero.innerHTML = phantomAssassin.name;
+				characterAvatar[4].src = item.url;
 			}
 			else if (i == 5) {
-				level.innerHTML = ursa.hp;
-				nameHero.innerHTML = ursa.name;
+				characterAvatar[5].src = item.url;
 			}
-		}
+
+
+			function addingHero() {
+
+				elem.onclick = function () {
+					popup.classList.remove("active"); // Удаление класса у popup, чтобы закрыть окно
+
+					if (index == 0) {
+						character.src = characterAvatar[0].src;
+						nameHero.innerHTML = heroes[0].name;
+						level.innerHTML = heroes[0].hp;
+					}
+					else if (index == 1) {
+						character.src = characterAvatar[1].src;
+						nameHero.innerHTML = heroes[1].name;
+						level.innerHTML = heroes[1].hp;
+					}
+					else if (index == 2) {
+						character.src = characterAvatar[2].src;
+						nameHero.innerHTML = heroes[2].name;
+						level.innerHTML = heroes[2].hp;
+					}
+					else if (index == 3) {
+						character.src = characterAvatar[3].src;
+						nameHero.innerHTML = heroes[3].name;
+						level.innerHTML = heroes[3].hp;
+					}
+					else if (index == 4) {
+						character.src = characterAvatar[4].src;
+						nameHero.innerHTML = heroes[4].name;
+						level.innerHTML = heroes[4].hp;
+					}
+					else if (index == 5) {
+						character.src = characterAvatar[5].src;
+						nameHero.innerHTML = heroes[5].name;
+						level.innerHTML = heroes[5].hp;
+					}
+
+				}
+
+			}
+
+			addingHero();
+
+		});
+
 	});
 }
 
@@ -193,7 +267,7 @@ function useSkills() {
 		item.onclick = function () {
 
 			// Нанесение урона //
-			
+
 			if (i == 0) {
 				creepHealth.innerHTML = creepHealth.innerHTML - impactSimple;
 				receivedHealth = receivedHealth - 4;
@@ -209,17 +283,17 @@ function useSkills() {
 
 			function speak() {
 				speakingCreep.forEach(function (item, i) {
-					if(i == 0 && creepHealthLevel.style.width <= "90%") {
+					if (i == 0 && creepHealthLevel.style.width <= "90%") {
 						setTimeout(function () {
 							item.classList.add("active");
 						}, 1000);
 					}
-					else if(i == 1 && creepHealthLevel.style.width <= "70%") {
+					else if (i == 1 && creepHealthLevel.style.width <= "70%") {
 						setTimeout(function () {
 							item.classList.add("active");
 						}, 1000);
 					}
-					else if(i == 2 && creepHealthLevel.style.width <= "50%") {
+					else if (i == 2 && creepHealthLevel.style.width <= "50%") {
 						setTimeout(function () {
 							item.classList.add("active");
 						}, 1000);
@@ -233,7 +307,7 @@ function useSkills() {
 
 			function cooldownSkills() {
 				let countdown = document.querySelectorAll(".skill .skill__countdown");
-				
+
 				if (item.onclick && i == 0) {
 					cooldownBlock[0].classList.add("active");
 					for (let i = 1; i >= 0; i--) {
@@ -249,8 +323,8 @@ function useSkills() {
 					cooldownBlock[1].classList.add("active");
 					for (let i = 5; i >= 0; i--) {
 						setTimeout(function () {
-							countdown[1].innerHTML =+ i;
-						},  (5 - i) * 1000);
+							countdown[1].innerHTML = + i;
+						}, (5 - i) * 1000);
 					}
 					setTimeout(function () {
 						cooldownBlock[1].classList.remove("active");
@@ -268,7 +342,7 @@ function useSkills() {
 					creeps.classList.remove("creeps-active");
 					characterLevel.innerHTML = 2;
 					coin.innerHTML = Number(coin.innerHTML) + kill;
-					
+
 				}
 			}
 
