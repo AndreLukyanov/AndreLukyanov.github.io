@@ -4,7 +4,7 @@ function addClassFirst() {
     item.classList.add("slider__images--active");
 }
 addClassFirst();
-
+ 
 let items = document.querySelectorAll("div > img");
 function nextImages() {
     
