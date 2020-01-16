@@ -168,6 +168,181 @@ function useSkills() {
 
 useSkills();
 
+let shop = [
+	{
+		id: 0,
+		name: "stout-shield",
+		url: "/img/inventory/stout-shield.png"
+	},
+	{
+		id: 1,
+		name: "tango",
+		url: "/img/inventory/tango.png"
+	},
+	{
+		id: 2,
+		name: "urn-of-shadows",
+		url: "/img/inventory/urn-of-shadows.png"
+	},
+	{
+		id: 3,
+		name: "ring-of-protection",
+		url: "/img/inventory/ring-of-protection.png"
+	},
+	{
+		id: 4,
+		name: "healing-salve",
+		url: "/img/inventory/healing-salve.png"
+	},
+	{
+		id: 5,
+		name: "vladmirs-offering",
+		url: "/img/inventory/vladmirs-offering.png"
+	},
+	{
+		id: 6,
+		name: "spirit-vessel",
+		url: "/img/inventory/spirit-vessel.png"
+	},
+	{
+		id: 7,
+		name: "shivas-guard",
+		url: "/img/inventory/shivas-guard.png"
+	},
+	{
+		id: 8,
+		name: "phase-boots",
+		url: "/img/inventory/phase-boots.png"
+	},
+	{
+		id: 9,
+		name: "euls-scepter-of-divinity",
+		url: "/img/inventory/euls-scepter-of-divinity.png"
+	},
+	{
+		id: 10,
+		name: "force-staff",
+		url: "/img/inventory/force-staff.png"
+	},
+	{
+		id: 11,
+		name: "hood-of-defiance",
+		url: "/img/inventory/hood-of-defiance.png"
+	},
+	{
+		id: 12,
+		name: "pipe-of-insight",
+		url: "/img/inventory/pipe-of-insight.png"
+	},
+	{
+		id: 13,
+		name: "blade-mail",
+		url: "/img/inventory/blade-mail.png"
+	},
+	{
+		id: 14,
+		name: "blink-dagger",
+		url: "/img/inventory/blink-dagger.png"
+	},
+	{
+		id: 15,
+		name: "battle-fury",
+		url: "/img/inventory/battle-fury.png"
+	},
+	{
+		id: 16,
+		name: "black-king-bar",
+		url: "/img/inventory/black-king-bar.png"
+	},
+	{
+		id: 17,
+		name: "butterfly",
+		url: "/img/inventory/butterfly.png"
+	},
+	{
+		id: 18,
+		name: "desolator",
+		url: "/img/inventory/desolator.png"
+	},
+	{
+		id: 19,
+		name: "crimson-guard",
+		url: "/img/inventory/crimson-guard.png"
+	},
+	{
+		id: 20,
+		name: "aghanims-scepter",
+		url: "/img/inventory/aghanims-scepter.png"
+	},
+	{
+		id: 21,
+		name: "lotus-orb",
+		url: "/img/inventory/lotus-orb.png"
+	},
+	{
+		id: 22,
+		name: "manta-style",
+		url: "/img/inventory/manta-style.png"
+	},
+	{
+		id: 23,
+		name: "nullifier",
+		url: "/img/inventory/nullifier.png"
+	},
+	{
+		id: 24,
+		name: "monkey-king-bar",
+		url: "/img/inventory/monkey-king-bar.png"
+	},
+	{
+		id: 25,
+		name: "rod-of-atos",
+		url: "/img/inventory/rod-of-atos.png"
+	},
+	{
+		id: 26,
+		name: "radiance",
+		url: "/img/inventory/radiance.png"
+	},
+	{
+		id: 27,
+		name: "satanic",
+		url: "/img/inventory/satanic.png"
+	},
+	{
+		id: 27,
+		name: "abyssal-blade",
+		url: "/img/inventory/abyssal-blade.png"
+	},
+	{
+		id: 29,
+		name: "divine-rapier",
+		url: "/img/inventory/divine-rapier.png"
+	}
+];
+
+function addInventory() {
+	for(let i = 0; i < shop.length; i++) {
+		let inventoryItem = document.createElement("div");
+		let inventoryImg = document.createElement("img");
+
+		
+		inventoryItem.className = "armor__item";
+		document.querySelector(".armor__body").appendChild(inventoryItem);
+
+		Array.prototype.forEach.call(document.querySelectorAll(".armor__item"), function (e) {
+			e.appendChild(inventoryImg);
+			inventoryImg.className = "armor__images";
+		});
+
+		// Добавление пути к img
+
+		inventoryImg.src = shop[i].url;
+	}
+};
+
+addInventory();
+
 // Открытие ЛАВКИ //
 
 function visible() {
@@ -206,7 +381,6 @@ addItems();
 
 // Выбор героя //
 
-// let hero = document.querySelectorAll(".choice-character__box .choice-character__item img");
 let character = document.querySelector(".character .character__body img");
 let characterHealth = document.querySelector(".character .character__body .character__level .character__scale");
 let characterName = document.querySelector(".character .character__body .character__name");
