@@ -1,14 +1,16 @@
 // Добавление coins //
 
 let coin = document.getElementById("coin");
-
+let bank = 0;
 function addCoins() {
 
-	for (let i = 0; i <= 30000; i++) {
-		setTimeout(function () {
-			coin.innerHTML = i + i;
-		}, i * 2000);
-	}
+	setInterval(function () {
+		if (bank >= 10) return;
+		bank += 2;
+		coin.innerHTML = bank;
+	}, 2000);
+
+
 
 }
 
@@ -134,7 +136,8 @@ function useSkills() {
 				if (creepHealth.innerText <= 0) {
 					creeps.classList.remove("creeps-active");
 					characterLevel.innerHTML = 2;
-					coin.innerHTML = Number(coin.innerHTML) + kill;
+					bank=bank+kill;
+					coin.innerHTML = bank;
 
 				}
 			}
