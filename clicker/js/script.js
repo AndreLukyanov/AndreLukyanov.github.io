@@ -5,12 +5,10 @@ let bank = 0;
 function addCoins() {
 
 	setInterval(function () {
-		if (bank >= 10) return;
+		if (bank >= 30000) return;
 		bank += 2;
 		coin.innerHTML = bank;
 	}, 2000);
-
-
 
 }
 
@@ -136,7 +134,7 @@ function useSkills() {
 				if (creepHealth.innerText <= 0) {
 					creeps.classList.remove("creeps-active");
 					characterLevel.innerHTML = 2;
-					bank=bank+kill;
+					bank = bank + kill;
 					coin.innerHTML = bank;
 
 				}
