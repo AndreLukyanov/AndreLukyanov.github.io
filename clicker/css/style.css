@@ -403,6 +403,8 @@ body {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	width: 50%;
+	
+	position: relative;
 	box-sizing: border-box;
 }
 
@@ -411,6 +413,7 @@ body {
 	height: 76px;
 	width: 33.33%;
 	cursor: pointer;
+	position: relative;
 	border: 4px solid #000;
 	background: #242625;
 	box-sizing: border-box;
