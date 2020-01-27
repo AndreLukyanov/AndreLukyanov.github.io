@@ -12,24 +12,6 @@ function addCoins() {
 
 }
 
-// Старт игры //
-
-function gameStart() {
-
-	let buttonStart = document.getElementById("button-start");
-	let creeps = document.getElementById("creeps");
-	let sckillBlock = document.getElementById("skill");
-
-	editPopup.style.display = "none";
-	buttonStart.style.display = "none";
-	addCoins();
-	setTimeout(function () {
-		sckillBlock.classList.add("active");
-		creeps.classList.add("creeps-active");
-	}, 1000);
-}
-
-
 // Здоровье крипов //
 
 let creepHealth = document.querySelector(".creeps__health");

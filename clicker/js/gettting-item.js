@@ -1,20 +1,33 @@
 function getItems() {
-	let shop = Array.from(document.querySelectorAll(".armor .armor__item img")); // Лавка
+	let shopping = Array.from(document.querySelectorAll(".armor .armor__item img")); // Лавка
 	let inventory = Array.from(document.querySelectorAll(".items .items__col img")); // Инвентарь
 	let inventaryIndex = 0;
-	shop.forEach(function (item, ii) {
-		item.onclick = function () {
+	let armorPrice = document.querySelector(".armor__price");
+	let coinValue = parseInt(coin.innerHTML)
+	shopping.forEach(function (item) {
 
-			item.offsetParent.lastElementChild.play(); // Звук предмета по клику
-			inventory[inventaryIndex].src = item.src;
-			inventaryIndex++;
+		shop.forEach(function (array) {
 
-			if (inventaryIndex == 6) {
-				inventaryIndex = 0; // Доходит до 6 и возращается к 0
+			if (coinValue >= array.price) {
+				armorPrice.style.opacity = 1;
+	
+				item.onclick = function () {
+					item.offsetParent.lastElementChild.play(); // Звук предмета по клику
+					inventory[inventaryIndex].src = item.src;
+					inventaryIndex++;
+	
+					if (inventaryIndex == 6) {
+						inventaryIndex = 0; // Доходит до 6 и возращается к 0
+					}
+				}
 			}
-		}
+			else {
+				console.log(12);
+			}
+		});
 	});
 
 }
+
 
 getItems();

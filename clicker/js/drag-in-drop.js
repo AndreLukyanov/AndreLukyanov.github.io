@@ -3,45 +3,32 @@ function dragInventory() {
 	let inventorys = Array.from(document.querySelectorAll(".items .items__col img")); // Инвентарь
 
 	inventorys.forEach(function (item) {
-		item.onmousedown = function (e) {
+		item.onmousedown  = function(e) {
 
-			var coords = getCoords(item);
-			var shiftX = e.pageX - coords.left;
-			var shiftY = e.pageY - coords.top;
-
+			let shiftX = e.pageX;
+			let shiftY = e.pageY;
 			item.style.position = "absolute";
-			moveAt(e);
+			drag(e);
 
-			inventoryBox.appendChild(item);
-			item.style.zIndex = 1000;
-
-			function moveAt(e) {
-				item.style.top = e.pageY - shiftY + "px";
+			function drag(e) {
 				item.style.left = e.pageX - shiftX + "px";
-			}
-
-			inventoryBox.onmousemove = function (e) {
-				moveAt(e);
-			}
-
-			item.onmouseup = function () {
-				inventoryBox.onmousemove = null;
-				item.onmouseup = null;
-			}
-
-			item.ondragstart = function () {
-				return false;
+				item.style.top = e.pageY - shiftY + "px";
 			};
 
-			function getCoords(el) {
-				let box = el.getBoundingClientRect();
+			document.onmousemove = function(e) {
+				drag(e);
+			};
 
-				return {
-					top: box.top + pageYOffset,
-					left: box.left + pageXOffset
-				}
-			}
-		}
+			item.onmouseup = function() {
+				document.onmousemove = null;
+				item.onmouseup = null;
+			};
+
+		};
+
+		item.ondragstart = function() {
+			return false;
+		};
 	});
 }
 

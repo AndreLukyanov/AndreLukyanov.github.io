@@ -13,9 +13,18 @@
 
 	<main>
 		<div class="game">
+			<div class="game-sound">
+				<audio class="game-sound__hero" autoplay loop>
+					<source type="audio/mpeg" src="sound/game-start/hero-select.mp3">
+				</audio>
+				<audio class="game-sound__start">
+					<source type="audio/mpeg" src="sound/game-start/default.mp3">
+				</audio>
+			</div>
 			<div class="game__column game__column--left">
 				<div class="character">
 					<div class="character__body">
+						<div class="character__element"></div>
 						<span class="character__edit" id="edit" onclick="openPopup()">
 							<span class="character__hint">Вы можете изменить героя до начала игры!</span>
 						</span>
@@ -23,8 +32,25 @@
 						<img src="" alt="" class="character__images">
 						<span class="character__level">
 							<span class="character__number">1</span>
-							<span class="character__scale"></span>
+							<div class="character__info">
+								<div class="character__scale"></div>
+								<span class="character__health"></span>
+							</div>
 						</span>
+						<div class="character__property">
+							<span class="character__property-stat">
+								Сила
+								<span class="character__property-strength"></span>
+							</span>
+							<span class="character__property-stat">
+								Ловкость
+								<span class="character__property-agility"></span>
+							</span>
+							<span class="character__property-stat">
+								Интелект
+								<span class="character__property-intelligence"></span>
+							</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -116,6 +142,7 @@
 	<script src="js/script.js"></script>
 	<script src="js/popup.js"></script>
 	<script src="js/hero-pick.js"></script>
+	<script src="js/start-game.js"></script>
 	<script src="js/shop.js"></script>
 	<script src="js/gettting-item.js"></script>
 	<script src="js/drag-in-drop.js"></script>
